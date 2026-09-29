@@ -1,0 +1,183 @@
+/* ==========================================================================
+   base.css — 设计令牌 / 重置 / 排版 / 骨架布局
+   风格：现代、明亮、极简、温暖；移动端优先，最大内容宽度 520px
+   ========================================================================== */
+
+/* ---------- 1. 设计令牌（改这里 = 改全站） ---------- */
+:root {
+  /* 配色（文字色按 WCAG AA 调深：正文 ≥7:1，次要 ≥5.6:1，弱化 ≥4.5:1） */
+  --brand: #2EAFA0;          /* 主色：柔和蓝绿（边框、图标、装饰） */
+  --brand-dark: #15736A;     /* 主色文字版：白底/浅底均 ≥5.2:1 */
+  --brand-ink: #17786E;      /* 主色实心底：上白字 ≥5.3:1 */
+  --brand-soft: #E6F6F4;     /* 主色浅底 */
+  --accent: #2F6FB0;         /* 辅助色文字版：白底 ≥5.2:1 */
+  --accent-ink: #2A66A4;     /* 辅助色实心底：上白字 ≥5.4:1 */
+  --accent-soft: #EAF2FB;
+  --bg: #FAFAFA;             /* 内容背景 */
+  --bg-page: #EFF4F3;        /* 桌面端“手机容器”外侧背景 */
+  --surface: #FFFFFF;        /* 卡片面 */
+  --border: #E1E7E5;
+  --text: #333333;           /* 正文：对比度 ≥12.6:1 */
+  --text-2: #5F6A68;         /* 次要文字：≥5.6:1 */
+  --text-3: #626C6A;         /* 弱化文字：在 #FAFAFA / 白底 / 品牌浅底上均 ≥4.8:1 */
+
+  /* 排版：正文不小于 18px，重点英文 20-22px，行高不小于 1.6 */
+  --fs-body: 18px;
+  --fs-sm: 18px;             /* 译文/说明等次级正文，同样 ≥18px */
+  --fs-xs: 14px;             /* 仅用于计数、徽标、提示等界面装饰文字 */
+  --fs-h1: 24px;
+  --fs-h2: 21px;
+  --fs-en-lg: 22px;
+  --lh: 1.6;
+  --font-cn: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", "Helvetica Neue", Arial, sans-serif;
+  --font-en: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+
+  /* 圆角 / 阴影 / 间距 */
+  --radius: 16px;
+  --radius-sm: 12px;
+  --radius-pill: 999px;
+  --shadow-1: 0 1px 2px rgba(31, 78, 73, .04), 0 4px 14px rgba(31, 78, 73, .06);
+  --shadow-2: 0 6px 22px rgba(31, 78, 73, .10);
+  --gap: 16px;
+  --pad-x: 16px;
+
+  /* 骨架尺寸 */
+  --shell-max: 520px;        /* 手机容器最大宽度 */
+  --tap: 44px;               /* 最小可点击区域 44x44 */
+  --tabbar-h: 64px;
+  --safe-t: env(safe-area-inset-top, 0px);
+  --safe-b: env(safe-area-inset-bottom, 0px);
+
+  /* 层级 */
+  --z-header: 20;
+  --z-dropdown: 30;
+  --z-tabbar: 40;
+  --z-toast: 60;
+}
+
+/* ---------- 2. 重置 ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body, h1, h2, h3, h4, p, ul, ol, li, figure { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+img, svg { max-width: 100%; display: block; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { background: none; border: 0; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+a { color: inherit; text-decoration: none; -webkit-tap-highlight-color: transparent; }
+[hidden] { display: none !important; }
+:focus-visible { outline: 3px solid rgba(46, 175, 160, .45); outline-offset: 2px; border-radius: 8px; }
+
+/* ---------- 3. 排版 ---------- */
+body {
+  font-family: var(--font-cn);
+  font-size: var(--fs-body);
+  line-height: var(--lh);
+  color: var(--text);
+  background: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word;
+}
+h1 { font-size: var(--fs-h1); line-height: 1.4; }
+h2 { font-size: var(--fs-h2); line-height: 1.4; }
+h3 { font-size: 19px; line-height: 1.45; }
+p { font-size: var(--fs-body); }
+
+/* 英文文本统一使用英文优先字体，略大一点更易读 */
+.en {
+  font-family: var(--font-en);
+  font-size: var(--fs-en-lg);
+  line-height: 1.5;
+  letter-spacing: .2px;
+}
+
+/* 中文释义 */
+.zh { font-size: var(--fs-body); color: var(--text); }
+
+/* 次要/弱化说明文字 */
+.muted { font-size: var(--fs-sm); color: var(--text-2); line-height: 1.6; }
+.tiny { font-size: var(--fs-xs); color: var(--text-3); line-height: 1.6; }
+
+/* ---------- 4. 骨架布局 ---------- */
+/* 手机容器：移动端满宽；桌面端居中显示（配合 @media 下方阴影） */
+.app-shell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: var(--shell-max);
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0 auto;
+  background: var(--bg);
+  /* 底部留出 Tab 栏 + iPhone 安全区，内容不会被挡住 */
+  padding-bottom: calc(var(--tabbar-h) + var(--safe-b));
+}
+
+/* 顶部固定区：用 sticky 实现“固定搜索框”，不必写死高度 */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  padding: calc(var(--safe-t) + 10px) var(--pad-x) 12px;
+  background: rgba(250, 250, 250, .94);
+  border-bottom: 1px solid var(--border);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  backdrop-filter: saturate(180%) blur(12px);
+}
+.app-header__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+.app-header__title { font-size: var(--fs-h2); font-weight: 700; letter-spacing: .5px; }
+.app-header__hint { font-family: var(--font-en); font-size: var(--fs-sm); color: var(--text-3); }
+
+/* 内容区 */
+.app-main { flex: 1 1 auto; padding: 18px var(--pad-x) 28px; outline: none; }
+
+/* 底部固定 Tab 栏：跟随 520px 容器一起居中 */
+.tabbar {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  z-index: var(--z-tabbar);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+  max-width: var(--shell-max);
+  padding-bottom: var(--safe-b);
+  background: rgba(255, 255, 255, .97);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -4px 18px rgba(31, 78, 73, .05);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+.tabbar__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-height: var(--tabbar-h);      /* 远高于 44px 触控标准 */
+  padding: 8px 2px;
+  color: var(--text-2);
+  transition: color .18s ease, transform .18s ease;
+}
+.tabbar__item:active { transform: scale(.94); }
+.tabbar__icon { font-size: 22px; line-height: 1; }
+.tabbar__label { font-size: var(--fs-sm); line-height: 1.2; }
+.tabbar__item[aria-current="page"] { color: var(--brand-dark); font-weight: 700; }
+.tabbar__item[aria-current="page"] .tabbar__icon { transform: translateY(-1px); }
+
+/* 桌面端：让容器“浮”起来，视觉上像手机预览 */
+@media (min-width: 560px) {
+  body { background: linear-gradient(160deg, #EDF5F3 0%, #F5F8FC 100%); }
+  .app-shell { box-shadow: 0 10px 40px rgba(31, 78, 73, .10); }
+}
+
+/* 尊重“减少动态效果”系统设置 */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}

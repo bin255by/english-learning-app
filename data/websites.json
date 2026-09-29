@@ -1,0 +1,152 @@
+{
+  "categories": [
+    {
+      "id": "search",
+      "nameZh": "搜索引擎",
+      "items": [
+        {
+          "nameEn": "Google",
+          "nameZh": "谷歌",
+          "url": "https://www.google.com",
+          "descEn": "The most popular search engine in the world.",
+          "descZh": "世界上最常用的搜索引擎。"
+        },
+        {
+          "nameEn": "Bing",
+          "nameZh": "必应",
+          "url": "https://www.bing.com",
+          "descEn": "Microsoft's search engine.",
+          "descZh": "微软出品的搜索引擎。"
+        }
+      ]
+    },
+    {
+      "id": "shopping",
+      "nameZh": "购物",
+      "items": [
+        {
+          "nameEn": "Amazon",
+          "nameZh": "亚马逊",
+          "url": "https://www.amazon.com",
+          "descEn": "Buy almost anything and get it delivered.",
+          "descZh": "几乎什么都能买，还能送货上门。"
+        },
+        {
+          "nameEn": "eBay",
+          "nameZh": "易趣",
+          "url": "https://www.ebay.com",
+          "descEn": "Buy and sell new and used goods.",
+          "descZh": "买卖新品和二手物品的平台。"
+        }
+      ]
+    },
+    {
+      "id": "travel",
+      "nameZh": "地图与出行",
+      "items": [
+        {
+          "nameEn": "Google Maps",
+          "nameZh": "谷歌地图",
+          "url": "https://maps.google.com",
+          "descEn": "Find directions and check traffic.",
+          "descZh": "查路线、看路况。"
+        },
+        {
+          "nameEn": "Uber",
+          "nameZh": "优步",
+          "url": "https://www.uber.com",
+          "descEn": "Call a car with your phone.",
+          "descZh": "用手机叫车。"
+        }
+      ]
+    },
+    {
+      "id": "media",
+      "nameZh": "视频与新闻",
+      "items": [
+        {
+          "nameEn": "YouTube",
+          "nameZh": "油管",
+          "url": "https://www.youtube.com",
+          "descEn": "Watch videos and learn English.",
+          "descZh": "看视频、学英语。"
+        },
+        {
+          "nameEn": "CNN",
+          "nameZh": "美国有线电视新闻网",
+          "url": "https://www.cnn.com",
+          "descEn": "An American news channel.",
+          "descZh": "美国的新闻频道。"
+        },
+        {
+          "nameEn": "BBC",
+          "nameZh": "英国广播公司",
+          "url": "https://www.bbc.com",
+          "descEn": "British news and stories.",
+          "descZh": "英国的新闻与报道。"
+        }
+      ]
+    },
+    {
+      "id": "social",
+      "nameZh": "社交与分享",
+      "items": [
+        {
+          "nameEn": "Facebook",
+          "nameZh": "脸书",
+          "url": "https://www.facebook.com",
+          "descEn": "Keep in touch with friends and family.",
+          "descZh": "和亲友保持联系。"
+        },
+        {
+          "nameEn": "Instagram",
+          "nameZh": "照片分享应用",
+          "url": "https://www.instagram.com",
+          "descEn": "Share photos with your friends.",
+          "descZh": "和朋友分享照片。"
+        }
+      ]
+    },
+    {
+      "id": "tools",
+      "nameZh": "邮件与翻译",
+      "items": [
+        {
+          "nameEn": "Gmail",
+          "nameZh": "谷歌邮箱",
+          "url": "https://mail.google.com",
+          "descEn": "Send and receive emails.",
+          "descZh": "收发电子邮件。"
+        },
+        {
+          "nameEn": "Google Translate",
+          "nameZh": "谷歌翻译",
+          "url": "https://translate.google.com",
+          "descEn": "Translate words and sentences.",
+          "descZh": "翻译单词和句子。"
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "nameZh": "餐饮与外卖",
+      "items": [
+        {
+          "nameEn": "DoorDash",
+          "nameZh": "美国外卖平台",
+          "url": "https://www.doordash.com",
+          "descEn": "Order food and get it delivered.",
+          "descZh": "点外卖，送到家门口。"
+        },
+        {
+          "nameEn": "Yelp",
+          "nameZh": "商家点评网站",
+          "url": "https://www.yelp.com",
+          "descEn": "Find restaurants and read reviews.",
+          "descZh": "找餐厅、看评价。"
+        }
+      ]
+    }
+  ]
+}
+

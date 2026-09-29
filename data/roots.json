@@ -1,0 +1,322 @@
+{
+  "categories": [
+    {
+      "id": "prefixes",
+      "nameZh": "前缀",
+      "items": [
+        {
+          "id": "dis",
+          "groupZh": "否定与相反",
+          "affix": "dis-",
+          "meaningZh": "否定、相反",
+          "examples": [
+            { "word": "disadvantage", "meaningZh": "缺点" },
+            { "word": "dislike", "meaningZh": "不喜欢" },
+            { "word": "disagree", "meaningZh": "不同意" }
+          ],
+          "sentenceEn": "This is a disadvantage.",
+          "sentenceZh": "这是一个缺点。"
+        },
+        {
+          "id": "un",
+          "groupZh": "否定与相反",
+          "affix": "un-",
+          "meaningZh": "不、没有",
+          "examples": [
+            { "word": "unhappy", "meaningZh": "不开心" },
+            { "word": "unable", "meaningZh": "不能的" },
+            { "word": "unknown", "meaningZh": "未知的" }
+          ],
+          "sentenceEn": "The answer is unknown.",
+          "sentenceZh": "答案还不知道。"
+        },
+        {
+          "id": "im",
+          "groupZh": "否定与相反",
+          "affix": "im-",
+          "meaningZh": "不、非（常加在 p、b、m 前）",
+          "examples": [
+            { "word": "impossible", "meaningZh": "不可能的" },
+            { "word": "impatient", "meaningZh": "不耐烦的" },
+            { "word": "impolite", "meaningZh": "不礼貌的" }
+          ],
+          "sentenceEn": "It is impossible to finish in one day.",
+          "sentenceZh": "一天之内完成是不可能的。"
+        },
+        {
+          "id": "ex",
+          "groupZh": "方向与位置",
+          "affix": "ex-",
+          "meaningZh": "向外、出去",
+          "examples": [
+            { "word": "exit", "meaningZh": "出口" },
+            { "word": "export", "meaningZh": "出口货物" },
+            { "word": "exclude", "meaningZh": "排除" }
+          ],
+          "sentenceEn": "Please use the exit door.",
+          "sentenceZh": "请走出口。"
+        },
+        {
+          "id": "sub",
+          "groupZh": "方向与位置",
+          "affix": "sub-",
+          "meaningZh": "在下面、次要的",
+          "examples": [
+            { "word": "subway", "meaningZh": "地铁" },
+            { "word": "submit", "meaningZh": "提交" },
+            { "word": "subtract", "meaningZh": "减去" }
+          ],
+          "sentenceEn": "We take the subway to work.",
+          "sentenceZh": "我们坐地铁去上班。"
+        },
+        {
+          "id": "pre",
+          "groupZh": "方向与位置",
+          "affix": "pre-",
+          "meaningZh": "在前面、事先",
+          "examples": [
+            { "word": "prepare", "meaningZh": "准备" },
+            { "word": "preview", "meaningZh": "预习、预告" },
+            { "word": "prevent", "meaningZh": "防止" }
+          ],
+          "sentenceEn": "I prepare breakfast at seven.",
+          "sentenceZh": "我七点准备早餐。"
+        },
+        {
+          "id": "re",
+          "groupZh": "重复与过度",
+          "affix": "re-",
+          "meaningZh": "再、重新",
+          "examples": [
+            { "word": "return", "meaningZh": "返回" },
+            { "word": "review", "meaningZh": "复习" },
+            { "word": "replay", "meaningZh": "重放" }
+          ],
+          "sentenceEn": "I review the words every day.",
+          "sentenceZh": "我每天复习这些单词。"
+        },
+        {
+          "id": "over",
+          "groupZh": "重复与过度",
+          "affix": "over-",
+          "meaningZh": "过度、在……之上",
+          "examples": [
+            { "word": "overwork", "meaningZh": "过度劳累" },
+            { "word": "overlook", "meaningZh": "忽略" },
+            { "word": "overnight", "meaningZh": "一夜之间" }
+          ],
+          "sentenceEn": "Do not overwork yourself.",
+          "sentenceZh": "别让自己太累。"
+        },
+        {
+          "id": "under",
+          "groupZh": "重复与过度",
+          "affix": "under-",
+          "meaningZh": "不足、在……下面",
+          "examples": [
+            { "word": "understand", "meaningZh": "理解" },
+            { "word": "underestimate", "meaningZh": "低估" },
+            { "word": "underwater", "meaningZh": "水下的" }
+          ],
+          "sentenceEn": "I do not understand the question.",
+          "sentenceZh": "我不明白这个问题。"
+        }
+      ]
+    },
+    {
+      "id": "suffixes",
+      "nameZh": "后缀",
+      "items": [
+        {
+          "id": "er",
+          "groupZh": "做……的人",
+          "affix": "-er",
+          "meaningZh": "……的人、……的东西",
+          "examples": [
+            { "word": "teacher", "meaningZh": "老师" },
+            { "word": "worker", "meaningZh": "工人" },
+            { "word": "farmer", "meaningZh": "农民" }
+          ],
+          "sentenceEn": "My sister is a teacher.",
+          "sentenceZh": "我姐姐是老师。"
+        },
+        {
+          "id": "or",
+          "groupZh": "做……的人",
+          "affix": "-or",
+          "meaningZh": "……者、……的人",
+          "examples": [
+            { "word": "actor", "meaningZh": "演员" },
+            { "word": "visitor", "meaningZh": "访客" },
+            { "word": "doctor", "meaningZh": "医生" }
+          ],
+          "sentenceEn": "The doctor is very kind.",
+          "sentenceZh": "这位医生很和蔼。"
+        },
+        {
+          "id": "ful",
+          "groupZh": "形容词：……的",
+          "affix": "-ful",
+          "meaningZh": "充满……的",
+          "examples": [
+            { "word": "helpful", "meaningZh": "有帮助的" },
+            { "word": "careful", "meaningZh": "小心的" },
+            { "word": "beautiful", "meaningZh": "美丽的" }
+          ],
+          "sentenceEn": "She is a beautiful girl.",
+          "sentenceZh": "她是个漂亮的女孩。"
+        },
+        {
+          "id": "less",
+          "groupZh": "形容词：……的",
+          "affix": "-less",
+          "meaningZh": "没有……的",
+          "examples": [
+            { "word": "careless", "meaningZh": "粗心的" },
+            { "word": "homeless", "meaningZh": "无家可归的" },
+            { "word": "hopeless", "meaningZh": "没有希望的" }
+          ],
+          "sentenceEn": "Be careful and do not be careless.",
+          "sentenceZh": "小心一点，不要粗心。"
+        },
+        {
+          "id": "able",
+          "groupZh": "形容词：……的",
+          "affix": "-able",
+          "meaningZh": "能……的、适合……的",
+          "examples": [
+            { "word": "readable", "meaningZh": "易读的" },
+            { "word": "comfortable", "meaningZh": "舒适的" },
+            { "word": "usable", "meaningZh": "可用的" }
+          ],
+          "sentenceEn": "This chair is very comfortable.",
+          "sentenceZh": "这把椅子很舒服。"
+        },
+        {
+          "id": "ness",
+          "groupZh": "名词：性质与状态",
+          "affix": "-ness",
+          "meaningZh": "性质、状态",
+          "examples": [
+            { "word": "kindness", "meaningZh": "善良" },
+            { "word": "happiness", "meaningZh": "快乐" },
+            { "word": "weakness", "meaningZh": "弱点" }
+          ],
+          "sentenceEn": "Kindness is important.",
+          "sentenceZh": "善良很重要。"
+        },
+        {
+          "id": "ment",
+          "groupZh": "名词：性质与状态",
+          "affix": "-ment",
+          "meaningZh": "动作的结果、状态",
+          "examples": [
+            { "word": "movement", "meaningZh": "运动" },
+            { "word": "development", "meaningZh": "发展" },
+            { "word": "agreement", "meaningZh": "同意" }
+          ],
+          "sentenceEn": "They reached an agreement.",
+          "sentenceZh": "他们达成了一致。"
+        },
+        {
+          "id": "tion",
+          "groupZh": "名词：性质与状态",
+          "affix": "-tion",
+          "meaningZh": "动作、过程",
+          "examples": [
+            { "word": "education", "meaningZh": "教育" },
+            { "word": "information", "meaningZh": "信息" },
+            { "word": "invitation", "meaningZh": "邀请" }
+          ],
+          "sentenceEn": "Thank you for your invitation.",
+          "sentenceZh": "谢谢你的邀请。"
+        }
+      ]
+    },
+    {
+      "id": "roots",
+      "nameZh": "词根",
+      "items": [
+        {
+          "id": "spect",
+          "groupZh": "看",
+          "affix": "spect",
+          "meaningZh": "看",
+          "examples": [
+            { "word": "inspect", "meaningZh": "检查" },
+            { "word": "respect", "meaningZh": "尊重" },
+            { "word": "spectator", "meaningZh": "观众" }
+          ],
+          "sentenceEn": "Inspect means to look carefully.",
+          "sentenceZh": "inspect 表示仔细看。"
+        },
+        {
+          "id": "vis",
+          "groupZh": "看",
+          "affix": "vis / vid",
+          "meaningZh": "看见",
+          "examples": [
+            { "word": "visit", "meaningZh": "拜访" },
+            { "word": "video", "meaningZh": "视频" },
+            { "word": "visible", "meaningZh": "可见的" }
+          ],
+          "sentenceEn": "The stars are visible tonight.",
+          "sentenceZh": "今晚能看见星星。"
+        },
+        {
+          "id": "dict",
+          "groupZh": "说与写",
+          "affix": "dict",
+          "meaningZh": "说",
+          "examples": [
+            { "word": "dictionary", "meaningZh": "词典" },
+            { "word": "predict", "meaningZh": "预测" },
+            { "word": "dictate", "meaningZh": "口述、听写" }
+          ],
+          "sentenceEn": "The teacher dictates one word.",
+          "sentenceZh": "老师让我们听写一个单词。"
+        },
+        {
+          "id": "scribe",
+          "groupZh": "说与写",
+          "affix": "scribe",
+          "meaningZh": "写",
+          "examples": [
+            { "word": "describe", "meaningZh": "描述" },
+            { "word": "subscribe", "meaningZh": "订阅" },
+            { "word": "prescription", "meaningZh": "处方" }
+          ],
+          "sentenceEn": "The doctor writes a prescription.",
+          "sentenceZh": "医生开了一张处方。"
+        },
+        {
+          "id": "duct",
+          "groupZh": "行进与引导",
+          "affix": "duct / duc",
+          "meaningZh": "引导、带来",
+          "examples": [
+            { "word": "conduct", "meaningZh": "指挥、进行" },
+            { "word": "produce", "meaningZh": "生产" },
+            { "word": "educate", "meaningZh": "教育" }
+          ],
+          "sentenceEn": "Schools educate children.",
+          "sentenceZh": "学校教育孩子。"
+        },
+        {
+          "id": "cede",
+          "groupZh": "行进与引导",
+          "affix": "cede / cess",
+          "meaningZh": "走、让步",
+          "examples": [
+            { "word": "process", "meaningZh": "过程" },
+            { "word": "succeed", "meaningZh": "成功" },
+            { "word": "exceed", "meaningZh": "超过" }
+          ],
+          "sentenceEn": "Practice helps you succeed.",
+          "sentenceZh": "练习能帮你成功。"
+        }
+      ]
+    }
+  ]
+}
+

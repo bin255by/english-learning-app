@@ -1,0 +1,43 @@
+{
+  "name": "轻轻学英语 · English Learning for Beginners",
+  "short_name": "轻轻学英语",
+  "description": "面向中国中年英语初学者：所有英文都能点击朗读，中文不朗读。",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "id": "./index.html",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait",
+  "background_color": "#FAFAFA",
+  "theme_color": "#2EAFA0",
+  "categories": ["education", "books"],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    { "name": "词根词缀", "short_name": "词根", "url": "./index.html#/roots", "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "场景对话", "short_name": "对话", "url": "./index.html#/dialogues", "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "主题单词", "short_name": "单词", "url": "./index.html#/vocabulary", "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "常用网站", "short_name": "网站", "url": "./index.html#/websites", "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }] }
+  ],
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

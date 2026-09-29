@@ -1,0 +1,104 @@
+/* ==========================================================================
+   home.css — 首页样式（含“朗读测试区”，测试区在内容阶段会移除）
+   ========================================================================== */
+
+/* ==========================================================================
+   首页卡片轮播（Swiper 11）
+   注意：本文件的 <link> 在 Swiper 官方 CSS 之后加载，所以这里的覆盖生效
+   ========================================================================== */
+.home-swiper { padding: 4px 2px 6px; }
+.home-swiper .swiper-slide { height: auto; }
+
+.home-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  min-height: 188px;
+  padding: 20px;
+  text-align: left;
+  background: linear-gradient(155deg, #FFFFFF 0%, #F6FBFA 100%);
+  border: 1px solid #E4EFEC;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-1);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.home-card:active { transform: scale(.985); }
+.home-card.is-speaking {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(46, 175, 160, .22), var(--shadow-2);
+  animation: pulse 1.4s ease-in-out infinite;
+}
+.home-card__top { display: flex; align-items: center; gap: 8px; }
+.home-card__emoji { font-size: 26px; line-height: 1; }
+.home-card__type {
+  padding: 3px 10px;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--brand-dark);
+  background: var(--brand-soft);
+  border-radius: var(--radius-pill);
+}
+.home-card__en {
+  font-family: var(--font-en);
+  font-size: var(--fs-en-lg);
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--text);
+  text-decoration: underline dotted rgba(46, 175, 160, .55);
+  text-underline-offset: 4px;
+}
+.home-card__zh { font-size: var(--fs-body); color: var(--text-2); }
+.home-card__desc-en {
+  font-family: var(--font-en);
+  font-size: 19px;
+  line-height: 1.55;
+  color: #40504D;
+  text-decoration: underline dotted rgba(46, 175, 160, .45);
+  text-underline-offset: 4px;
+}
+.home-card__desc-zh { font-size: var(--fs-sm); color: var(--text-2); }
+.home-card__go {
+  margin-top: auto;
+  padding-top: 10px;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--brand-dark);
+}
+
+/* 圆点指示器（跟随品牌色）
+   视觉仍是 8px 小圆点，但用 18px padding 把可点区域撑到 44×44（content-box） */
+.home-cards .swiper-pagination { position: static; margin-top: 4px; text-align: center; }
+.home-cards .swiper-pagination-bullet {
+  box-sizing: content-box;
+  width: 8px;
+  height: 8px;
+  padding: 18px;
+  margin: 0 1px;
+  opacity: 1;
+  background-clip: content-box;
+  background-color: #CBD9D6;
+  border: 0;
+  border-radius: 999px;
+  transition: width .2s ease, background-color .2s ease;
+}
+.home-cards .swiper-pagination-bullet-active { width: 20px; background-color: var(--brand); }
+.home-cards__hint {
+  margin-top: 8px;
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+  color: var(--text-3);
+  text-align: center;
+}
+
+/* 降级方案：Swiper 没加载成功时，改成横向滚动 + scroll-snap */
+.swiper--fallback { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.swiper--fallback .swiper-wrapper {
+  display: flex;
+  gap: 12px;
+  transform: none !important;
+  transition: none !important;
+  scroll-snap-type: x mandatory;
+}
+.swiper--fallback .swiper-slide { flex: 0 0 100%; scroll-snap-align: center; }
+

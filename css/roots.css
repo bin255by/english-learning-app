@@ -1,0 +1,98 @@
+/* ==========================================================================
+   roots.css — 词根词缀页
+   结构：页头 → 分类快速跳转（前缀/后缀/词根）→ 分类 → 语义分组 → 词缀卡片
+   所有英文（词缀 / 例词 / 例句 / 分类英文名）都可点击朗读
+   ========================================================================== */
+
+/* 顶部分类快速跳转 */
+.roots-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.roots-nav__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: var(--tap);              /* 触控目标 ≥44px */
+  padding: 0 16px;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--brand-dark);
+  background: var(--brand-soft);
+  border: 1px solid #CDEBE6;
+  border-radius: var(--radius-pill);
+  transition: transform .15s ease, background .18s ease;
+}
+.roots-nav__chip:active { transform: scale(.96); background: #D7F0EC; }
+.roots-nav__count { font-size: var(--fs-xs); font-weight: 500; color: var(--text-3); }
+
+/* 分类区块：滚动时留出固定头部的位置 */
+.roots-category { scroll-margin-top: 184px; margin-bottom: 26px; }
+.roots-category__head { display: flex; align-items: baseline; gap: 8px; margin-bottom: 14px; }
+.roots-category__title { font-size: var(--fs-h2); font-weight: 700; }
+.roots-category__title-en { font-family: var(--font-en); font-size: var(--fs-sm); color: var(--text-3); }
+.roots-category__count { margin-left: auto; font-size: var(--fs-xs); color: var(--text-3); }
+
+/* 语义分组标题：用辅助色区分层次（不按字母顺序） */
+.roots-group { margin-bottom: 18px; }
+.roots-group__head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.roots-group__title {
+  flex: 0 0 auto;
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--accent);
+}
+.roots-group__line { flex: 1 1 auto; height: 1px; background: var(--border); }
+
+/* 词缀卡片 */
+.affix-card { scroll-margin-top: 184px; }
+.affix-card__top { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.affix-card__affix {
+  font-family: var(--font-en);
+  font-size: var(--fs-en-lg);
+  font-weight: 700;
+  color: var(--brand-dark);
+}
+.affix-card__meaning { font-size: var(--fs-body); color: var(--text-2); }
+
+/* 例词：2-3 个，等宽自适应换行 */
+.affix-card__words {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+.word-chip { display: flex; flex-direction: column; gap: 3px; }
+.word-chip__en {
+  display: flex;
+  align-items: center;
+  min-height: var(--tap);
+  padding: 0 12px;
+  font-family: var(--font-en);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  text-align: left;
+  transition: background .18s ease, color .18s ease;
+}
+.word-chip__en:active { background: var(--brand-soft); color: var(--brand-dark); }
+.word-chip__zh { padding-left: 2px; font-size: var(--fs-sm); color: var(--text-2); }
+
+/* 例句 */
+.affix-card__sentence {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+}
+.affix-card__sentence-en {
+  font-family: var(--font-en);
+  font-size: var(--fs-en-lg);
+  line-height: 1.5;
+}
+.affix-card__sentence-zh { margin-top: 4px; font-size: var(--fs-sm); color: var(--text-2); }
+.affix-card__foot { display: flex; justify-content: flex-end; margin-top: 10px; }
+
+/* 窄屏（<360px）：例词改单列，避免文字挤压 */
+@media (max-width: 359px) {
+  .affix-card__words { grid-template-columns: 1fr; }
+}

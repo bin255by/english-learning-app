@@ -1,0 +1,130 @@
+/* ==========================================================================
+   vocabulary.css — 主题单词页
+   结构：页头 → 可横向滑动的分类条（17 个分类）→ 当前分类的单词卡片
+   分类切换只重绘下方内容；带 wikiTitle 的单词会显示维基摘要 + 阅读全文
+   ========================================================================== */
+
+/* ---------- 分类条：横向滑动，不换行，避免占满好几行 ---------- */
+.vocab-strip {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding-bottom: 4px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;                 /* Firefox 隐藏滚动条 */
+  scroll-snap-type: x proximity;
+}
+.vocab-strip::-webkit-scrollbar { display: none; }
+
+.vocab-strip__chip {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: var(--tap);                /* ≥44px */
+  padding: 0 14px;
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  scroll-snap-align: start;
+  transition: transform .15s ease, background .18s ease, color .18s ease, border-color .18s ease;
+}
+.vocab-strip__chip:active { transform: scale(.96); }
+.vocab-strip__chip.is-active {
+  color: #fff;
+  background: var(--brand-ink);
+  border-color: var(--brand-ink);
+  font-weight: 700;
+}
+.vocab-strip__count { font-size: var(--fs-xs); opacity: .75; }
+
+/* ---------- 当前分类 ---------- */
+.vocab-category { scroll-margin-top: 190px; }
+.vocab-category__head { display: flex; align-items: baseline; gap: 8px; margin-bottom: 12px; }
+.vocab-category__title { font-size: var(--fs-h2); font-weight: 700; }
+.vocab-category__title-en { font-family: var(--font-en); font-size: var(--fs-sm); color: var(--text-3); }
+.vocab-category__count { margin-left: auto; font-size: var(--fs-xs); color: var(--text-3); }
+
+/* ---------- 单词卡片 ---------- */
+.vocab-grid { display: flex; flex-direction: column; gap: 12px; }
+.word-card { margin-bottom: 0; }          /* 卡片间距由 grid 控制 */
+
+.word-card__top { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.word-card__en {
+  font-family: var(--font-en);
+  font-size: var(--fs-en-lg);
+  font-weight: 700;
+  color: var(--text);
+}
+.word-card__abbr {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 2px 10px;
+  font-family: var(--font-en);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: var(--radius-pill);
+}
+.word-card__zh { font-size: var(--fs-body); color: var(--text-2); }
+
+.word-card__example {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border);
+}
+.word-card__example-en {
+  font-family: var(--font-en);
+  font-size: 19px;
+  line-height: 1.55;
+}
+.word-card__example-zh { margin-top: 4px; font-size: var(--fs-sm); color: var(--text-2); }
+
+/* ---------- 维基百科摘要（节日分类） ---------- */
+.wiki { margin-top: 12px; }
+.wiki__title { margin-bottom: 6px; font-size: var(--fs-sm); font-weight: 700; color: var(--text-2); }
+.wiki__extract {
+  padding: 12px 14px;
+  font-family: var(--font-en);
+  font-size: 18px;
+  line-height: 1.65;
+  color: #40504D;
+  background: #F6F9F8;
+  border-left: 3px solid var(--brand);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.wiki__loading {
+  padding: 12px 14px;
+  font-size: var(--fs-sm);
+  color: var(--text-3);
+  background: #F6F9F8;
+  border-radius: var(--radius-sm);
+}
+.wiki__foot { display: flex; align-items: center; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+.wiki__note { font-size: var(--fs-xs); color: var(--text-3); }
+.wiki__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: var(--tap);                /* ≥44px */
+  padding: 0 14px;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid #D5E6F7;
+  border-radius: var(--radius-pill);
+}
+.wiki__link:active { background: #DFEDFB; }
+
+/* 骨架屏（摘要加载中） */
+.wiki__skeleton {
+  height: 64px;
+  border-radius: var(--radius-sm);
+}

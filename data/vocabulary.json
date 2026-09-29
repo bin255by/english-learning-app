@@ -1,0 +1,210 @@
+{
+  "categories": [
+    {
+      "id": "months",
+      "nameEn": "Months",
+      "nameZh": "月份",
+      "items": [
+        { "en": "January", "zh": "一月", "abbr": "Jan.", "exampleEn": "My birthday is in January.", "exampleZh": "我的生日在一月。" },
+        { "en": "February", "zh": "二月", "abbr": "Feb.", "exampleEn": "February is the shortest month.", "exampleZh": "二月是一年中最短的月份。" },
+        { "en": "March", "zh": "三月", "abbr": "Mar.", "exampleEn": "We plant trees in March.", "exampleZh": "我们在三月植树。" },
+        { "en": "April", "zh": "四月", "abbr": "Apr.", "exampleEn": "It rains a lot in April.", "exampleZh": "四月经常下雨。" },
+        { "en": "May", "zh": "五月", "abbr": "May", "exampleEn": "May is my favorite month.", "exampleZh": "五月是我最喜欢的月份。" },
+        { "en": "June", "zh": "六月", "abbr": "Jun.", "exampleEn": "School ends in June.", "exampleZh": "学校六月放假。" },
+        { "en": "July", "zh": "七月", "abbr": "Jul.", "exampleEn": "We have a barbecue in July.", "exampleZh": "我们七月吃烧烤。" },
+        { "en": "August", "zh": "八月", "abbr": "Aug.", "exampleEn": "August is very hot.", "exampleZh": "八月很热。" },
+        { "en": "September", "zh": "九月", "abbr": "Sep.", "exampleEn": "School starts in September.", "exampleZh": "九月开学。" },
+        { "en": "October", "zh": "十月", "abbr": "Oct.", "exampleEn": "October is my birthday month.", "exampleZh": "十月是我的生日月。" },
+        { "en": "November", "zh": "十一月", "abbr": "Nov.", "exampleEn": "Thanksgiving is in November.", "exampleZh": "感恩节在十一月。" },
+        { "en": "December", "zh": "十二月", "abbr": "Dec.", "exampleEn": "Christmas is in December.", "exampleZh": "圣诞节在十二月。" }
+      ]
+    },
+    {
+      "id": "weekdays",
+      "nameEn": "Weekdays",
+      "nameZh": "星期",
+      "items": [
+        { "en": "Monday", "zh": "周一", "abbr": "Mon.", "exampleEn": "I go to work on Monday.", "exampleZh": "我周一上班。" },
+        { "en": "Tuesday", "zh": "周二", "abbr": "Tue.", "exampleEn": "We have a meeting on Tuesday.", "exampleZh": "我们周二开会。" },
+        { "en": "Wednesday", "zh": "周三", "abbr": "Wed.", "exampleEn": "Wednesday is the middle of the week.", "exampleZh": "周三是一周的中间。" },
+        { "en": "Thursday", "zh": "周四", "abbr": "Thu.", "exampleEn": "I play basketball on Thursday.", "exampleZh": "我周四打篮球。" },
+        { "en": "Friday", "zh": "周五", "abbr": "Fri.", "exampleEn": "Friday is my favorite day.", "exampleZh": "周五是我最喜欢的一天。" },
+        { "en": "Saturday", "zh": "周六", "abbr": "Sat.", "exampleEn": "We clean the house on Saturday.", "exampleZh": "我们周六打扫房子。" },
+        { "en": "Sunday", "zh": "周日", "abbr": "Sun.", "exampleEn": "We visit my parents on Sunday.", "exampleZh": "我们周日看望父母。" }
+      ]
+    },
+    {
+      "id": "numbers",
+      "nameEn": "Numbers",
+      "nameZh": "数字",
+      "items": [
+        { "en": "one", "zh": "一", "exampleEn": "I have one brother.", "exampleZh": "我有一个兄弟。" },
+        { "en": "two", "zh": "二", "exampleEn": "There are two cats.", "exampleZh": "有两只猫。" },
+        { "en": "three", "zh": "三", "exampleEn": "Three plus two is five.", "exampleZh": "三加二等于五。" },
+        { "en": "four", "zh": "四", "exampleEn": "The table has four legs.", "exampleZh": "这张桌子有四条腿。" },
+        { "en": "five", "zh": "五", "exampleEn": "Five minutes, please.", "exampleZh": "请给我五分钟。" },
+        { "en": "six", "zh": "六", "exampleEn": "We have six eggs.", "exampleZh": "我们有六个鸡蛋。" },
+        { "en": "seven", "zh": "七", "exampleEn": "A week has seven days.", "exampleZh": "一周有七天。" },
+        { "en": "eight", "zh": "八", "exampleEn": "I get up at eight.", "exampleZh": "我八点起床。" },
+        { "en": "nine", "zh": "九", "exampleEn": "Nine people are waiting.", "exampleZh": "有九个人在等。" },
+        { "en": "ten", "zh": "十", "exampleEn": "Ten dollars, please.", "exampleZh": "请给我十美元。" }
+      ]
+    },
+    {
+      "id": "animals",
+      "nameEn": "Animals",
+      "nameZh": "动物",
+      "items": [
+        { "en": "cat", "zh": "猫", "exampleEn": "I have a cat.", "exampleZh": "我养了一只猫。" },
+        { "en": "dog", "zh": "狗", "exampleEn": "The dog is very friendly.", "exampleZh": "这只狗很友好。" },
+        { "en": "bird", "zh": "鸟", "exampleEn": "A bird is singing in the tree.", "exampleZh": "一只鸟在树上唱歌。" },
+        { "en": "fish", "zh": "鱼", "exampleEn": "We eat fish on Friday.", "exampleZh": "我们周五吃鱼。" }
+      ]
+    },
+    {
+      "id": "food",
+      "nameEn": "Food",
+      "nameZh": "常见食物",
+      "items": [
+        { "en": "rice", "zh": "米饭", "exampleEn": "I eat rice for lunch.", "exampleZh": "我午饭吃米饭。" },
+        { "en": "bread", "zh": "面包", "exampleEn": "Please buy some bread.", "exampleZh": "请买点面包。" },
+        { "en": "egg", "zh": "鸡蛋", "exampleEn": "I eat an egg every morning.", "exampleZh": "我每天早上吃一个鸡蛋。" },
+        { "en": "apple", "zh": "苹果", "exampleEn": "She eats an apple every day.", "exampleZh": "她每天吃一个苹果。" }
+      ]
+    },
+    {
+      "id": "holidays",
+      "nameEn": "Holidays",
+      "nameZh": "节日",
+      "items": [
+        { "en": "Christmas", "zh": "圣诞节", "wikiTitle": "Christmas", "exampleEn": "We put up a tree at Christmas.", "exampleZh": "我们在圣诞节摆圣诞树。" },
+        { "en": "Thanksgiving", "zh": "感恩节", "wikiTitle": "Thanksgiving", "exampleEn": "Thanksgiving is in November.", "exampleZh": "感恩节在十一月。" },
+        { "en": "Halloween", "zh": "万圣节", "wikiTitle": "Halloween", "exampleEn": "Children dress up on Halloween.", "exampleZh": "孩子们在万圣节变装。" },
+        { "en": "Independence Day", "zh": "美国独立日", "wikiTitle": "Independence Day (United States)", "exampleEn": "We watch fireworks on Independence Day.", "exampleZh": "我们在独立日看烟花。" },
+        { "en": "Valentine's Day", "zh": "情人节", "wikiTitle": "Valentine's Day", "exampleEn": "People give cards on Valentine's Day.", "exampleZh": "人们在情人节送卡片。" }
+      ]
+    },
+    {
+      "id": "colors",
+      "nameEn": "Colors",
+      "nameZh": "颜色",
+      "items": [
+        { "en": "red", "zh": "红色", "exampleEn": "She likes red clothes.", "exampleZh": "她喜欢红色的衣服。" },
+        { "en": "blue", "zh": "蓝色", "exampleEn": "The sky is blue.", "exampleZh": "天空是蓝色的。" },
+        { "en": "green", "zh": "绿色", "exampleEn": "Green means go.", "exampleZh": "绿灯表示通行。" },
+        { "en": "yellow", "zh": "黄色", "exampleEn": "Be careful when the light turns yellow.", "exampleZh": "黄灯亮时要小心。" }
+      ]
+    },
+    {
+      "id": "family",
+      "nameEn": "Family",
+      "nameZh": "家庭称谓",
+      "items": [
+        { "en": "father", "zh": "父亲", "exampleEn": "My father is a worker.", "exampleZh": "我父亲是工人。" },
+        { "en": "mother", "zh": "母亲", "exampleEn": "My mother cooks dinner.", "exampleZh": "我母亲做晚饭。" },
+        { "en": "brother", "zh": "兄弟", "exampleEn": "I have one older brother.", "exampleZh": "我有一个哥哥。" },
+        { "en": "sister", "zh": "姐妹", "exampleEn": "My sister lives in Beijing.", "exampleZh": "我姐姐住在北京。" }
+      ]
+    },
+    {
+      "id": "weather",
+      "nameEn": "Weather",
+      "nameZh": "天气",
+      "items": [
+        { "en": "sunny", "zh": "晴朗的", "exampleEn": "It is sunny today.", "exampleZh": "今天是晴天。" },
+        { "en": "rainy", "zh": "下雨的", "exampleEn": "Take an umbrella on rainy days.", "exampleZh": "下雨天带把伞。" },
+        { "en": "cloudy", "zh": "多云的", "exampleEn": "The sky is cloudy today.", "exampleZh": "今天天空多云。" },
+        { "en": "windy", "zh": "有风的", "exampleEn": "It is windy outside.", "exampleZh": "外面风很大。" }
+      ]
+    },
+    {
+      "id": "body",
+      "nameEn": "Body",
+      "nameZh": "身体部位",
+      "items": [
+        { "en": "head", "zh": "头", "exampleEn": "My head hurts.", "exampleZh": "我头疼。" },
+        { "en": "hand", "zh": "手", "exampleEn": "Wash your hands before dinner.", "exampleZh": "饭前洗手。" },
+        { "en": "foot", "zh": "脚", "exampleEn": "My foot hurts.", "exampleZh": "我的脚疼。" },
+        { "en": "mouth", "zh": "嘴", "exampleEn": "Open your mouth, please.", "exampleZh": "请张开嘴。" }
+      ]
+    },
+    {
+      "id": "transport",
+      "nameEn": "Transportation",
+      "nameZh": "交通工具",
+      "items": [
+        { "en": "car", "zh": "汽车", "exampleEn": "We drive a car to work.", "exampleZh": "我们开车去上班。" },
+        { "en": "bus", "zh": "公交车", "exampleEn": "I take the bus to work.", "exampleZh": "我坐公交车上班。" },
+        { "en": "train", "zh": "火车", "exampleEn": "The train is on time.", "exampleZh": "火车准点到达。" },
+        { "en": "subway", "zh": "地铁", "exampleEn": "The subway is very fast.", "exampleZh": "地铁非常快。" }
+      ]
+    },
+    {
+      "id": "clothing",
+      "nameEn": "Clothing",
+      "nameZh": "衣着",
+      "items": [
+        { "en": "shirt", "zh": "衬衫", "exampleEn": "He wears a white shirt.", "exampleZh": "他穿一件白衬衫。" },
+        { "en": "pants", "zh": "裤子", "exampleEn": "These pants are too long.", "exampleZh": "这条裤子太长了。" },
+        { "en": "dress", "zh": "连衣裙", "exampleEn": "She wears a red dress.", "exampleZh": "她穿一条红色连衣裙。" },
+        { "en": "coat", "zh": "外套", "exampleEn": "Put on your coat.", "exampleZh": "穿上你的外套。" }
+      ]
+    },
+    {
+      "id": "home",
+      "nameEn": "Home",
+      "nameZh": "家居",
+      "items": [
+        { "en": "table", "zh": "桌子", "exampleEn": "Put the book on the table.", "exampleZh": "把书放在桌上。" },
+        { "en": "chair", "zh": "椅子", "exampleEn": "Please sit on this chair.", "exampleZh": "请坐这把椅子。" },
+        { "en": "bed", "zh": "床", "exampleEn": "I go to bed at ten.", "exampleZh": "我十点上床睡觉。" },
+        { "en": "door", "zh": "门", "exampleEn": "Close the door, please.", "exampleZh": "请关上门。" }
+      ]
+    },
+    {
+      "id": "us-measures",
+      "nameEn": "U.S. Measures",
+      "nameZh": "美国度量单位",
+      "items": [
+        { "en": "mile", "zh": "英里", "exampleEn": "One mile is about 1.6 kilometers.", "exampleZh": "一英里大约等于 1.6 公里。" },
+        { "en": "pound", "zh": "磅", "exampleEn": "He weighs 150 pounds.", "exampleZh": "他体重 150 磅。" },
+        { "en": "gallon", "zh": "加仑", "exampleEn": "We buy a gallon of milk.", "exampleZh": "我们买一加仑牛奶。" },
+        { "en": "inch", "zh": "英寸", "exampleEn": "This screen is fifteen inches.", "exampleZh": "这块屏幕是 15 英寸。" }
+      ]
+    },
+    {
+      "id": "dollars",
+      "nameEn": "U.S. Money",
+      "nameZh": "美元",
+      "items": [
+        { "en": "dollar", "zh": "美元", "exampleEn": "This book costs ten dollars.", "exampleZh": "这本书十美元。" },
+        { "en": "cent", "zh": "美分", "exampleEn": "It costs fifty cents.", "exampleZh": "这个值五十美分。" },
+        { "en": "quarter", "zh": "25 美分硬币", "abbr": "25¢", "exampleEn": "A quarter is twenty-five cents.", "exampleZh": "一枚 25 美分硬币等于 25 美分。" },
+        { "en": "dime", "zh": "10 美分硬币", "abbr": "10¢", "exampleEn": "A dime is ten cents.", "exampleZh": "一枚 10 美分硬币等于 10 美分。" }
+      ]
+    },
+    {
+      "id": "states",
+      "nameEn": "State Abbreviations",
+      "nameZh": "州名缩写",
+      "items": [
+        { "en": "California", "zh": "加利福尼亚州", "abbr": "CA", "exampleEn": "Many tech companies are in California.", "exampleZh": "很多科技公司在加州。" },
+        { "en": "New York", "zh": "纽约州", "abbr": "NY", "exampleEn": "I want to visit New York.", "exampleZh": "我想去纽约看看。" },
+        { "en": "Texas", "zh": "德克萨斯州", "abbr": "TX", "exampleEn": "Texas is very big.", "exampleZh": "德克萨斯州很大。" },
+        { "en": "Florida", "zh": "佛罗里达州", "abbr": "FL", "exampleEn": "Florida is warm in winter.", "exampleZh": "佛罗里达州冬天很暖和。" }
+      ]
+    },
+    {
+      "id": "brands",
+      "nameEn": "Common Brands",
+      "nameZh": "常见品牌",
+      "items": [
+        { "en": "Google", "zh": "谷歌", "exampleEn": "I search on Google every day.", "exampleZh": "我每天用谷歌搜索。" },
+        { "en": "Amazon", "zh": "亚马逊", "exampleEn": "I shop on Amazon.", "exampleZh": "我在亚马逊购物。" },
+        { "en": "Walmart", "zh": "沃尔玛", "exampleEn": "We buy food at Walmart.", "exampleZh": "我们在沃尔玛买食物。" },
+        { "en": "Apple", "zh": "苹果公司", "exampleEn": "I use an Apple phone.", "exampleZh": "我用苹果手机。" }
+      ]
+    }
+  ]
+}
+

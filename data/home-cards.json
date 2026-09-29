@@ -1,0 +1,58 @@
+[
+  {
+    "id": "card-spect",
+    "type": "root",
+    "emoji": "🧩",
+    "titleEn": "spect = to look",
+    "titleZh": "词根 spect：看",
+    "descEn": "Inspect means to look carefully.",
+    "descZh": "inspect 表示仔细看。",
+    "targetTab": "roots",
+    "targetId": "spect"
+  },
+  {
+    "id": "card-small-talk",
+    "type": "dialogue",
+    "emoji": "💬",
+    "titleEn": "How's it going?",
+    "titleZh": "日常寒暄怎么说",
+    "descEn": "A friendly way to say hello in America.",
+    "descZh": "美国人常用的打招呼方式。",
+    "targetTab": "dialogues",
+    "targetId": "small-talk"
+  },
+  {
+    "id": "card-months",
+    "type": "vocabulary",
+    "emoji": "📅",
+    "titleEn": "January, February, March",
+    "titleZh": "月份要先记牢",
+    "descEn": "My birthday is in January.",
+    "descZh": "我的生日在一月。",
+    "targetTab": "vocabulary",
+    "targetId": "months"
+  },
+  {
+    "id": "card-us-mile",
+    "type": "tip",
+    "emoji": "🇺🇸",
+    "titleEn": "One mile is about 1.6 kilometers.",
+    "titleZh": "美国生活贴士：距离用英里",
+    "descEn": "In America, distance is usually measured in miles.",
+    "descZh": "在美国，距离一般用英里算。",
+    "targetTab": "vocabulary",
+    "targetId": "us-measures"
+  },
+  {
+    "id": "card-google",
+    "type": "website",
+    "emoji": "🌐",
+    "titleEn": "Google helps you find anything.",
+    "titleZh": "常用网站：Google",
+    "descEn": "When you do not know a word, just search it.",
+    "descZh": "遇到不认识的词，搜一下就好。",
+    "targetTab": "websites",
+    "targetId": "search"
+  }
+]
+

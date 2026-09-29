@@ -1,0 +1,242 @@
+{
+  "scenes": [
+    {
+      "id": "small-talk",
+      "titleEn": "Small Talk",
+      "titleZh": "闲聊",
+      "descZh": "美国人日常寒暄常用表达。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "How's it going?",
+          "zh": "最近怎么样？",
+          "keyExpressions": [
+            { "en": "How's it going?", "zh": "最近怎么样？" },
+            { "en": "Not bad.", "zh": "还不错。" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Not bad. How about you?",
+          "zh": "还不错。你呢？",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "I'm doing great, thanks.",
+          "zh": "我挺好的，谢谢。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "B",
+          "en": "Great. See you around!",
+          "zh": "很好，回头见！",
+          "keyExpressions": []
+        }
+      ],
+      "tipsZh": [
+        "美国人常用 How's it going 代替 How are you。",
+        "回答 Pretty good. 或 Not bad. 就可以，不用真的描述近况。"
+      ]
+    },
+    {
+      "id": "greetings",
+      "titleEn": "Greetings",
+      "titleZh": "日常打招呼",
+      "descZh": "见面和告别时最常用的几句话。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "Good morning!",
+          "zh": "早上好！",
+          "keyExpressions": [
+            { "en": "Good morning!", "zh": "早上好！" },
+            { "en": "How have you been?", "zh": "你最近好吗？" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Morning! How have you been?",
+          "zh": "早上好！你最近好吗？",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "I've been busy, but I'm fine.",
+          "zh": "最近挺忙，不过我还好。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "B",
+          "en": "Take care!",
+          "zh": "保重！",
+          "keyExpressions": [
+            { "en": "Take care!", "zh": "保重！" }
+          ]
+        }
+      ],
+      "tipsZh": [
+        "在电梯、商店里，美国人常跟陌生人打招呼，回一句 Morning 就好。",
+        "Take care 表示“保重”，离开时说很自然。"
+      ]
+    },
+    {
+      "id": "shopping",
+      "titleEn": "Shopping",
+      "titleZh": "购物",
+      "descZh": "在美国超市或商店买东西时的常用句。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "Excuse me, where is the milk?",
+          "zh": "打扰一下，牛奶在哪里？",
+          "keyExpressions": [
+            { "en": "Excuse me, where is ...", "zh": "打扰一下，……在哪里？" },
+            { "en": "How much is this?", "zh": "这个多少钱？" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "The milk is in aisle four.",
+          "zh": "牛奶在第 4 号通道。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "How much is this?",
+          "zh": "这个多少钱？",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "B",
+          "en": "It's three ninety-nine.",
+          "zh": "三块九毛九。",
+          "keyExpressions": []
+        }
+      ],
+      "tipsZh": [
+        "标价通常不含税，结账时会再加税。",
+        "店员常问 Cash or card?（现金还是刷卡？）"
+      ]
+    },
+    {
+      "id": "asking-help",
+      "titleEn": "Asking for Help",
+      "titleZh": "寻求帮助",
+      "descZh": "需要别人帮忙时的礼貌说法。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "Could you help me, please?",
+          "zh": "请帮我一下好吗？",
+          "keyExpressions": [
+            { "en": "Could you help me, please?", "zh": "请帮我一下好吗？" },
+            { "en": "I don't understand.", "zh": "我不明白。" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Of course. What do you need?",
+          "zh": "当然可以。你需要什么？",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "I don't understand this form.",
+          "zh": "我看不懂这张表。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "B",
+          "en": "Let me show you how to fill it out.",
+          "zh": "我来教你怎么填。",
+          "keyExpressions": []
+        }
+      ],
+      "tipsZh": [
+        "开口先说 Excuse me 或 Could you help me，会显得更有礼貌。",
+        "I don't understand 是最实用的求助句，听不懂时直接说这句。"
+      ]
+    },
+    {
+      "id": "restaurant",
+      "titleEn": "At the Restaurant",
+      "titleZh": "餐厅",
+      "descZh": "点餐、要水、买单时的常用表达。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "A table for two, please.",
+          "zh": "请给我们两人桌位。",
+          "keyExpressions": [
+            { "en": "A table for two, please.", "zh": "请给我们两人桌位。" },
+            { "en": "I'd like to order.", "zh": "我要点餐。" },
+            { "en": "Check, please.", "zh": "买单，谢谢。" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Here is the menu. What would you like to drink?",
+          "zh": "这是菜单。你们想喝点什么？",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "I'd like a glass of water, please.",
+          "zh": "我要一杯水，谢谢。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "B",
+          "en": "Enjoy your meal!",
+          "zh": "用餐愉快！",
+          "keyExpressions": []
+        }
+      ],
+      "tipsZh": [
+        "小费一般给 15%–20%，结账时可以在刷卡小票上写。",
+        "想结账就对服务员说 Check, please.，不要挥手大声喊。"
+      ]
+    },
+    {
+      "id": "politeness",
+      "titleEn": "Polite Expressions",
+      "titleZh": "日常礼貌用语",
+      "descZh": "每天都会用到的几句礼貌话。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "Excuse me.",
+          "zh": "劳驾。",
+          "keyExpressions": [
+            { "en": "Excuse me.", "zh": "劳驾。" },
+            { "en": "I'm sorry.", "zh": "对不起。" },
+            { "en": "Thank you so much!", "zh": "非常感谢！" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "I'm sorry.",
+          "zh": "对不起。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "No problem.",
+          "zh": "没关系。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "B",
+          "en": "Thank you so much!",
+          "zh": "非常感谢！",
+          "keyExpressions": []
+        }
+      ],
+      "tipsZh": [
+        "每天多说 Please 和 Thank you，美国人会觉得你很友善。"
+      ]
+    }
+  ]
+}
+

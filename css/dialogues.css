@@ -1,0 +1,175 @@
+/* ==========================================================================
+   dialogues.css — 场景对话页
+   结构：页头 → 工具条（中文开关 + 场景跳转）→ 场景卡片（对话 / 关键表达 / 文化贴士）
+   整段播放时，正在朗读的那一句高亮，所属场景标记为 is-playing
+   ========================================================================== */
+
+/* ---------- 工具条：中文开关 + 场景快速跳转 ---------- */
+.dialogues-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.dialogues-toolbar__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.dialogues-count { font-size: var(--fs-xs); color: var(--text-3); }
+
+/* 显示 / 隐藏中文开关 */
+.zh-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: var(--tap);              /* ≥44px */
+  padding: 0 16px;
+  font-size: var(--fs-sm);
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  transition: background .18s ease, color .18s ease, border-color .18s ease;
+}
+.zh-toggle__label { color: var(--text-2); }
+.zh-toggle__state { font-weight: 700; color: var(--brand-dark); }
+.zh-toggle[aria-checked="false"] { background: var(--bg); color: var(--text-3); }
+.zh-toggle[aria-checked="false"] .zh-toggle__state { color: var(--text-3); }
+.zh-toggle[aria-checked="false"] .zh-toggle__label { text-decoration: line-through; text-decoration-color: #C8D2D0; }
+
+.dialogues-nav { display: flex; flex-wrap: wrap; gap: 8px; }
+.dialogues-nav__chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+  padding: 0 14px;
+  font-size: var(--fs-sm);
+  color: var(--brand-dark);
+  background: var(--brand-soft);
+  border: 1px solid #CDEBE6;
+  border-radius: var(--radius-pill);
+  transition: transform .15s ease, background .18s ease;
+}
+.dialogues-nav__chip:active { transform: scale(.96); }
+
+/* ---------- 场景卡片 ---------- */
+.dialogue-scene { scroll-margin-top: 190px; margin-bottom: 24px; }
+.dialogue-scene__head { margin-bottom: 12px; }
+.dialogue-scene__title {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.dialogue-scene__index {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  font-family: var(--font-en);
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--brand-ink);
+  border-radius: 50%;
+}
+.dialogue-scene__title-en {
+  font-family: var(--font-en);
+  font-size: var(--fs-h2);
+  font-weight: 700;
+}
+.dialogue-scene__title-zh { font-size: var(--fs-body); color: var(--text-2); }
+.dialogue-scene__desc { margin-top: 4px; font-size: var(--fs-sm); color: var(--text-3); }
+
+/* 每个场景的操作条：整段播放 + 停止 */
+.dialogue-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0; }
+.dialogue-actions .btn--play.is-playing {
+  color: #fff;
+  background: var(--brand);
+  border-color: var(--brand);
+  box-shadow: 0 4px 14px rgba(46, 175, 160, .28);
+}
+
+/* 对话行：说话人 + 英文 + 中文翻译 */
+.dialogue-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 12px 0;
+  border-bottom: 1px dashed var(--border);
+}
+.dialogue-line:last-child { border-bottom: 0; padding-bottom: 0; }
+.dialogue-line__speaker {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  margin-top: 4px;
+  font-family: var(--font-en);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--brand-dark);
+  background: var(--brand-soft);
+  border-radius: 50%;
+}
+.dialogue-line__text { flex: 1 1 auto; min-width: 0; }
+.dialogue-line__en {
+  font-family: var(--font-en);
+  font-size: var(--fs-en-lg);
+  line-height: 1.5;
+}
+.dialogue-line__zh {
+  margin-top: 4px;
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+  color: var(--text-2);
+}
+
+/* 关键表达 */
+.dialogue-keys { margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--border); }
+.dialogue-keys__title { margin-bottom: 8px; font-size: var(--fs-sm); font-weight: 700; color: var(--accent); }
+.dialogue-keys__list { display: flex; flex-direction: column; gap: 8px; }
+.key-chip {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: var(--tap);
+  padding: 8px 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.key-chip__en { font-family: var(--font-en); font-size: 19px; font-weight: 600; color: var(--brand-dark); }
+.key-chip__zh { font-size: var(--fs-sm); color: var(--text-2); }
+
+/* 文化小贴士 */
+.dialogue-tips { margin-top: 14px; padding: 14px 16px; background: #FFF8EC; border: 1px solid #F6E3C4; border-radius: var(--radius); }
+.dialogue-tips__title { margin-bottom: 6px; font-size: var(--fs-sm); font-weight: 700; color: #8A5F1E; }
+.dialogue-tips li {
+  position: relative;
+  padding-left: 16px;
+  font-size: var(--fs-sm);
+  line-height: 1.7;
+  color: #6E5730;
+}
+.dialogue-tips li::before {
+  content: "·";
+  position: absolute;
+  left: 4px;
+  font-weight: 700;
+}
+
+/* ---------- 显示/隐藏中文 ---------- */
+.dialogues-view.is-zh-hidden .zh-trans { display: none; }
+
+/* 正在整段播放的场景：给一点视觉提示 */
+.dialogue-scene.is-playing .dialogue-scene__index { background: var(--accent-ink); }
+
+/* 窄屏：关键表达竖排已经默认换行，这里只微调间距 */
+@media (max-width: 359px) {
+  .dialogue-actions .btn { flex: 1 1 100%; }
+}

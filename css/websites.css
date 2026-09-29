@@ -1,0 +1,109 @@
+/* ==========================================================================
+   websites.css — 常用网站页
+   结构：页头 → 分类快速跳转 → 分类（英文名 + 中文名）→ 网站卡片
+   网站卡片：英文名 + 中文名 + 英文介绍（可点读）+ 中文说明 + 站点地址 + 打开链接
+   ========================================================================== */
+
+/* 分类快速跳转（与词根页同一套视觉） */
+.websites-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.websites-nav__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: var(--tap);                 /* ≥44px */
+  padding: 0 16px;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--brand-dark);
+  background: var(--brand-soft);
+  border: 1px solid #CDEBE6;
+  border-radius: var(--radius-pill);
+  transition: transform .15s ease, background .18s ease;
+}
+.websites-nav__chip:active { transform: scale(.96); background: #D7F0EC; }
+.websites-nav__count { font-size: var(--fs-xs); font-weight: 500; color: var(--text-3); }
+
+/* 分类区块 */
+.website-category { scroll-margin-top: 184px; margin-bottom: 26px; }
+.website-category__head { display: flex; align-items: baseline; gap: 8px; margin-bottom: 14px; }
+.website-category__title { font-size: var(--fs-h2); font-weight: 700; }
+.website-category__count { margin-left: auto; font-size: var(--fs-xs); color: var(--text-3); }
+
+/* 网站卡片列表 */
+.website-grid { display: flex; flex-direction: column; gap: 12px; }
+.website-card { margin-bottom: 0; }        /* 间距由 grid 控制 */
+
+.website-card__head { display: flex; align-items: center; gap: 12px; }
+.website-card__badge {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  font-family: var(--font-en);
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  /* 底色用 ink 版（白字 ≥5.3:1），再用渐变叠一层观感 */
+  background-color: var(--brand-ink);
+  background-image: linear-gradient(135deg, var(--brand-ink) 0%, var(--accent-ink) 100%);
+  border-radius: 12px;
+}
+.website-card__names { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.website-card__name-en {
+  font-family: var(--font-en);
+  font-size: var(--fs-en-lg);
+  font-weight: 700;
+  line-height: 1.35;
+}
+.website-card__name-zh { font-size: var(--fs-sm); color: var(--text-2); }
+
+.website-card__desc-en {
+  margin-top: 12px;
+  font-family: var(--font-en);
+  font-size: 19px;
+  line-height: 1.55;
+  color: #40504D;
+}
+.website-card__desc-zh { margin-top: 4px; font-size: var(--fs-sm); color: var(--text-2); }
+
+/* 站点地址（等宽，帮助辨认链接） */
+.website-card__url {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  margin-top: 10px;
+  padding: 2px 10px;
+  font-family: var(--font-en);
+  font-size: var(--fs-xs);
+  color: var(--text-3);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  overflow-wrap: anywhere;
+}
+
+/* 操作行：打开网站（新窗口）+ 朗读介绍 */
+.website-card__foot { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 12px; }
+.website-card__open {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: var(--tap);                 /* ≥44px */
+  padding: 0 18px;
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: #fff;
+  background: var(--accent-ink);
+  border: 1px solid var(--accent-ink);
+  border-radius: var(--radius-pill);
+  transition: transform .15s ease, background .18s ease;
+}
+.website-card__open:active { transform: scale(.96); background: #245A93; }
+
+/* 窄屏：按钮换行不挤压 */
+@media (max-width: 359px) {
+  .website-card__foot .btn,
+  .website-card__open { flex: 1 1 100%; }
+}
