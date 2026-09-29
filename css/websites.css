@@ -1,27 +1,10 @@
 /* ==========================================================================
    websites.css — 常用网站页
-   结构：页头 → 分类快速跳转 → 分类（英文名 + 中文名）→ 网站卡片
+   结构：页头 → 分类筛选条（.filterbar，需求 6/7/9）→ 分类（英文名 + 中文名）→ 网站卡片
    网站卡片：英文名 + 中文名 + 英文介绍（可点读）+ 中文说明 + 站点地址 + 打开链接
    ========================================================================== */
 
-/* 分类快速跳转（与词根页同一套视觉） */
-.websites-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
-.websites-nav__chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  min-height: var(--tap);                 /* ≥44px */
-  padding: 0 16px;
-  font-size: var(--fs-sm);
-  font-weight: 600;
-  color: var(--brand-dark);
-  background: var(--brand-soft);
-  border: 1px solid #CDEBE6;
-  border-radius: var(--radius-pill);
-  transition: transform .15s ease, background .18s ease;
-}
-.websites-nav__chip:active { transform: scale(.96); background: #D7F0EC; }
-.websites-nav__count { font-size: var(--fs-xs); font-weight: 500; color: var(--text-3); }
+/* 分类快速跳转的样式已由通用 .filterbar 组件接管（css/components.css）。 */
 
 /* 分类区块 */
 .website-category { scroll-margin-top: 184px; margin-bottom: 26px; }
@@ -101,6 +84,15 @@
   transition: transform .15s ease, background .18s ease;
 }
 .website-card__open:active { transform: scale(.96); background: #245A93; }
+
+/* 分类全被取消勾选时的提示（配合 applyWebsitesFilter） */
+.websites-filter-empty {
+  padding: 20px 12px;
+  text-align: center;
+  background: var(--bg);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-sm);
+}
 
 /* 窄屏：按钮换行不挤压 */
 @media (max-width: 359px) {

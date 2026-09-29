@@ -39,20 +39,9 @@
 .zh-toggle[aria-checked="false"] .zh-toggle__state { color: var(--text-3); }
 .zh-toggle[aria-checked="false"] .zh-toggle__label { text-decoration: line-through; text-decoration-color: #C8D2D0; }
 
-.dialogues-nav { display: flex; flex-wrap: wrap; gap: 8px; }
-.dialogues-nav__chip {
-  display: inline-flex;
-  align-items: center;
-  min-height: var(--tap);
-  padding: 0 14px;
-  font-size: var(--fs-sm);
-  color: var(--brand-dark);
-  background: var(--brand-soft);
-  border: 1px solid #CDEBE6;
-  border-radius: var(--radius-pill);
-  transition: transform .15s ease, background .18s ease;
-}
-.dialogues-nav__chip:active { transform: scale(.96); }
+.dialogues-nav { display: none; }
+.dialogues-nav__chip { display: none; }
+/* 场景筛选条已由通用 .filterbar 组件接管（css/components.css）。 */
 
 /* ---------- 场景卡片 ---------- */
 .dialogue-scene { scroll-margin-top: 190px; margin-bottom: 24px; }
@@ -165,6 +154,15 @@
 
 /* ---------- 显示/隐藏中文 ---------- */
 .dialogues-view.is-zh-hidden .zh-trans { display: none; }
+
+/* 分类全被取消勾选时的提示（配合 applyDialoguesFilter） */
+.dialogues-filter-empty {
+  padding: 20px 12px;
+  text-align: center;
+  background: var(--bg);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-sm);
+}
 
 /* 正在整段播放的场景：给一点视觉提示 */
 .dialogue-scene.is-playing .dialogue-scene__index { background: var(--accent-ink); }

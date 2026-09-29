@@ -3,15 +3,43 @@
    搜索框 / 卡片 / 区块标题 / 标签 / 按钮 / 朗读按钮 / 空状态 / 骨架屏 / Toast
    ========================================================================== */
 
-/* ---------- 搜索框（顶部固定区域内） ---------- */
-.search { position: relative; margin-top: 10px; }
+/* ---------- 搜索框（第 2 轮：默认收起为放大镜图标，点击展开成输入框） ---------- */
+.search { position: relative; display: flex; align-items: center; gap: 8px; }
+
+/* 放大镜图标按钮（44x44，收起态唯一可见的元素） */
+.search__toggle {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: var(--tap);
+  height: var(--tap);
+  margin-left: -8px;                     /* 与输入框左缘对齐，展开时视觉不跳动 */
+  border-radius: 50%;
+  transition: transform .15s ease, background .18s ease;
+}
+.search__toggle:active { transform: scale(.94); background: var(--brand-soft); }
+.search__toggle-icon { font-size: 20px; line-height: 1; }
+
+/* 输入框容器：宽度从 0 → 100% 过渡，即“从图标位置展开” */
+.search__field {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: width .26s ease, opacity .2s ease;
+}
+.search.is-open .search__field { width: 100%; opacity: 1; }
+.search.is-open .search__toggle { display: none; }
+
 .search__icon {
   position: absolute; left: 15px; top: 50%; transform: translateY(-50%);
   font-size: 17px; opacity: .65; pointer-events: none;
 }
 .search__input {
   width: 100%; height: 48px;
-  padding: 0 46px 0 42px;               /* 右留清空按钮空间 */
+  padding: 0 118px 0 42px;               /* 右留“清空 ✕”+“取消”两个按钮的空间 */
   font-size: var(--fs-body);
   color: var(--text);
   background: var(--surface);
@@ -27,12 +55,24 @@
 .search__input::-webkit-search-cancel-button { display: none; }
 
 .search__clear {
-  position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+  position: absolute; right: 62px; top: 50%; transform: translateY(-50%);
   width: var(--tap); height: var(--tap); border-radius: 50%;
   display: grid; place-items: center;
   color: var(--text-3); font-size: 18px;
 }
 .search__clear:active { background: var(--bg); color: var(--text-2); }
+
+/* 「取消」按钮：收起搜索框（需求 3a） */
+.search__cancel {
+  position: absolute; right: 2px; top: 50%; transform: translateY(-50%);
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 56px; height: 40px;
+  padding: 0 12px;
+  font-size: var(--fs-sm);
+  color: var(--brand-dark);
+  border-radius: var(--radius-pill);
+}
+.search__cancel:active { background: var(--brand-soft); }
 
 /* ---------- 搜索结果下拉面板 ---------- */
 .search-result {
@@ -335,52 +375,79 @@
 .fav-empty__desc { font-size: var(--fs-sm); color: var(--text-2); }
 
 /* ==========================================================================
-   朗读工具条：语速三档 + 停止朗读 + 朗读状态徽标
+   朗读工具条（第 2 轮：语速步进器 + 停止朗读，强制一行）
+   结构：[ − ] [ 1.00 ] [ + ]  [⏹ 停止朗读]  + 朗读状态徽标
    ========================================================================== */
 .speakbar {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-top: 10px;
-  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: nowrap;            /* 需求 3b：任何情况下都保持一行 */
+  min-width: 0;
 }
-.speakbar__label {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: var(--fs-sm);
-  color: var(--text-2);
-  white-space: nowrap;
-}
-.speakbar__label b { font-family: var(--font-en); color: var(--brand-dark); }
-.speakbar__right { display: flex; align-items: center; gap: 8px; margin-left: auto; }
 
-/* 语速档位 */
-.rate { display: inline-flex; gap: 6px; }
+/* 语速步进器：[ − ] [ 数值 ] [ + ] */
+.rate { display: inline-flex; align-items: center; gap: 4px; flex: 0 0 auto; }
 .rate.is-disabled { opacity: .55; }
 .rate__btn {
-  min-width: 58px;
-  min-height: var(--tap);                 /* 点击区域 ≥44px */
-  padding: 0 12px;
+  display: inline-grid;
+  place-items: center;
+  min-width: 40px;                          /* 小屏（<400px）下的下限，见下方媒体查询 */
+  min-height: var(--tap);                   /* 触控高度恒 ≥44px */
+  padding: 0 8px;
   font-family: var(--font-en);
   font-size: var(--fs-sm);
-  color: var(--text-2);
+  font-weight: 700;
+  color: var(--brand-dark);
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-pill);
   transition: transform .15s ease, color .18s ease, background .18s ease, border-color .18s ease;
 }
 .rate__btn:active { transform: scale(.96); }
-.rate__btn.is-active { color: #fff; background: var(--brand-ink); border-color: var(--brand-ink); font-weight: 700; }
-.rate__btn[disabled] { cursor: default; }
+.rate__btn[disabled] { opacity: .45; cursor: default; }
+.rate__btn[disabled]:active { transform: none; }
 
-/* 朗读状态徽标 */
+/* 数值显示：固定两位小数（1.00 / 0.75），aria-live 会播报变化 */
+.rate__value {
+  display: inline-grid;
+  place-items: center;
+  min-width: 52px;
+  min-height: 32px;
+  padding: 0 6px;
+  font-family: var(--font-en);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--brand-dark);
+  background: var(--brand-soft);
+  border-radius: var(--radius-pill);
+}
+
+/* 「🔈 语速」提示文字（仅作视觉说明，aria-hidden，不参与朗读） */
+.speakbar__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  font-size: var(--fs-xs);
+  color: var(--text-3);
+  white-space: nowrap;
+}
+
+/* 朗读状态徽标（仅朗读中出现，占位极窄） */
 .speak-status {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  flex: 0 1 auto;
+  min-width: 0;
   min-height: 32px;
-  padding: 0 12px;
+  padding: 0 10px;
+  overflow: hidden;
   font-size: var(--fs-xs);
   font-weight: 600;
   color: var(--brand-dark);
@@ -390,7 +457,7 @@
 }
 
 /* 停止朗读按钮：默认灰（不可点），朗读中变主色并轻微呼吸 */
-.btn--stop { min-height: var(--tap); padding: 0 16px; font-size: var(--fs-sm); }
+.btn--stop { flex: 0 0 auto; margin-left: auto; min-height: var(--tap); padding: 0 14px; font-size: var(--fs-sm); white-space: nowrap; }
 .btn--stop[disabled] { opacity: .5; }
 .btn--stop.is-active {
   color: #fff;
@@ -398,6 +465,217 @@
   border-color: var(--brand-ink);
   box-shadow: 0 4px 14px rgba(46, 175, 160, .28);
   animation: pulse 1.4s ease-in-out infinite;
+}
+
+/* 小屏（<400px）：仍强制一行，各元素最小宽度压到 40px 也能放得下 */
+@media (max-width: 399px) {
+  .speakbar { gap: 6px; }
+  .speakbar__label { display: none; }     /* 空间不够时先让位给可操作控件 */
+  .rate__btn { min-width: 40px; padding: 0 4px; }
+  .rate__value { min-width: 46px; }
+  .btn--stop { padding: 0 10px; font-size: var(--fs-xs); }
+}
+
+/* ==========================================================================
+   分类筛选条（需求 5 / 6 / 7 / 9 共用组件，class 前缀 .filterbar）
+   词根词缀 / 场景对话 / 主题单词 / 常用网站 四页复用同一套结构与样式
+   ========================================================================== */
+.filterbar { margin-bottom: 18px; }
+
+/* 行：一行内 = [ 横向标签区（可滑动） ] + [ 右侧工具区 ] */
+.filterbar__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+/* 标签区：收起态一行横向滑动；展开态多行平铺 */
+.filterbar__list {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  gap: 8px;
+  /* 收起态：一行平铺 + 横向滚动（滚动条隐藏但保留滚动能力） */
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  scroll-snap-type: x proximity;
+  padding-bottom: 2px;
+  transition: max-height .28s ease;
+}
+.filterbar__list::-webkit-scrollbar { display: none; }
+
+/* 展开态：多行平铺显示全部标签（高度过渡由 max-height 承担） */
+.filterbar.is-collapsed .filterbar__list { max-height: 52px; }
+.filterbar:not(.is-collapsed) .filterbar__list {
+  flex-wrap: wrap;
+  overflow-x: visible;
+  max-height: 420px;
+  scroll-snap-type: none;
+}
+
+/* 一级分类组 */
+.filterbar__group {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  scroll-snap-align: start;
+}
+.filterbar:not(.is-collapsed) .filterbar__group { scroll-snap-align: none; }
+.filterbar__head { display: flex; align-items: stretch; gap: 2px; }
+
+.filterbar__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: var(--tap);              /* 触控目标 ≥44px */
+  padding: 0 14px;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--brand-dark);
+  background: var(--brand-soft);
+  border: 1px solid #CDEBE6;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  transition: transform .15s ease, background .18s ease, color .18s ease, border-color .18s ease;
+}
+.filterbar__chip:active { transform: scale(.96); background: #D7F0EC; }
+.filterbar__count { font-size: var(--fs-xs); font-weight: 500; color: var(--text-3); }
+
+/* 勾选视觉：勾选=加粗+主色底；未勾选=灰字白底 + 灰色描边 */
+.filterbar__chip.is-on { color: var(--brand-ink); background: var(--brand-soft); border-color: var(--brand); font-weight: 700; }
+.filterbar__chip.is-off {
+  color: var(--text-3);
+  font-weight: 400;
+  background: var(--surface);
+  border-color: var(--border);
+}
+.filterbar__chip.is-off .filterbar__count { color: var(--text-3); }
+
+/* 一级分类旁的小三角（展开/收起二级列表，需求 5） */
+.filterbar__caret {
+  display: grid;
+  place-items: center;
+  min-width: var(--tap);              /* 触控区域 ≥44px */
+  min-height: var(--tap);
+  padding: 0 6px;
+  color: var(--brand-dark);
+  background: var(--brand-soft);
+  border: 1px solid #CDEBE6;
+  border-left: 0;
+  border-radius: 0 var(--radius-pill) var(--radius-pill) 0;
+  margin-left: -10px;                 /* 与左侧 chip 视觉贴合 */
+  padding-left: 16px;
+  transition: background .18s ease, color .18s ease;
+}
+.filterbar__caret:active { background: #D7F0EC; }
+.filterbar__caret-icon { font-size: 14px; line-height: 1; }
+
+/* 二级分类列表（需求 5） */
+.filterbar__subs {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 4px 0 4px 10px;
+  border-left: 2px dashed var(--border);
+}
+.filterbar__sub {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: var(--tap);              /* 触控目标 ≥44px */
+  padding: 0 12px;
+  font-size: var(--fs-sm);
+  color: var(--text-3);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  transition: background .18s ease, color .18s ease, border-color .18s ease;
+}
+/* 未勾选：✓ 半透明（仅描边感）；勾选：✓ 主色 + 填充色 */
+.filterbar__sub-tick { font-size: 13px; line-height: 1; opacity: .35; }
+.filterbar__sub.is-on {
+  color: var(--brand-ink);
+  font-weight: 600;
+  background: var(--brand-soft);
+  border-color: var(--brand);
+}
+.filterbar__sub.is-on .filterbar__sub-tick { opacity: 1; color: var(--brand-ink); }
+
+/* 右侧工具区：「清空勾选」+ 展开/收起小三角（需求 9 + 需求 6） */
+.filterbar__tools {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filterbar__reset {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--tap);              /* 触控区域 ≥44px */
+  padding: 0 12px;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid #D5E6F7;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+}
+.filterbar__reset:active { background: #DFEDFB; }
+/* 已全选 / 全空时置灰（方案：置灰而非隐藏，位置不跳动） */
+.filterbar__reset[disabled] { opacity: .45; cursor: default; }
+
+.filterbar__toggle {
+  display: grid;
+  place-items: center;
+  width: var(--tap);                   /* 44x44 */
+  height: var(--tap);
+  color: var(--brand-dark);
+  background: var(--brand-soft);
+  border: 1px solid #CDEBE6;
+  border-radius: var(--radius-pill);
+  transition: transform .15s ease, background .18s ease;
+}
+.filterbar__toggle:active { transform: scale(.94); background: #D7F0EC; }
+.filterbar__toggle-icon { font-size: 15px; line-height: 1; font-weight: 700; }
+
+/* ==========================================================================
+   返回顶部悬浮按钮（需求 1）
+   固定右下角，位于底部 Tab 栏上方 16px（已含 iPhone 安全区），直径 48px
+   ========================================================================== */
+.back-to-top {
+  position: fixed;
+  right: calc(var(--pad-x) + 2px);
+  bottom: calc(var(--tabbar-h) + var(--safe-b) + 16px);
+  z-index: var(--z-fab);
+  display: grid;
+  place-items: center;
+  width: 48px;                             /* 直径约 48px（≥44px 触控标准） */
+  height: 48px;
+  color: #fff;
+  background: var(--brand-ink);
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(31, 78, 73, .22);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px) scale(.9);
+  transition: opacity .2s ease, transform .2s ease, visibility .2s;
+}
+.back-to-top.is-visible { opacity: 1; visibility: visible; transform: translateY(0) scale(1); }
+.back-to-top:active { transform: translateY(0) scale(.94); }
+.back-to-top__icon { font-size: 22px; line-height: 1; font-weight: 700; }
+
+/* 桌面端：跟随 520px 容器居中，不要贴到屏幕最右边 */
+@media (min-width: 560px) {
+  .back-to-top {
+    right: max(calc(var(--pad-x) + 2px), calc((100vw - var(--shell-max)) / 2 + var(--pad-x) + 2px));
+  }
 }
 
 /* ==========================================================================

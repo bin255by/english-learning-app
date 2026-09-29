@@ -1,46 +1,10 @@
 /* ==========================================================================
    vocabulary.css — 主题单词页
-   结构：页头 → 可横向滑动的分类条（17 个分类）→ 当前分类的单词卡片
+   结构：页头 → 分类条（.filterbar，默认收起一行可滑动）→ 当前分类的单词卡片
    分类切换只重绘下方内容；带 wikiTitle 的单词会显示维基摘要 + 阅读全文
    ========================================================================== */
 
-/* ---------- 分类条：横向滑动，不换行，避免占满好几行 ---------- */
-.vocab-strip {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 8px;
-  margin-bottom: 16px;
-  padding-bottom: 4px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;                 /* Firefox 隐藏滚动条 */
-  scroll-snap-type: x proximity;
-}
-.vocab-strip::-webkit-scrollbar { display: none; }
-
-.vocab-strip__chip {
-  flex: 0 0 auto;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  min-height: var(--tap);                /* ≥44px */
-  padding: 0 14px;
-  font-size: var(--fs-sm);
-  color: var(--text-2);
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-pill);
-  scroll-snap-align: start;
-  transition: transform .15s ease, background .18s ease, color .18s ease, border-color .18s ease;
-}
-.vocab-strip__chip:active { transform: scale(.96); }
-.vocab-strip__chip.is-active {
-  color: #fff;
-  background: var(--brand-ink);
-  border-color: var(--brand-ink);
-  font-weight: 700;
-}
-.vocab-strip__count { font-size: var(--fs-xs); opacity: .75; }
+/* 顶部分类条已由通用 .filterbar 组件接管（css/components.css）。 */
 
 /* ---------- 当前分类 ---------- */
 .vocab-category { scroll-margin-top: 190px; }

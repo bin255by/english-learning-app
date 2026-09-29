@@ -32,38 +32,45 @@
   <!-- 移动端优先，最大宽度 520px，桌面端居中显示为"手机容器" -->
   <div class="app-shell">
 
-    <!-- ===== 顶部固定区：标题 + 站内搜索框（逻辑见 js/search.js） ===== -->
+    <!-- ===== 顶部固定区：搜索入口（放大镜图标 → 展开输入框）+ 朗读工具条（逻辑见 js/search.js） ===== -->
+    <!-- 原「轻轻学英语 / Every English word is clickable」标题行已按第 2 轮需求删除，
+         浏览器标签页标题 <title>轻轻学英语</title> 保留不动。 -->
     <header class="app-header">
-      <div class="app-header__row">
-        <h1 class="app-header__title">轻轻学英语</h1>
-        <p class="app-header__hint speakable" lang="en">Every English word is clickable.</p>
-      </div>
 
-      <div class="search" role="search">
-        <span class="search__icon" aria-hidden="true">🔍</span>
-        <input id="searchInput" class="search__input" type="search"
-               placeholder="搜索 单词 / 场景 / 网站" aria-label="站内搜索"
-               role="combobox" aria-expanded="false" aria-controls="searchResults"
-               aria-autocomplete="list" aria-haspopup="listbox"
-               autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="search" />
-        <button id="searchClear" class="search__clear" type="button" aria-label="清空搜索" hidden>✕</button>
+      <!-- 站内搜索：默认只显示放大镜图标，点一下从图标位置展开成完整输入框（逻辑见 js/search.js） -->
+      <div class="search" id="searchBox" role="search">
+        <button class="search__toggle" id="searchToggle" type="button"
+                aria-label="打开搜索" aria-expanded="false" aria-controls="searchField">
+          <span class="search__toggle-icon" aria-hidden="true">🔍</span>
+        </button>
+
+        <div class="search__field" id="searchField">
+          <span class="search__icon" aria-hidden="true">🔍</span>
+          <input id="searchInput" class="search__input" type="search"
+                 placeholder="搜索 单词 / 场景 / 网站" aria-label="站内搜索"
+                 role="combobox" aria-expanded="false" aria-controls="searchResults"
+                 aria-autocomplete="list" aria-haspopup="listbox"
+                 autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="search" />
+          <button id="searchClear" class="search__clear" type="button" aria-label="清空搜索" hidden>✕</button>
+          <button id="searchCancel" class="search__cancel" type="button" aria-label="收起搜索">取消</button>
+        </div>
+
         <div id="searchResults" class="search__results" role="listbox" aria-label="搜索结果" hidden></div>
       </div>
 
-      <!-- ===== 朗读工具条：语速三档 + 停止朗读（界面见 js/speech-feedback.js） ===== -->
+      <!-- ===== 朗读工具条：[ - ] [ 1.00 ] [ + ] [ 停止朗读 ] 同行（界面见 js/speech-feedback.js） ===== -->
       <div class="speakbar">
-        <span class="speakbar__label" id="rateLabel">🔈 语速 <b id="rateValue">0.9</b></span>
+        <span class="speakbar__label" aria-hidden="true">🔈 语速</span>
         <div class="rate" id="rateGroup" role="group" aria-label="朗读语速">
-          <button class="rate__btn" type="button" data-rate="0.7" aria-pressed="false">0.7</button>
-          <button class="rate__btn" type="button" data-rate="0.85" aria-pressed="false">0.85</button>
-          <button class="rate__btn" type="button" data-rate="1.0" aria-pressed="false">1.0</button>
+          <button class="rate__btn rate__btn--step" type="button" data-rate-step="-1" aria-label="降低语速">−</button>
+          <span class="rate__value" id="rateValue" role="status" aria-live="polite" aria-atomic="true"
+                aria-label="当前语速">0.90</span>
+          <button class="rate__btn rate__btn--step" type="button" data-rate-step="1" aria-label="提高语速">+</button>
         </div>
-        <div class="speakbar__right">
-          <span class="speak-status" id="speakStatus" role="status" aria-live="polite" hidden>朗读中</span>
-          <button class="btn btn--ghost btn--stop" id="stopSpeak" type="button" disabled>
-            <span aria-hidden="true">⏹</span>停止朗读
-          </button>
-        </div>
+        <span class="speak-status" id="speakStatus" role="status" aria-live="polite" hidden>朗读中</span>
+        <button class="btn btn--ghost btn--stop" id="stopSpeak" type="button" disabled>
+          <span aria-hidden="true">⏹</span>停止朗读
+        </button>
       </div>
     </header>
 

@@ -1,27 +1,11 @@
 /* ==========================================================================
    roots.css — 词根词缀页
-   结构：页头 → 分类快速跳转（前缀/后缀/词根）→ 分类 → 语义分组 → 词缀卡片
+   结构：页头 → 分类筛选条（.filterbar，需求 5/6/7/9）→ 分类 → 语义分组 → 词缀卡片
    所有英文（词缀 / 例词 / 例句 / 分类英文名）都可点击朗读
    ========================================================================== */
 
-/* 顶部分类快速跳转 */
-.roots-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
-.roots-nav__chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  min-height: var(--tap);              /* 触控目标 ≥44px */
-  padding: 0 16px;
-  font-size: var(--fs-sm);
-  font-weight: 600;
-  color: var(--brand-dark);
-  background: var(--brand-soft);
-  border: 1px solid #CDEBE6;
-  border-radius: var(--radius-pill);
-  transition: transform .15s ease, background .18s ease;
-}
-.roots-nav__chip:active { transform: scale(.96); background: #D7F0EC; }
-.roots-nav__count { font-size: var(--fs-xs); font-weight: 500; color: var(--text-3); }
+/* 顶部分类快速跳转的样式已由通用 .filterbar 组件接管（css/components.css），
+   本页只保留分类区块 / 语义分组 / 词缀卡片自身的样式。 */
 
 /* 分类区块：滚动时留出固定头部的位置 */
 .roots-category { scroll-margin-top: 184px; margin-bottom: 26px; }

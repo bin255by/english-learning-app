@@ -52,6 +52,7 @@
   --z-header: 20;
   --z-dropdown: 30;
   --z-tabbar: 40;
+  --z-fab: 45;              /* 返回顶部悬浮按钮：高于 Tab 栏、低于 Toast */
   --z-toast: 60;
 }
 
@@ -113,25 +114,19 @@ p { font-size: var(--fs-body); }
   padding-bottom: calc(var(--tabbar-h) + var(--safe-b));
 }
 
-/* 顶部固定区：用 sticky 实现“固定搜索框”，不必写死高度 */
+/* 顶部固定区：用 sticky 实现“固定搜索框”，不必写死高度
+   第 2 轮已删除标题行（.app-header__row），这里只保留搜索入口 + 朗读工具条，
+   顶部内边距相应收紧一点，避免出现大片空白。 */
 .app-header {
   position: sticky;
   top: 0;
   z-index: var(--z-header);
-  padding: calc(var(--safe-t) + 10px) var(--pad-x) 12px;
+  padding: calc(var(--safe-t) + 8px) var(--pad-x) 10px;
   background: rgba(250, 250, 250, .94);
   border-bottom: 1px solid var(--border);
   -webkit-backdrop-filter: saturate(180%) blur(12px);
   backdrop-filter: saturate(180%) blur(12px);
 }
-.app-header__row {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 10px;
-}
-.app-header__title { font-size: var(--fs-h2); font-weight: 700; letter-spacing: .5px; }
-.app-header__hint { font-family: var(--font-en); font-size: var(--fs-sm); color: var(--text-3); }
 
 /* 内容区 */
 .app-main { flex: 1 1 auto; padding: 18px var(--pad-x) 28px; outline: none; }
