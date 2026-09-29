@@ -6,13 +6,13 @@
  *     buildSearchRecords(dataByName) → 把 5 份 JSON 拍平成搜索记录
  *     createSearcher(records, opts)  → { engine, search(keyword, limit) }
  *   DOM 层：
- *     initSearch({ loadJSON, goTo, notify }) → 建索引 + 放大镜展开/收起 + 实时下拉 + 点击跳转高亮
+ *     initSearch({ loadJSON, goTo, notify }) → 建索引 + 实时下拉 + 点击跳转高亮
  *
- * 搜索框形态（第 2 轮需求 3a / 4）：
- *   - 默认收起，顶部只显示一个 44x44 的 🔍 图标按钮
- *   - 点图标 → 从图标位置宽度过渡展开成完整输入框并自动聚焦（软键盘弹出）
- *   - 点「取消」/ 点框外空白 / 按 Esc → 收起并 blur（软键盘收起），但【保留关键词】
- *   - 点某条搜索结果跳转 → 结果框收起 + blur 收起键盘，搜索框保持展开、关键词保留
+ * 搜索框形态（第 3 轮：回退为【常驻显示】，输入框一直可见）：
+ *   - 顶部直接显示完整输入框，左侧 🔍 仅作装饰（pointer-events:none）
+ *   - 没有放大镜入口按钮，也没有「取消」按钮；iOS 上不自动聚焦，点输入框才聚焦
+ *   - 点击某条搜索结果跳转 → 结果框收起 + blur 收起键盘，【关键词保留】
+ *   - 点击输入框外的空白处 / 按 Esc → 结果框收起，关键词保留
  *
  * 依赖（loadJSON / goTo / toast）由 app.js 注入，避免与 app.js 循环引用。
  * 匹配策略是「先子串分级，再 Fuse 容错」：
@@ -282,9 +282,6 @@ export function initSearch(options) {
   const input = document.getElementById('searchInput');
   const clearBtn = document.getElementById('searchClear');
   const panel = document.getElementById('searchResults');
-  const box = document.getElementById('searchBox');
-  const toggleBtn = document.getElementById('searchToggle');
-  const cancelBtn = document.getElementById('searchCancel');
   if (!input || !panel || typeof loadJSON !== 'function') return null;
 
   let searcher = null;
@@ -342,7 +339,8 @@ export function initSearch(options) {
     } else if (event.key === 'Escape') {
       event.preventDefault();
       event.stopPropagation();                  // 避免冒泡到 document 再收一次
-      closeSearch();                            // 需求 3a：Esc 收起（保留关键词）
+      hideResults();                             // Esc 收起结果框（关键词保留）
+      blurInput();                               // 顺带收起移动端软键盘
     }
   });
 
@@ -355,41 +353,11 @@ export function initSearch(options) {
     });
   }
 
-  /* 点搜索区域外 → 收起结果 */
+  /* 点搜索区域外 → 收起结果框（关键词保留） */
   document.addEventListener('click', (event) => {
     if (panel.hidden) return;
     if (!event.target.closest('.search')) hideResults();
   });
-
-  /* ===================== 2.5 放大镜 ⇄ 搜索框 展开/收起（需求 3a） ===================== */
-  /**
-   * 展开搜索框：从放大镜图标位置展开成完整输入框，自动聚焦唤起软键盘。
-   * 已有关键词时直接复用，不必重新输入。
-   */
-  function openSearch() {
-    if (!box) return;
-    box.classList.add('is-open');
-    if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'true');
-    if (cancelBtn) cancelBtn.hidden = false;
-    input.focus();
-    // 再次点开时恢复上次的搜索结果
-    const keyword = input.value.trim();
-    if (keyword) runSearch(keyword);
-  }
-
-  /**
-   * 收起搜索框：清空结果列表 + 让输入框失焦（收起移动端软键盘），
-   * 但【保留输入框里的关键词】，用户下次点开还能看到自己搜了什么（需求 3a / 4）。
-   * @param {{keepOpen?: boolean, keepResults?: boolean}} [opts]
-   */
-  function closeSearch(opts = {}) {
-    if (!opts.keepResults) hideResults();
-    if (opts.keepOpen) return;
-    if (box) box.classList.remove('is-open');
-    if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
-    if (cancelBtn) cancelBtn.hidden = true;
-    blurInput();
-  }
 
   /** 让输入框失焦：移动端据此收起软键盘（iOS 需要真实 blur 才生效） */
   function blurInput() {
@@ -397,27 +365,6 @@ export function initSearch(options) {
       if (typeof input.blur === 'function') input.blur();
     } catch (err) { /* 忽略 */ }
   }
-
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', () => { openSearch(); });
-  }
-  if (cancelBtn) {
-    cancelBtn.addEventListener('click', () => { closeSearch(); });
-  }
-
-  // 点输入框外的空白区域 → 收起（需求 3a）
-  document.addEventListener('click', (event) => {
-    if (!box || !box.classList.contains('is-open')) return;
-    if (!event.target.closest('.search')) closeSearch();
-  });
-
-  // Escape → 收起（需求 3a；输入框内已有一份，见下面的 keydown）
-  document.addEventListener('keydown', (event) => {
-    if (event.key !== 'Escape') return;
-    if (!box || !box.classList.contains('is-open')) return;
-    if (panel && !panel.hidden) return;    // 结果还开着时交给输入框处理，避免两次收起
-    closeSearch();
-  });
 
   /* 3) 渲染与跳转 */
   function renderResults(list, keyword) {
@@ -488,17 +435,10 @@ export function initSearch(options) {
 
   setExpanded(false);
   if (clearBtn) clearBtn.hidden = input.value.length === 0;
-  // 默认收起：只显示放大镜图标
-  if (box) box.classList.remove('is-open');
-  if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
-  if (cancelBtn) cancelBtn.hidden = true;
 
   return {
     search: (keyword) => (searcher ? searcher.search(keyword, MAX_RESULTS) : []),
-    hide: hideResults,
-    open: openSearch,
-    close: closeSearch,
-    isOpen: () => !!(box && box.classList.contains('is-open'))
+    hide: hideResults
   };
 }
 

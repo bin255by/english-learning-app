@@ -3,11 +3,12 @@
  * --------------------------------------------------------------------------
  * 一个组件同时承担三件事，四页（词根词缀 / 场景对话 / 主题单词 / 常用网站）复用：
  *
- *   1) 展开 / 收起（需求 6）
+ *   1) 展开 / 收起（需求 6 / 第 3 轮需求 3）
  *      - 顶部右侧一个 44x44 的小三角按钮（收起 ▸ / 展开 ▾）
- *      - 默认【收起】：所有分类标签在一行内横向平铺，可左右滑动
+ *      - 收起态：所有分类标签在一行内横向平铺，可左右滑动
  *        （overflow-x:auto + scroll-snap，滚动条隐藏但保留滚动能力）
- *      - 展开：多行平铺显示全部标签；切换有高度过渡动画
+ *      - 展开态：多行平铺显示全部标签；切换有高度过渡动画
+ *      - 第 3 轮起组件【默认展开】；需要"默认收起"的页面传 defaultCollapsed: true
  *      - 展开/收起【只影响显示】，不影响勾选状态
  *
  *   2) 一级分类 + 二级分类（需求 5，仅 roots 页传 subs）
@@ -50,7 +51,7 @@ let uid = 0;
  *   ariaLabel?: string,
  *   mode?: 'multi'|'single',        // 默认 multi（分类筛选切换）
  *   showReset?: boolean,            // 是否显示「清空勾选」（需求 9）
- *   defaultCollapsed?: boolean,     // 默认收起（需求 6）
+ *   defaultCollapsed?: boolean,     // 默认【展开】；传 true 则默认收起一行（主题单词页）
  *   activeId?: string,              // single 模式初始选中项
  *   onChange?: (payload: {selected: Set<string>, reason: string, id: string}) => void
  * }} options
@@ -190,7 +191,9 @@ export function createFilterBar(options = {}) {
   root.append(row);
 
   /* ---------------------------- 状态渲染 ---------------------------- */
-  let collapsed = options.defaultCollapsed !== false;   // 需求 6：默认收起
+  // 第 3 轮起默认【展开】（多行平铺显示所有分类标签）；
+  // 需要"默认收起一行横向滑动"的页面传 defaultCollapsed: true（如主题单词页）。
+  let collapsed = options.defaultCollapsed === true;
 
   function renderSelection() {
     items.forEach((item) => {

@@ -499,7 +499,7 @@ function createRootsFilterBar(categories, host) {
     ariaLabel: '词根词缀分类筛选',
     mode: 'multi',                 // 需求 7：词根词缀 = 分类筛选切换（并集）
     showReset: true,               // 需求 9
-    defaultCollapsed: true,        // 需求 6：默认收起一行
+    defaultCollapsed: false,       // 第 3 轮需求 3：默认展开，多行平铺所有分类标签
     onChange: () => applyRootsFilter(host)
   });
 }
@@ -726,7 +726,7 @@ function buildDialoguesToolbar(scenes, root) {
     ariaLabel: '对话场景筛选',
     mode: 'multi',
     showReset: true,
-    defaultCollapsed: true,
+    defaultCollapsed: false,      // 第 3 轮需求 3：默认展开
     onChange: () => applyDialoguesFilter(root || bar.closest('.dialogues-view'))
   });
   bar.append(filterBar.element);
@@ -1143,7 +1143,7 @@ async function renderWebsitesView(tab) {
     ariaLabel: '网站分类筛选',
     mode: 'multi',
     showReset: true,
-    defaultCollapsed: true,
+    defaultCollapsed: false,      // 第 3 轮需求 3：默认展开
     onChange: () => applyWebsitesFilter(wrap)
   });
   wrap.append(filterBar.element);

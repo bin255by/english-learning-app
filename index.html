@@ -32,29 +32,21 @@
   <!-- 移动端优先，最大宽度 520px，桌面端居中显示为"手机容器" -->
   <div class="app-shell">
 
-    <!-- ===== 顶部固定区：搜索入口（放大镜图标 → 展开输入框）+ 朗读工具条（逻辑见 js/search.js） ===== -->
+    <!-- ===== 顶部固定区：常驻搜索框 + 朗读工具条（逻辑见 js/search.js） ===== -->
     <!-- 原「轻轻学英语 / Every English word is clickable」标题行已按第 2 轮需求删除，
-         浏览器标签页标题 <title>轻轻学英语</title> 保留不动。 -->
+         浏览器标签页标题 <title>轻轻学英语</title> 保留不动。
+         第 3 轮起搜索框回退为【常驻显示】：不再有放大镜入口按钮，也不再有「取消」按钮。 -->
     <header class="app-header">
 
-      <!-- 站内搜索：默认只显示放大镜图标，点一下从图标位置展开成完整输入框（逻辑见 js/search.js） -->
+      <!-- 站内搜索：输入框常驻可见，左侧 🔍 仅为装饰（不可点击），点输入框才聚焦 -->
       <div class="search" id="searchBox" role="search">
-        <button class="search__toggle" id="searchToggle" type="button"
-                aria-label="打开搜索" aria-expanded="false" aria-controls="searchField">
-          <span class="search__toggle-icon" aria-hidden="true">🔍</span>
-        </button>
-
-        <div class="search__field" id="searchField">
-          <span class="search__icon" aria-hidden="true">🔍</span>
-          <input id="searchInput" class="search__input" type="search"
-                 placeholder="搜索 单词 / 场景 / 网站" aria-label="站内搜索"
-                 role="combobox" aria-expanded="false" aria-controls="searchResults"
-                 aria-autocomplete="list" aria-haspopup="listbox"
-                 autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="search" />
-          <button id="searchClear" class="search__clear" type="button" aria-label="清空搜索" hidden>✕</button>
-          <button id="searchCancel" class="search__cancel" type="button" aria-label="收起搜索">取消</button>
-        </div>
-
+        <span class="search__icon" aria-hidden="true">🔍</span>
+        <input id="searchInput" class="search__input" type="search"
+               placeholder="搜索 单词 / 场景 / 网站" aria-label="站内搜索"
+               role="combobox" aria-expanded="false" aria-controls="searchResults"
+               aria-autocomplete="list" aria-haspopup="listbox"
+               autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="search" />
+        <button id="searchClear" class="search__clear" type="button" aria-label="清空搜索" hidden>✕</button>
         <div id="searchResults" class="search__results" role="listbox" aria-label="搜索结果" hidden></div>
       </div>
 

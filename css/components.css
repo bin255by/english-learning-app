@@ -3,35 +3,11 @@
    搜索框 / 卡片 / 区块标题 / 标签 / 按钮 / 朗读按钮 / 空状态 / 骨架屏 / Toast
    ========================================================================== */
 
-/* ---------- 搜索框（第 2 轮：默认收起为放大镜图标，点击展开成输入框） ---------- */
-.search { position: relative; display: flex; align-items: center; gap: 8px; }
-
-/* 放大镜图标按钮（44x44，收起态唯一可见的元素） */
-.search__toggle {
-  flex: 0 0 auto;
-  display: grid;
-  place-items: center;
-  width: var(--tap);
-  height: var(--tap);
-  margin-left: -8px;                     /* 与输入框左缘对齐，展开时视觉不跳动 */
-  border-radius: 50%;
-  transition: transform .15s ease, background .18s ease;
-}
-.search__toggle:active { transform: scale(.94); background: var(--brand-soft); }
-.search__toggle-icon { font-size: 20px; line-height: 1; }
-
-/* 输入框容器：宽度从 0 → 100% 过渡，即“从图标位置展开” */
-.search__field {
-  position: relative;
-  flex: 1 1 auto;
-  min-width: 0;
-  width: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: width .26s ease, opacity .2s ease;
-}
-.search.is-open .search__field { width: 100%; opacity: 1; }
-.search.is-open .search__toggle { display: none; }
+/* ---------- 搜索框（第 3 轮：回退为常驻显示） ----------
+   输入框一直可见，占满顶部整行；左侧 🔍 仅为装饰（pointer-events:none，不可点击）。
+   已移除：放大镜入口按钮（.search__toggle）、取消按钮（.search__cancel）、
+          以及 width:0 → 100% 的展开动画（.search__field / .search.is-open）。 */
+.search { position: relative; }
 
 .search__icon {
   position: absolute; left: 15px; top: 50%; transform: translateY(-50%);
@@ -39,7 +15,7 @@
 }
 .search__input {
   width: 100%; height: 48px;
-  padding: 0 118px 0 42px;               /* 右留“清空 ✕”+“取消”两个按钮的空间 */
+  padding: 0 46px 0 42px;               /* 右留清空 ✕ 按钮的空间 */
   font-size: var(--fs-body);
   color: var(--text);
   background: var(--surface);
@@ -55,24 +31,12 @@
 .search__input::-webkit-search-cancel-button { display: none; }
 
 .search__clear {
-  position: absolute; right: 62px; top: 50%; transform: translateY(-50%);
+  position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
   width: var(--tap); height: var(--tap); border-radius: 50%;
   display: grid; place-items: center;
   color: var(--text-3); font-size: 18px;
 }
 .search__clear:active { background: var(--bg); color: var(--text-2); }
-
-/* 「取消」按钮：收起搜索框（需求 3a） */
-.search__cancel {
-  position: absolute; right: 2px; top: 50%; transform: translateY(-50%);
-  display: inline-flex; align-items: center; justify-content: center;
-  min-width: 56px; height: 40px;
-  padding: 0 12px;
-  font-size: var(--fs-sm);
-  color: var(--brand-dark);
-  border-radius: var(--radius-pill);
-}
-.search__cancel:active { background: var(--brand-soft); }
 
 /* ---------- 搜索结果下拉面板 ---------- */
 .search-result {
@@ -524,7 +488,8 @@
   scroll-snap-align: start;
 }
 .filterbar:not(.is-collapsed) .filterbar__group { scroll-snap-align: none; }
-.filterbar__head { display: flex; align-items: stretch; gap: 2px; }
+/* chip 与展开胶囊的间距由 .filterbar__caret 的 margin-left 控制，这里保持 0 */
+.filterbar__head { display: flex; align-items: stretch; gap: 0; }
 
 .filterbar__chip {
   display: inline-flex;
@@ -554,24 +519,37 @@
 }
 .filterbar__chip.is-off .filterbar__count { color: var(--text-3); }
 
-/* 一级分类旁的小三角（展开/收起二级列表，需求 5） */
+/* 一级分类旁的展开/收起小三角（第 3 轮需求 4：完整独立胶囊）
+   之前是 border-left:0 + 左圆角为 0 + margin-left:-10px 的"半个胶囊"，
+   视觉上像主按钮延伸出来的一部分；现在改为：
+     · 按钮本体 = 44x44 的透明命中区（保证触控区域 ≥44x44px）
+     · 内层 .filterbar__caret-icon 才是可见的胶囊：四边完整描边 + 完整圆角 + 白底
+     · 与主按钮间距约 7px（2px margin + 胶囊在 44px 盒内居中的 5px），既有分离感又保持关联 */
 .filterbar__caret {
+  flex: 0 0 auto;
   display: grid;
   place-items: center;
-  min-width: var(--tap);              /* 触控区域 ≥44px */
-  min-height: var(--tap);
-  padding: 0 6px;
-  color: var(--brand-dark);
-  background: var(--brand-soft);
-  border: 1px solid #CDEBE6;
-  border-left: 0;
-  border-radius: 0 var(--radius-pill) var(--radius-pill) 0;
-  margin-left: -10px;                 /* 与左侧 chip 视觉贴合 */
-  padding-left: 16px;
-  transition: background .18s ease, color .18s ease;
+  width: var(--tap);                 /* 44x44 触控命中区 */
+  height: var(--tap);
+  margin-left: 2px;
+  border: 0;
+  background: transparent;
 }
-.filterbar__caret:active { background: #D7F0EC; }
-.filterbar__caret-icon { font-size: 14px; line-height: 1; }
+.filterbar__caret:active .filterbar__caret-icon { background: var(--brand-soft); transform: scale(.94); }
+
+.filterbar__caret-icon {
+  display: grid;
+  place-items: center;
+  width: 34px;                       /* 可见胶囊宽度（32~36px） */
+  height: var(--tap);                /* 与主按钮同高 */
+  font-size: 14px;
+  line-height: 1;
+  color: var(--brand-dark);
+  background: var(--surface);        /* 白底 */
+  border: 1px solid var(--brand);    /* 四边完整主色描边 */
+  border-radius: var(--radius-pill); /* 完整圆角 */
+  transition: background .18s ease, transform .15s ease;
+}
 
 /* 二级分类列表（需求 5） */
 .filterbar__subs {

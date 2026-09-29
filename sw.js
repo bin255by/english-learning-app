@@ -9,7 +9,10 @@
  * 版本升级：修改 CACHE_VERSION，activate 时旧缓存会被自动清理。
  * ========================================================================== */
 
-const CACHE_VERSION = 'v0.9.0';
+/* 第 3 轮：从 v0.9.0 升到 v0.9.1
+   —— 补入上一轮新增但漏掉的 js/back-to-top.js、js/filter-bar.js；
+      activate 会清掉 v0.9.0 的旧缓存，离线也能拿到新资源。 */
+const CACHE_VERSION = 'v0.9.1';
 const SHELL_CACHE = `shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `runtime-${CACHE_VERSION}`;
 
@@ -34,6 +37,8 @@ const SHELL_ASSETS = [
   './js/home.js',
   './js/search.js',
   './js/favorites.js',
+  './js/back-to-top.js',      // 第 3 轮补入：返回顶部按钮
+  './js/filter-bar.js',      // 第 3 轮补入：分类筛选条组件
   './data/home-cards.json',
   './data/roots.json',
   './data/dialogues.json',
