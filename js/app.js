@@ -1,15 +1,15 @@
 /* ==========================================================================
  * app.js — 应用唯一入口（原生 ES6 模块）
  * --------------------------------------------------------------------------
- * 阶段 1 职责：
+ * 职责：
  *   1. Hash 路由：#/home、#/roots/spect …（Tab + 目标 ID，支持深链与刷新保持）
  *   2. 底部 Tab 高亮与视图切换
- *   3. 视图渲染调度（各页面内容在后续阶段实现，本阶段为占位视图）
+ *   3. 视图渲染调度（5 个 Tab 各有独立视图函数）
  *   4. data/*.json 统一加载（带内存缓存）
  *   5. Service Worker 注册（PWA）
  *
- * 全站约定（后续阶段严格遵守）：
- *   - 英文文本元素统一加 class="speakable"（阶段 2 接入 js/tts.js 后即可点击朗读）
+ * 全站约定：
+ *   - 英文文本元素统一加 class="speakable"，由 js/tts.js 的事件委托接管点击朗读
  *   - 中文文本不加 speakable，且不会被朗读
  *   - 由 JSON 数据渲染的文本一律使用 textContent，避免 HTML 注入
  * ========================================================================== */
@@ -22,7 +22,7 @@ import { initSearch } from './search.js';
 import { initFavorites, decorateFavorites, mountFavoritesList, getFavorites, countFavorites } from './favorites.js';
 
 /* ============================ 1. Tab 配置 ============================ */
-/** 底部 5 个 Tab；dataFile 为该页对应的数据文件，descZh 用于占位说明 */
+/** 底部 5 个 Tab；dataFile 为该页对应的数据文件，descZh 为该页的一句话介绍（预留文案） */
 export const TABS = [
   { id: 'home',       label: '首页',     emoji: '🏠', titleZh: '首页',     titleEn: 'Home',
     dataFile: 'data/home-cards.json', descZh: '随机知识点卡片，每天看一眼就好。' },
@@ -136,7 +136,7 @@ function parseHash() {
   return { tab, targetId: targetPart ? decodeURIComponent(targetPart) : null };
 }
 
-/** 生成某个 Tab（可带目标 ID）的 hash，供后续阶段跳转使用 */
+/** 生成某个 Tab（可带目标 ID）的 hash，供搜索、收藏、首页卡片跳转使用 */
 export function tabHash(tabId, targetId) {
   const id = TAB_IDS.includes(tabId) ? tabId : DEFAULT_TAB;
   return `#/${id}${targetId ? '/' + encodeURIComponent(targetId) : ''}`;
@@ -150,7 +150,7 @@ export function goTo(tabId, targetId) {
 }
 
 /* ============================ 4. 视图渲染调度 ============================ */
-/** 各 Tab 对应的视图函数：返回 Element（或 Promise<Element>）；后续阶段逐个替换 */
+/** 各 Tab 对应的视图函数：返回 Element（或 Promise<Element>） */
 const views = {
   home: renderHomeView,
   roots: renderRootsView,
@@ -198,7 +198,7 @@ async function renderView(tabId, targetId) {
   main.append(view);
   main.removeAttribute('aria-busy');
 
-  decorateFavorites(main);      // 给内容卡片加收藏按钮（阶段 9）
+  decorateFavorites(main);      // 给内容卡片加收藏按钮
 
   if (targetId) focusTarget(targetId);
   else window.scrollTo({ top: 0 });
@@ -211,7 +211,7 @@ function focusTarget(targetId) {
   const main = $('#appMain');
   const node = $$('[data-id]', main).find((n) => n.dataset.id === targetId);
   if (!node) {
-    toast(`「${targetId}」的内容将在后续阶段上线`);
+    toast('未找到该内容');
     return;
   }
   node.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -265,6 +265,10 @@ async function renderHomeView(tab) {
   favSection.append(favList);
   wrap.append(favSection);
   favListApi = mountFavoritesList(favList, { goTo, notify: toast });
+
+  /* (3) 底部版本号 + 隐藏的「真机自测」入口（连点 5 次展开；临时功能，第 3 轮可整段删除） */
+  appendSelfTestEntry(wrap);
+
   return wrap;
 }
 
@@ -288,9 +292,7 @@ function makePlayAllButton(items, label) {
 }
 
 
-/* （阶段 1 的「建设中」占位视图已移除：5 个 Tab 现在都有真实视图） */
-
-/* ---------------------------- 词根词缀视图（阶段 4） ---------------------------- */
+/* ---------------------------- 词根词缀视图 ---------------------------- */
 /** 分类英文名：固定的 UI 标签（数据里只有 nameZh），也可点击朗读 */
 const CATEGORY_EN = { prefixes: 'Prefixes', suffixes: 'Suffixes', roots: 'Roots' };
 
@@ -441,7 +443,7 @@ function buildAffixCard(item) {
   return card;
 }
 
-/* ---------------------------- 场景对话视图（阶段 5） ---------------------------- */
+/* ---------------------------- 场景对话视图 ---------------------------- */
 /** 中文显示偏好：'1' = 隐藏「英文的中文翻译」（文化小贴士属于讲解，不受影响） */
 const ZH_PREF_KEY = 'elapp.dialogues.hideZh';
 /** 视图级事件订阅；离开页面时必须退订，否则反复切换 Tab 会重复绑定 */
@@ -656,7 +658,7 @@ function collectKeyExpressions(lines) {
   return list;
 }
 
-/* ---------------------------- 主题单词视图（阶段 6） ---------------------------- */
+/* ---------------------------- 主题单词视图 ---------------------------- */
 /** 维基摘要缓存：title → Promise<{extract,url}>（失败结果也缓存，不重复请求） */
 const wikiCache = new Map();
 
@@ -908,7 +910,7 @@ function buildWikiBox(title) {
   return box;
 }
 
-/* ---------------------------- 常用网站视图（阶段 7） ---------------------------- */
+/* ---------------------------- 常用网站视图 ---------------------------- */
 /**
  * 渲染常用网站页：
  *   页头 → 分类快速跳转 → 分类区块 → 网站卡片
@@ -1052,11 +1054,10 @@ function slugId(name) {
 
 /* ============================ 5. 顶部搜索框 ============================ */
 /* 搜索框的全部交互（预热索引、实时结果、清空、回车跳第一条、点外部收起）
-   已在阶段 8 移交 js/search.js；boot() 里用 initSearch({ loadJSON, goTo, notify }) 接入。
-   这里不再保留任何阶段 1 的「搜索即将上线」占位逻辑。 */
+   已由 js/search.js 负责；boot() 里用 initSearch({ loadJSON, goTo, notify }) 接入。 */
 
 /* ============================ 6. 说明：朗读交互的接管方式 ============================ */
-/* 阶段 1 的临时提示已在阶段 2 删除。
+/* 旧版本的临时朗读提示已移除。
    现在全站的英文朗读由 js/tts.js 的 bindSpeakable(document) 用事件委托统一接管，
    界面状态（停止按钮、语速档位、朗读中徽标）由 js/speech-feedback.js 负责。 */
 
@@ -1132,7 +1133,7 @@ function boot() {
     });
   }
 
-  // 朗读引擎 + 界面反馈（阶段 2）
+  // 朗读引擎 + 界面反馈
   const ttsReady = initTTS();
   if (ttsReady) bindSpeakable(document);   // document 级事件委托：绑一次，全站生效
   initSpeechFeedback({ notify: toast });
@@ -1149,6 +1150,184 @@ function boot() {
     search: searchApi,
     favorites: { getFavorites, countFavorites }
   };
+}
+
+/* ============================ 9. 真机自测面板（临时） ============================ */
+/*
+ * 【临时功能 · 第 3 轮可整段删除】
+ * 用途：真机走查时，在首页底部「连点版本号 5 次」展开，一键截图上报环境信息
+ *       （浏览器 UA / 当前缓存版本 / SW 注册状态 / 系统语音列表）。
+ * 依据：docs/真机验收.md 的附录 A。
+ *
+ * 删除方法（共 3 处，删完不影响任何功能）：
+ *   1) 本节全部代码
+ *   2) renderHomeView() 里的 appendSelfTestEntry(wrap);
+ *   3) css/components.css 末尾的「真机自测面板」样式块
+ */
+
+/** 页面版本常量：应与 sw.js 的 CACHE_VERSION 保持一致（面板会与 caches 实际名对照显示） */
+const APP_VERSION = 'v0.9.0';
+const SELFTEST_TAPS = 5;        // 需要连点的次数
+const SELFTEST_TAP_GAP = 2500;  // 相邻两次点击的最大间隔(ms)，超时则重新计数
+const SELFTEST_VOICE_MAX = 12;  // 语音列表最多展示几条（截图友好）
+
+let selftestTaps = 0;        // 已连点次数
+let selftestLastTap = 0;     // 上一次点击的时间戳
+let selftestPanel = null;    // 面板节点（跨 Tab 切换保留，切回来仍是展开状态）
+let selftestFields = null;   // 面板里各个 <dd> 的引用
+
+/**
+ * 首页底部：灰色版本号（同时是隐藏入口）。
+ * @param {HTMLElement} host
+ * @returns {HTMLElement} 版本号按钮
+ */
+function appendSelfTestEntry(host) {
+  const btn = el('button', 'app-version', `版本 ${APP_VERSION}`);
+  btn.type = 'button';
+  btn.setAttribute('aria-label', `版本 ${APP_VERSION}，连点 5 次打开真机自测面板`);
+  btn.addEventListener('click', () => {
+    const now = Date.now();
+    // 超过间隔就重新计数，避免很久之后随手点几下就误触
+    selftestTaps = (now - selftestLastTap > SELFTEST_TAP_GAP) ? 1 : selftestTaps + 1;
+    selftestLastTap = now;
+    if (selftestTaps >= SELFTEST_TAPS) {
+      selftestTaps = 0;
+      showSelfTestPanel(btn);
+    }
+  });
+
+  host.append(btn);
+  if (selftestPanel) host.append(selftestPanel);   // 切走再回来时保持已展开
+  return btn;
+}
+
+/** 展开（或刷新）自测面板；幂等 */
+function showSelfTestPanel(anchor) {
+  if (!selftestPanel) {
+    selftestPanel = buildSelfTestPanel();
+    if (anchor && anchor.parentNode) anchor.parentNode.insertBefore(selftestPanel, anchor.nextSibling);
+  }
+  selftestPanel.hidden = false;
+  collectSelfTestInfo();
+  selftestPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  return selftestPanel;
+}
+
+/** 搭面板骨架：标题 + 关闭按钮 + 若干「标签/取值」行 */
+function buildSelfTestPanel() {
+  const box = el('section', 'selftest');
+  box.id = 'selfTestPanel';
+
+  const head = el('div', 'selftest__head');
+  head.append(el('strong', 'selftest__title', '真机自测（临时）'));
+  const close = el('button', 'selftest__close', '✕');
+  close.type = 'button';
+  close.setAttribute('aria-label', '关闭真机自测面板');
+  close.addEventListener('click', () => { box.hidden = true; });
+  head.append(close);
+  box.append(head);
+
+  const list = el('dl', 'selftest__list');
+  const addRow = (label, extraClass) => {
+    list.append(el('dt', '', label));
+    const dd = el('dd', extraClass || '', '读取中…');
+    list.append(dd);
+    return dd;
+  };
+
+  selftestFields = {
+    ua:     addRow('浏览器 UA'),
+    page:   addRow('页面版本'),
+    cache:  addRow('当前缓存版本'),
+    sw:     addRow('SW 注册状态'),
+    voices: addRow('语音列表', 'selftest__voices'),
+    env:    addRow('环境')
+  };
+
+  box.append(list);
+  return box;
+}
+
+/** 采集一次环境信息并填进面板（同步项直接写，异步项给 Promise） */
+function collectSelfTestInfo() {
+  const f = selftestFields;
+  if (!f) return;
+
+  f.ua.textContent = navigator.userAgent;
+  f.page.textContent = `${APP_VERSION}（页面常量，应与缓存名一致）`;
+
+  /* 缓存版本：caches.keys() 是运行时真相，比去解析 sw.js 可靠 */
+  if ('caches' in window && window.isSecureContext) {
+    caches.keys()
+      .then((keys) => {
+        f.cache.textContent = keys.length
+          ? keys.join('、')
+          : '（空：Service Worker 尚未装上，PWA 与离线项会失败）';
+      })
+      .catch((err) => { f.cache.textContent = `读取失败：${errText(err)}`; });
+  } else {
+    f.cache.textContent = '不可用（需 https 或 127.0.0.1）';
+  }
+
+  /* SW 注册状态 */
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistration()
+      .then((reg) => {
+        if (!reg) { f.sw.textContent = '未注册（首次访问未完成？刷新一次再看）'; return; }
+        const state = reg.installing ? 'installing'
+          : reg.waiting ? 'waiting'
+            : reg.active ? 'activated' : '未知';
+        const ctrl = navigator.serviceWorker.controller
+          ? '本页已被接管' : '本页未被接管（首次访问属正常）';
+        f.sw.textContent = `${state} · scope=${reg.scope} · ${ctrl}`;
+      })
+      .catch((err) => { f.sw.textContent = `读取失败：${errText(err)}`; });
+  } else {
+    f.sw.textContent = '该浏览器不支持 Service Worker';
+  }
+
+  /* 语音列表：首屏常常是空的，监听 voiceschanged 再补两次重试 */
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.addEventListener('voiceschanged', refreshVoiceList);
+    setTimeout(refreshVoiceList, 800);
+    setTimeout(refreshVoiceList, 2500);
+  }
+  refreshVoiceList();
+
+  f.env.textContent = [
+    location.protocol,
+    `安全上下文=${window.isSecureContext}`,
+    `屏宽=${window.innerWidth}`,
+    `dpr=${window.devicePixelRatio}`,
+    `语速=${getRate()}`
+  ].join(' · ');
+}
+
+/** 刷新语音列表：空列表或没有英语语音时，面板本身就是问题定位依据 */
+function refreshVoiceList() {
+  const f = selftestFields;
+  if (!f) return;
+  if (!('speechSynthesis' in window)) {
+    f.voices.textContent = '该浏览器不支持语音合成（朗读会整体不可用）';
+    return;
+  }
+  const list = window.speechSynthesis.getVoices() || [];
+  if (!list.length) {
+    f.voices.textContent = '（空：系统里没有可用语音，需在系统设置中下载英语语音包）';
+    return;
+  }
+  const enCount = list.filter((v) => /^en([-_]|$)/i.test(v.lang || '')).length;
+  const shown = list.slice(0, SELFTEST_VOICE_MAX)
+    .map((v) => `${v.name} [${v.lang}]${v.localService ? ' 本地' : ''}${v.default ? ' 默认' : ''}`);
+  f.voices.textContent =
+    `共 ${list.length} 个，其中英语 ${enCount} 个${enCount ? '' : '（⚠️ 无英语语音，朗读必然失败）'}\n`
+    + shown.join('\n')
+    + (list.length > SELFTEST_VOICE_MAX ? `\n… 其余 ${list.length - SELFTEST_VOICE_MAX} 个省略` : '');
+}
+
+/** 统一取错误信息 */
+function errText(err) {
+  return String((err && err.message) || err || '未知错误');
 }
 
 boot();

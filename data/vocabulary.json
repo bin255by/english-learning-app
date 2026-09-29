@@ -51,6 +51,23 @@
       ]
     },
     {
+      "id": "ordinals",
+      "nameEn": "Ordinal Numbers",
+      "nameZh": "数字序号",
+      "items": [
+        { "en": "first", "zh": "第一", "abbr": "1st", "exampleEn": "She finished the race first.", "exampleZh": "她第一个跑完了比赛。" },
+        { "en": "second", "zh": "第二", "abbr": "2nd", "exampleEn": "He came in second in the race.", "exampleZh": "他在比赛中得了第二名。" },
+        { "en": "third", "zh": "第三", "abbr": "3rd", "exampleEn": "My sister lives on the third floor.", "exampleZh": "我姐姐住在三楼。" },
+        { "en": "fourth", "zh": "第四", "abbr": "4th", "exampleEn": "July fourth is my favorite day.", "exampleZh": "七月四日是我最喜欢的一天。" },
+        { "en": "fifth", "zh": "第五", "abbr": "5th", "exampleEn": "My son is in fifth grade.", "exampleZh": "我儿子上五年级。" },
+        { "en": "sixth", "zh": "第六", "abbr": "6th", "exampleEn": "Today is the sixth of March.", "exampleZh": "今天是三月六日。" },
+        { "en": "seventh", "zh": "第七", "abbr": "7th", "exampleEn": "The seventh day of the week is Sunday.", "exampleZh": "一周的第七天是星期日。" },
+        { "en": "eighth", "zh": "第八", "abbr": "8th", "exampleEn": "His birthday is on the eighth of May.", "exampleZh": "他的生日是五月八日。" },
+        { "en": "ninth", "zh": "第九", "abbr": "9th", "exampleEn": "September is the ninth month of the year.", "exampleZh": "九月是一年中的第九个月。" },
+        { "en": "tenth", "zh": "第十", "abbr": "10th", "exampleEn": "June tenth is my father's birthday.", "exampleZh": "六月十日是我爸爸的生日。" }
+      ]
+    },
+    {
       "id": "animals",
       "nameEn": "Animals",
       "nameZh": "动物",
@@ -59,6 +76,21 @@
         { "en": "dog", "zh": "狗", "exampleEn": "The dog is very friendly.", "exampleZh": "这只狗很友好。" },
         { "en": "bird", "zh": "鸟", "exampleEn": "A bird is singing in the tree.", "exampleZh": "一只鸟在树上唱歌。" },
         { "en": "fish", "zh": "鱼", "exampleEn": "We eat fish on Friday.", "exampleZh": "我们周五吃鱼。" }
+      ]
+    },
+    {
+      "id": "signs",
+      "nameEn": "Signs",
+      "nameZh": "标志",
+      "items": [
+        { "en": "stop sign", "zh": "停车让行标志", "exampleEn": "The stop sign is at the corner.", "exampleZh": "停车标志在拐角处。" },
+        { "en": "no parking", "zh": "禁止停车", "exampleEn": "There is a no parking sign in front of the house.", "exampleZh": "这栋房子前面有一个禁止停车标志。" },
+        { "en": "speed limit", "zh": "限速", "exampleEn": "The speed limit on this road is thirty-five.", "exampleZh": "这条路的限速是三十五。" },
+        { "en": "exit", "zh": "出口", "exampleEn": "The exit is on your right.", "exampleZh": "出口在你的右手边。" },
+        { "en": "restroom", "zh": "洗手间", "exampleEn": "Where is the restroom?", "exampleZh": "洗手间在哪里？" },
+        { "en": "entrance", "zh": "入口", "exampleEn": "The entrance is on the left side.", "exampleZh": "入口在左边。" },
+        { "en": "crosswalk", "zh": "人行横道", "exampleEn": "Look both ways before you cross at the crosswalk.", "exampleZh": "过人行横道之前要左右看。" },
+        { "en": "yield", "zh": "让行标志", "exampleEn": "The car must yield at this sign.", "exampleZh": "车辆看到这个标志必须让行。" }
       ]
     },
     {

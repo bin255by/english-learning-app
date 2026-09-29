@@ -32,7 +32,7 @@
   <!-- 移动端优先，最大宽度 520px，桌面端居中显示为"手机容器" -->
   <div class="app-shell">
 
-    <!-- ===== 顶部固定区：标题 + 站内搜索框（搜索逻辑在后续阶段接入） ===== -->
+    <!-- ===== 顶部固定区：标题 + 站内搜索框（逻辑见 js/search.js） ===== -->
     <header class="app-header">
       <div class="app-header__row">
         <h1 class="app-header__title">轻轻学英语</h1>
@@ -50,7 +50,7 @@
         <div id="searchResults" class="search__results" role="listbox" aria-label="搜索结果" hidden></div>
       </div>
 
-      <!-- ===== 朗读工具条：语速三档 + 停止朗读（阶段 2） ===== -->
+      <!-- ===== 朗读工具条：语速三档 + 停止朗读（界面见 js/speech-feedback.js） ===== -->
       <div class="speakbar">
         <span class="speakbar__label" id="rateLabel">🔈 语速 <b id="rateValue">0.9</b></span>
         <div class="rate" id="rateGroup" role="group" aria-label="朗读语速">
@@ -113,7 +113,7 @@
   <!-- 第三方：Swiper 11（UMD，暴露 window.Swiper）。加载失败时 js/home.js 会自动降级为横向滚动 -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <!-- 唯一入口：原生 ES6 模块（Fuse.js 会在真正用到它的搜索阶段再引入） -->
+  <!-- 唯一入口：原生 ES6 模块（Fuse.js / Swiper 为全局 UMD，已在上方引入） -->
   <script type="module" src="js/app.js"></script>
 </body>
 </html>

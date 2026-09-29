@@ -34,7 +34,7 @@
 }
 .search__clear:active { background: var(--bg); color: var(--text-2); }
 
-/* ---------- 搜索结果下拉面板（阶段 8） ---------- */
+/* ---------- 搜索结果下拉面板 ---------- */
 .search-result {
   display: flex;
   align-items: center;
@@ -193,7 +193,7 @@
 .is-speaking { animation: pulse 1.4s ease-in-out infinite; }
 @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .72; } }
 
-/* ---------- 空状态 / 占位 ---------- */
+/* ---------- 空状态 / 无内容提示 ---------- */
 .empty { padding: 26px 18px; text-align: center; }
 .empty__emoji { margin-bottom: 10px; font-size: 40px; line-height: 1; }
 .empty__title { margin-bottom: 6px; font-size: var(--fs-body); font-weight: 600; }
@@ -241,7 +241,7 @@
 }
 
 /* ==========================================================================
-   收藏 / 生词本（阶段 9）
+   收藏 / 生词本
    ========================================================================== */
 /* 卡片右上角收藏按钮：44×44，满足触控标准 */
 .fav-star {
@@ -335,7 +335,7 @@
 .fav-empty__desc { font-size: var(--fs-sm); color: var(--text-2); }
 
 /* ==========================================================================
-   朗读工具条（阶段 2）：语速三档 + 停止朗读 + 朗读状态徽标
+   朗读工具条：语速三档 + 停止朗读 + 朗读状态徽标
    ========================================================================== */
 .speakbar {
   display: flex;
@@ -399,3 +399,39 @@
   box-shadow: 0 4px 14px rgba(46, 175, 160, .28);
   animation: pulse 1.4s ease-in-out infinite;
 }
+
+/* ==========================================================================
+   真机自测面板（临时 · 第 3 轮连同 app.js 第 9 节一起整段删除）
+   ========================================================================== */
+/* 版本号：平时就是一行灰色小字，连点 5 次展开自测面板；仍满足 44px 触控高度 */
+.app-version {
+  display: block;
+  width: 100%;
+  min-height: var(--tap);
+  padding: 6px 0;
+  color: var(--text-3);
+  font-size: var(--fs-xs);
+  text-align: center;
+}
+.selftest {
+  margin: 4px 0 8px;
+  padding: 12px 14px 14px;
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-sm);
+}
+.selftest__head { display: flex; align-items: center; justify-content: space-between; }
+.selftest__title { font-size: var(--fs-sm); }
+.selftest__close { min-width: var(--tap); min-height: var(--tap); color: var(--text-3); font-size: 18px; }
+.selftest__list {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 6px 10px;
+  margin: 4px 0 0;
+  font-size: var(--fs-xs);
+  line-height: 1.6;
+  word-break: break-all;
+}
+.selftest__list dt { color: var(--text-2); }
+.selftest__list dd { margin: 0; }
+.selftest__voices { white-space: pre-wrap; }   /* 语音列表按行展示，方便截图 */

@@ -146,6 +146,61 @@
           "descZh": "找餐厅、看评价。"
         }
       ]
+    },
+    {
+      "id": "life-services",
+      "nameZh": "政府与生活服务",
+      "items": [
+        {
+          "nameEn": "Wikipedia",
+          "nameZh": "维基百科",
+          "url": "https://en.wikipedia.org",
+          "descEn": "The free encyclopedia with articles in many languages.",
+          "descZh": "免费百科全书，有英语、中文等多个语言版本。"
+        },
+        {
+          "nameEn": "weather.com",
+          "nameZh": "天气网",
+          "url": "https://www.weather.com",
+          "descEn": "Check the weather forecast for your city.",
+          "descZh": "查询所在城市的天气预报。"
+        },
+        {
+          "nameEn": "USA.gov",
+          "nameZh": "美国政府官网",
+          "url": "https://www.usa.gov",
+          "descEn": "Official information and services from the U.S. government.",
+          "descZh": "美国政府的官方信息与办事服务入口。"
+        },
+        {
+          "nameEn": "USPS",
+          "nameZh": "美国邮政",
+          "url": "https://www.usps.com",
+          "descEn": "Buy stamps, track packages, and change your address.",
+          "descZh": "买邮票、查快递、办理地址变更。"
+        },
+        {
+          "nameEn": "Chase",
+          "nameZh": "摩根大通银行",
+          "url": "https://www.chase.com",
+          "descEn": "A major U.S. bank for checking accounts and credit cards.",
+          "descZh": "美国大型银行，可办储蓄账户和信用卡。"
+        },
+        {
+          "nameEn": "CVS",
+          "nameZh": "药店与便利店",
+          "url": "https://www.cvs.com",
+          "descEn": "Pharmacy, health products, and photo services in one store.",
+          "descZh": "一家店里同时有药房、保健用品和照片打印服务。"
+        },
+        {
+          "nameEn": "Reddit",
+          "nameZh": "红迪网",
+          "url": "https://www.reddit.com",
+          "descEn": "Online forums where people discuss almost any topic.",
+          "descZh": "在线论坛，几乎什么话题都有人讨论。"
+        }
+      ]
     }
   ]
 }

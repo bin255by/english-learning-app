@@ -11,7 +11,7 @@
  * ========================================================================== */
 
 const STORAGE_KEY = 'elapp.favorites.v1';
-const MAX_ITEMS = 300;          // 上限保护，避免 localStorage 无限增长
+const MAX_ITEMS = 300;          // 上限保护，避免 localStorage 无限增长；超出后淘汰最旧的（见 writeAll）
 
 /** Tab → 分组标题 */
 const TAB_LABEL = {
@@ -38,13 +38,41 @@ function readAll() {
   }
 }
 
+/* 最近一次写入是否因超出上限而淘汰了条目（供 UI 提示使用，读后即清零） */
+let lastEvicted = 0;
+
 function writeAll(list) {
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(list.slice(0, MAX_ITEMS)));
+    // 收藏数组按「收藏时间升序」存放（旧 → 新），
+    // 所以超上限时必须淘汰**最旧**的：若用 slice(0, MAX) 保留前 MAX 条，
+    // 刚收藏的新条目会在写入瞬间被丢弃（界面却提示「已加入收藏」）。
+    let next = list;
+    if (list.length > MAX_ITEMS) {
+      const overflow = list.length - MAX_ITEMS;   // 正常一次收藏只溢出 1 条
+      const dropped = list.slice(0, overflow);
+      lastEvicted = overflow;
+      console.warn(`[favorites] 收藏已达上限 ${MAX_ITEMS} 条，已自动移除最早的 ${overflow} 条：`,
+        dropped.map((i) => i.title || i.targetId || i.key).join('、'));
+      next = list.slice(-MAX_ITEMS);              // 只保留最新 MAX_ITEMS 条
+    } else {
+      lastEvicted = 0;
+    }
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
     return true;
   } catch (err) {
     return false;
   }
+}
+
+/**
+ * 取出「上一次写入淘汰了几条」，调用后自动清零。
+ * UI 用它把提示改成「已加入收藏（已移除最早的 N 条）」，避免文案与实际行为不一致。
+ * @returns {number}
+ */
+export function consumeEvictedCount() {
+  const n = lastEvicted;
+  lastEvicted = 0;
+  return n;
 }
 
 /** 全部收藏（按收藏时间倒序） */
@@ -323,7 +351,15 @@ export function initFavorites(options = {}) {
     });
     syncStars(document);
     document.dispatchEvent(new CustomEvent('favorites:change'));
-    notify(added ? '已加入收藏 ⭐' : '已取消收藏');
+
+    // 收藏满 MAX_ITEMS 条时，最旧的会被自动淘汰 1 条；
+    // 提示必须写明这件事，否则「已加入收藏」与实际存下来的内容不一致。
+    const evicted = consumeEvictedCount();
+    if (added && evicted > 0) {
+      notify(`已加入收藏 ⭐（已达 ${MAX_ITEMS} 条上限，已移除最早的 ${evicted} 条）`, 3600);
+    } else {
+      notify(added ? '已加入收藏 ⭐' : '已取消收藏');
+    }
   });
 }
 
