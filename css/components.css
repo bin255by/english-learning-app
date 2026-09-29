@@ -453,7 +453,16 @@
   gap: 8px;
 }
 
-/* 标签区：收起态一行横向滑动；展开态多行平铺 */
+/* 第 4 轮：滚动视口包裹层
+   标签区本身是滚动容器，而底部渐隐提示条必须固定在"可视区"底部、
+   不能跟着内容一起滚走，所以 ::after 挂在这个不参与滚动的包裹层上。 */
+.filterbar__scroll {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* 标签区：收起态一行横向滑动；展开态多行平铺 + 内部垂直滚动 */
 .filterbar__list {
   flex: 1 1 auto;
   min-width: 0;
@@ -462,22 +471,47 @@
   /* 收起态：一行平铺 + 横向滚动（滚动条隐藏但保留滚动能力） */
   flex-wrap: nowrap;
   overflow-x: auto;
+  overflow-y: auto;                       /* 第 4 轮：允许区域内垂直滚动 */
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+  scrollbar-width: none;                  /* Firefox：滚动条不显示，滚动能力保留 */
+  overscroll-behavior: contain;           /* 触屏滚到顶/底时不带动页面整体滚动 */
   scroll-snap-type: x proximity;
   padding-bottom: 2px;
   transition: max-height .28s ease;
 }
-.filterbar__list::-webkit-scrollbar { display: none; }
+.filterbar__list::-webkit-scrollbar { display: none; }   /* Chrome / Safari */
 
-/* 展开态：多行平铺显示全部标签（高度过渡由 max-height 承担） */
+/* 展开态：多行平铺显示全部标签（高度过渡由 max-height 承担）
+   第 4 轮：标签越来越多时不再无限撑高页面，改为【在筛选区内部上下滑动】 */
 .filterbar.is-collapsed .filterbar__list { max-height: 52px; }
 .filterbar:not(.is-collapsed) .filterbar__list {
   flex-wrap: wrap;
   overflow-x: visible;
-  max-height: 420px;
+  max-height: 40vh;
   scroll-snap-type: none;
 }
+/* 主题单词页（Tab 式单行标签栏）：【始终】保留 40vh 上限。
+   收起态仍是一行横滑（内容高度约 46px < 40vh，视觉不变）；
+   展开后标签一多就在 Tab 栏内部上下滑动。 */
+.filterbar[data-mode="single"] .filterbar__list { max-height: 40vh; }
+
+/* 底部渐隐提示条：暗示"这里还能继续往下滑"
+   只在内容确实超出（JS 按 scrollHeight > clientHeight 加 .is-scrollable）
+   且还没滚到底（.is-scroll-end）时才显示。 */
+.filterbar__scroll::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 18px;
+  pointer-events: none;                   /* 纯装饰，绝不拦截点击 */
+  opacity: 0;
+  background: linear-gradient(to top, var(--bg) 10%, rgba(250, 250, 250, 0) 100%);
+  transition: opacity .18s ease;
+}
+.filterbar.is-scrollable .filterbar__scroll::after { opacity: 1; }
+.filterbar.is-scrollable.is-scroll-end .filterbar__scroll::after { opacity: 0; }
 
 /* 一级分类组 */
 .filterbar__group {

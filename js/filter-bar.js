@@ -15,8 +15,19 @@
  *      - 一级分类旁另有小三角：▸ 收起 / ▾ 展开二级列表（不改勾选）
  *      - 点一级分类文字本身 → 切换该一级下所有二级项的勾选（全选 / 全不选）
  *      - 点某个二级项     → 切换该二级项的勾选
+ *      - 第 4 轮需求 2：二级展开改为【手风琴】——同时只展开一个一级分类的二级；
+ *        点另一个一级的 ▸ 会自动收起前一个，点已展开的 ▾ 则收起它
+ *        （所以允许出现"一个二级都没展开"的状态）
  *
- *   3) 多选筛选 + 重置（需求 7 / 9）
+ *   3) 内部垂直滚动（第 4 轮需求 1，四页统一）
+ *      - 标签多到撑破屏幕时，在筛选区【内部】上下滑动，不带动页面整体滚动
+ *      - 展开态 max-height: 40vh + overflow-y:auto + overscroll-behavior:contain
+ *      - 滚动条隐藏（scrollbar-width:none + ::-webkit-scrollbar{display:none}）
+ *      - 收起态仍是一行横滑（本来就超不出 40vh，视觉不变）
+ *      - 主题单词页是 Tab 式（data-mode="single"），max-height 始终生效
+ *      - 内容确实超出时才在底部显示一条渐隐提示（::after + linear-gradient）
+ *
+ *   4) 多选筛选 + 重置（需求 7 / 9）
  *      - multi 模式：默认全部勾选，点击即切换，未勾选的分类内容隐藏
  *      - single 模式（主题单词页）：保持原有 Tab 式，点谁只显示谁
  *      - showReset 页面额外提供「清空勾选」按钮，点击恢复"全选"默认状态
@@ -118,6 +129,11 @@ export function createFilterBar(options = {}) {
   list.setAttribute('role', 'group');
   list.setAttribute('aria-label', options.ariaLabel || '分类筛选');
 
+  /* 第 4 轮：list 自身是滚动容器，外层 scroll 只是它的定位上下文，
+     用来挂一条固定的底部渐隐提示（::after 不能挂在滚动容器上，否则会跟着内容滚走）。 */
+  const scrollViewport = el('div', 'filterbar__scroll');
+  scrollViewport.append(list);
+
   const groupNodes = new Map();   // item.id → {group, chip, caret, subsBox, subChips}
 
   items.forEach((item) => {
@@ -187,7 +203,7 @@ export function createFilterBar(options = {}) {
   toggleBtn.append(el('span', 'filterbar__toggle-icon', '▸'));
   tools.append(toggleBtn);
 
-  row.append(list, tools);
+  row.append(scrollViewport, tools);
   root.append(row);
 
   /* ---------------------------- 状态渲染 ---------------------------- */
@@ -235,7 +251,53 @@ export function createFilterBar(options = {}) {
     toggleBtn.setAttribute('aria-label', collapsed ? '展开全部分类' : '收起分类');
     const icon = toggleBtn.querySelector('.filterbar__toggle-icon');
     if (icon) icon.textContent = collapsed ? '▸' : '▾';
+    syncScrollAffordance();
   }
+
+  /* --------------------- 二级分类：手风琴（同时只展开一个） ---------------------
+   * 第 4 轮需求 2：原先多个一级分类的二级可以同时展开，页面会被撑得很长。
+   * 现在改为手风琴：展开 B 前自动收起 A；点已展开的 A 则收起它，
+   * 于是允许出现"一个二级都没展开"的状态。
+   * 只影响二级列表的显隐，完全不碰勾选状态，也不触发 onChange。
+   * 组件级生效 —— 而四页里只有词根词缀页传了 subs，所以实际只有该页受影响。 */
+  /** 当前展开二级列表的一级项 id；null = 一个都没展开 */
+  let openSubId = null;
+
+  function renderSubs() {
+    items.forEach((item) => {
+      const nodes = groupNodes.get(item.id);
+      if (!nodes || !nodes.subsBox || !nodes.caret) return;
+      const open = openSubId === item.id;
+      nodes.subsBox.hidden = !open;
+      nodes.caret.setAttribute('aria-expanded', open ? 'true' : 'false');
+      nodes.caret.setAttribute('aria-label', `${open ? '收起' : '展开'}「${item.label || item.id}」的二级分类`);
+      const icon = nodes.caret.querySelector('.filterbar__caret-icon');
+      if (icon) icon.textContent = open ? '▾' : '▸';
+    });
+  }
+
+  /* ------------------ 第 4 轮：区域内垂直滚动 + 底部渐隐提示 ------------------ */
+  /**
+   * 按真实尺寸决定要不要显示"还能往下滑"的渐隐条：
+   *   .is-scrollable —— scrollHeight > clientHeight（内容确实超出）
+   *   .is-scroll-end —— 已经滚到底，此时不再提示
+   * 收起态只有一行，量出来不会超出，所以自然不会显示。
+   */
+  function syncScrollAffordance() {
+    const over = list.scrollHeight - list.clientHeight;
+    const scrollable = over > 1;
+    root.classList.toggle('is-scrollable', scrollable);
+    root.classList.toggle('is-scroll-end', scrollable && list.scrollTop >= over - 1);
+  }
+
+  /** 内容高度变了（展开二级 / 收起 / 换分类）后，下一帧再量一次尺寸 */
+  function refreshScrollAffordance() {
+    requestAnimationFrame(syncScrollAffordance);
+  }
+
+  list.addEventListener('scroll', syncScrollAffordance, { passive: true });
+  // 40vh 跟着视口走：转屏、地址栏收起等会让可视高度变化 → 由 RO 兜底重算
+  if (typeof ResizeObserver === 'function') new ResizeObserver(syncScrollAffordance).observe(list);
 
   /* ---------------------------- 交互 ---------------------------- */
   // 点一级分类文字 → single 模式=切换 Tab；multi 模式=切换该一级下所有二级项的勾选
@@ -247,12 +309,13 @@ export function createFilterBar(options = {}) {
       const id = caret.dataset.filterCaret;
       const nodes = groupNodes.get(id);
       if (nodes && nodes.subsBox) {
-        const open = nodes.subsBox.hidden;
-        nodes.subsBox.hidden = !open;
-        nodes.caret.setAttribute('aria-expanded', open ? 'true' : 'false');
-        nodes.caret.setAttribute('aria-label', `${open ? '收起' : '展开'}「${labelOf(id)}」的二级分类`);
-        const icon = nodes.caret.querySelector('.filterbar__caret-icon');
-        if (icon) icon.textContent = open ? '▾' : '▸';
+        // 第 4 轮需求 2（手风琴）：
+        //   点已展开的 ▾ → 收起它（可以一个都没展开）
+        //   点别的 ▸    → 先把当前展开的收起来，再展开这个
+        // 只改二级列表的显隐，不碰勾选、不触发 onChange。
+        openSubId = openSubId === id ? null : id;
+        renderSubs();
+        refreshScrollAffordance();   // 展开后内容变高，重算渐隐提示
       }
       return;
     }
@@ -321,6 +384,8 @@ export function createFilterBar(options = {}) {
 
   renderSelection();
   renderCollapsed();
+  renderSubs();                    // 第 4 轮：二级列表默认一个都没展开
+  refreshScrollAffordance();       // 入 DOM 前量不准，等挂载后（rAF/RO）再补一次
 
   return {
     element: root,
@@ -347,12 +412,10 @@ function countTextOf(item, withUnit) {
   return withUnit ? `${item.count}${DEFAULT_COUNT_SUFFIX}` : String(item.count);
 }
 
-function labelOf(id) {
-  const raw = String(id || '').split('::').pop();
-  return raw || id;
-}
-
-/** 让当前选中的标签滚进可视区（横向滑动条里尤其需要） */
+/**
+ * 让当前选中的标签滚进可视区。
+ * single 模式下切换分类时用：让被选中的那个标签在横向滑动条里自动居中。
+ */
 function scrollChipIntoView(chip) {
   if (!chip) return;
   try { chip.scrollIntoView({ inline: 'center', block: 'nearest' }); }
