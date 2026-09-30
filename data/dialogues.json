@@ -81,6 +81,133 @@
       ]
     },
     {
+  "id": "home-conversations",
+  "titleEn": "Common Home Conversations",
+  "titleZh": "家庭常用对话",
+  "descZh": "家庭生活中常见问答：开关门、放冰箱、东西摆放、出门接人。",
+  "lines": [
+    {
+      "speaker": "A",
+      "en": "Should I open the door?",
+      "zh": "我要开门吗？",
+      "keyExpressions": [
+        { "en": "Should I open the door?", "zh": "我要开门吗？" },
+        { "en": "Keep it closed.", "zh": "让它关着。" },
+        { "en": "Should I lock it?", "zh": "要锁门吗？" }
+      ]
+    },
+    {
+      "speaker": "B",
+      "en": "No, keep it closed. It's cold outside.",
+      "zh": "不用，让它关着。外面很冷。",
+      "keyExpressions": []
+    },
+    {
+      "speaker": "A",
+      "en": "Okay. Should I lock it?",
+      "zh": "好的。要锁门吗？",
+      "keyExpressions": []
+    },
+    {
+      "speaker": "B",
+      "en": "Yes, please lock the door.",
+      "zh": "要，请把门锁上。",
+      "keyExpressions": []
+    },
+    {
+      "speaker": "A",
+      "en": "Should I put the leftovers in the fridge?",
+      "zh": "剩菜要放冰箱吗？",
+      "keyExpressions": [
+        { "en": "Should I put the leftovers in the fridge?", "zh": "剩菜要放冰箱吗？" },
+        { "en": "Put them in the fridge.", "zh": "把它们放进冰箱。" },
+        { "en": "How long can we keep them?", "zh": "能放多久？" }
+      ]
+    },
+    {
+      "speaker": "B",
+      "en": "Yes, please put them in the fridge.",
+      "zh": "要，请把它们放进冰箱。",
+      "keyExpressions": []
+    },
+    {
+      "speaker": "A",
+      "en": "How long can we keep them?",
+      "zh": "能放多久？",
+      "keyExpressions": []
+    },
+    {
+      "speaker": "B",
+      "en": "Two days, I think.",
+      "zh": "我想两天吧。",
+      "keyExpressions": []
+    },
+    {
+      "speaker": "A",
+      "en": "Where should I put these groceries?",
+      "zh": "这些食品杂货该放哪儿？",
+      "keyExpressions": [
+        { "en": "Where should I put ...?", "zh": "……该放哪儿？" },
+        { "en": "Put the vegetables on the bottom shelf.", "zh": "把蔬菜放在最下层。" },
+        { "en": "What about ...?", "zh": "那……呢？" },
+        { "en": "Stack them in the cabinet.", "zh": "把它们叠放在橱柜里。" }
+      ]
+    },
+    {
+      "speaker": "B",
+      "en": "Put the vegetables on the bottom shelf.",
+      "zh": "把蔬菜放在最下层。",
+      "keyExpressions": []
+    },
+    {
+      "speaker": "A",
+      "en": "What about the dishes?",
+      "zh": "那这些盘子呢？",
+      "keyExpressions": []
+    },
+    {
+      "speaker": "B",
+      "en": "Stack them in the cabinet.",
+      "zh": "把它们叠放在橱柜里。",
+      "keyExpressions": []
+    },
+    {
+      "speaker": "A",
+      "en": "Do we need to go pick someone up?",
+      "zh": "我们要出门去接人吗？",
+      "keyExpressions": [
+        { "en": "Do we need to go pick someone up?", "zh": "我们要出门去接人吗？" },
+        { "en": "pick up", "zh": "接（人）" },
+        { "en": "Should we leave now?", "zh": "我们要现在出发吗？" }
+      ]
+    },
+    {
+      "speaker": "B",
+      "en": "Yes, we need to pick up your sister at six.",
+      "zh": "要，我们六点要去接你妹妹。",
+      "keyExpressions": []
+    },
+    {
+      "speaker": "A",
+      "en": "Should we leave now?",
+      "zh": "我们要现在出发吗？",
+      "keyExpressions": []
+    },
+    {
+      "speaker": "B",
+      "en": "Yes, let's go.",
+      "zh": "要，走吧。",
+      "keyExpressions": []
+    }
+  ],
+  "tipsZh": [
+    "家里问要不要做某事，常用 Should I ...? 或 Do you need me to ...?。",
+    "放东西可以问 Where should I put ...?，回答用 Put it/them ...。",
+    "接人常用 pick up，例如 pick up your sister。",
+    "出门前可以确认 Should we leave now?"
+  ]
+},
+    {
       "id": "shopping",
       "titleEn": "Shopping",
       "titleZh": "购物",
