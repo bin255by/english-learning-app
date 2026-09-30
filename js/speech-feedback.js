@@ -18,7 +18,7 @@
 
 import { on, setRate, getRate, stopSpeaking, speak, isSupported } from './tts.js';
 
-/** 切换语速后是否试听一句（中年用户靠听才分得清快慢，建议保持 true） */
+/** 切换语速后是否试听一句（用户靠听才分得清快慢，建议保持 true） */
 const SPEAK_SAMPLE_ON_RATE_CHANGE = true;
 const SAMPLE_TEXT = 'This is the new speed.';
 /** 语速步进：每次 ±0.25（沿用 tts.js 的 0.5~1.5 范围，超出会自动夹紧） */
