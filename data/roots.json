@@ -120,6 +120,786 @@
           ],
           "sentenceEn": "I do not understand the question.",
           "sentenceZh": "我不明白这个问题。"
+        },
+        {
+          "id": "mis",
+          "groupZh": "否定与错误",
+          "affix": "mis-",
+          "meaningZh": "错误地、不良地",
+          "examples": [
+            { "word": "mistake", "meaningZh": "错误" },
+            { "word": "misunderstand", "meaningZh": "误解" },
+            { "word": "mislead", "meaningZh": "误导" }
+          ],
+          "sentenceEn": "I made a small mistake.",
+          "sentenceZh": "我犯了一个小错误。"
+        },
+        {
+          "id": "non",
+          "groupZh": "否定与相反",
+          "affix": "non-",
+          "meaningZh": "非、不",
+          "examples": [
+            { "word": "nonstop", "meaningZh": "直达的" },
+            { "word": "nonsmoker", "meaningZh": "不吸烟的人" },
+            { "word": "nonfiction", "meaningZh": "非虚构作品" }
+          ],
+          "sentenceEn": "This is a nonstop train.",
+          "sentenceZh": "这是一列直达火车。"
+        },
+        {
+          "id": "anti",
+          "groupZh": "反对与抵抗",
+          "affix": "anti-",
+          "meaningZh": "反对、抗",
+          "examples": [
+            { "word": "antifreeze", "meaningZh": "防冻剂" },
+            { "word": "antibacterial", "meaningZh": "抗菌的" },
+            { "word": "anti-clockwise", "meaningZh": "逆时针的" }
+          ],
+          "sentenceEn": "Turn the key anti-clockwise.",
+          "sentenceZh": "逆时针转动钥匙。"
+        },
+        {
+          "id": "inter",
+          "groupZh": "之间与相互",
+          "affix": "inter-",
+          "meaningZh": "在……之间、相互",
+          "examples": [
+            { "word": "international", "meaningZh": "国际的" },
+            { "word": "Internet", "meaningZh": "互联网" },
+            { "word": "interview", "meaningZh": "面试、采访" }
+          ],
+          "sentenceEn": "We have an international class.",
+          "sentenceZh": "我们有一个国际班。"
+        },
+        {
+          "id": "post",
+          "groupZh": "时间与顺序",
+          "affix": "post-",
+          "meaningZh": "在……之后",
+          "examples": [
+            { "word": "postcard", "meaningZh": "明信片" },
+            { "word": "postpone", "meaningZh": "推迟" },
+            { "word": "postgraduate", "meaningZh": "研究生" }
+          ],
+          "sentenceEn": "I send a postcard to my friend.",
+          "sentenceZh": "我给朋友寄一张明信片。"
+        },
+        {
+          "id": "pro",
+          "groupZh": "方向与态度",
+          "affix": "pro-",
+          "meaningZh": "向前、支持",
+          "examples": [
+            { "word": "progress", "meaningZh": "进步" },
+            { "word": "promote", "meaningZh": "促进" },
+            { "word": "protect", "meaningZh": "保护" }
+          ],
+          "sentenceEn": "We make progress every day.",
+          "sentenceZh": "我们每天都有进步。"
+        },
+        {
+          "id": "super",
+          "groupZh": "程度与位置",
+          "affix": "super-",
+          "meaningZh": "超级、在上",
+          "examples": [
+            { "word": "supermarket", "meaningZh": "超市" },
+            { "word": "superman", "meaningZh": "超人" },
+            { "word": "superstar", "meaningZh": "超级明星" }
+          ],
+          "sentenceEn": "The supermarket is near my home.",
+          "sentenceZh": "超市在我家附近。"
+        },
+        {
+          "id": "trans",
+          "groupZh": "横跨与转移",
+          "affix": "trans-",
+          "meaningZh": "横跨、转移",
+          "examples": [
+            { "word": "transport", "meaningZh": "运输" },
+            { "word": "translate", "meaningZh": "翻译" },
+            { "word": "transfer", "meaningZh": "转移" }
+          ],
+          "sentenceEn": "We transport goods by train.",
+          "sentenceZh": "我们用火车运输货物。"
+        },
+        {
+          "id": "co",
+          "groupZh": "共同与相互",
+          "affix": "co-",
+          "meaningZh": "共同、一起",
+          "examples": [
+            { "word": "cooperate", "meaningZh": "合作" },
+            { "word": "co-worker", "meaningZh": "同事" },
+            { "word": "coexist", "meaningZh": "共存" }
+          ],
+          "sentenceEn": "We cooperate with each other.",
+          "sentenceZh": "我们互相合作。"
+        },
+        {
+          "id": "de",
+          "groupZh": "方向与否定",
+          "affix": "de-",
+          "meaningZh": "向下、离开、否定",
+          "examples": [
+            { "word": "decrease", "meaningZh": "减少" },
+            { "word": "depart", "meaningZh": "离开" },
+            { "word": "decode", "meaningZh": "解码" }
+          ],
+          "sentenceEn": "The number will decrease.",
+          "sentenceZh": "这个数字会减少。"
+        },
+        {
+          "id": "en",
+          "groupZh": "使成为",
+          "affix": "en-",
+          "meaningZh": "使……进入、使成为",
+          "examples": [
+            { "word": "enable", "meaningZh": "使能够" },
+            { "word": "enrich", "meaningZh": "丰富" },
+            { "word": "enlarge", "meaningZh": "扩大" }
+          ],
+          "sentenceEn": "This can enlarge the photo.",
+          "sentenceZh": "这可以放大照片。"
+        },
+        {
+          "id": "fore",
+          "groupZh": "时间与位置",
+          "affix": "fore-",
+          "meaningZh": "前、预先",
+          "examples": [
+            { "word": "forecast", "meaningZh": "预报" },
+            { "word": "forehead", "meaningZh": "额头" },
+            { "word": "foresee", "meaningZh": "预见" }
+          ],
+          "sentenceEn": "I listen to the weather forecast.",
+          "sentenceZh": "我听天气预报。"
+        },
+        {
+          "id": "auto",
+          "groupZh": "自己与自动",
+          "affix": "auto-",
+          "meaningZh": "自己、自动",
+          "examples": [
+            { "word": "automatic", "meaningZh": "自动的" },
+            { "word": "automobile", "meaningZh": "汽车" },
+            { "word": "autograph", "meaningZh": "签名" }
+          ],
+          "sentenceEn": "This is an automatic door.",
+          "sentenceZh": "这是一扇自动门。"
+        },
+        {
+          "id": "bi",
+          "groupZh": "数字与数量",
+          "affix": "bi-",
+          "meaningZh": "二、双",
+          "examples": [
+            { "word": "bicycle", "meaningZh": "自行车" },
+            { "word": "bilingual", "meaningZh": "双语的" },
+            { "word": "bimonthly", "meaningZh": "两月一次的" }
+          ],
+          "sentenceEn": "He rides a bicycle to school.",
+          "sentenceZh": "他骑自行车上学。"
+        },
+        {
+          "id": "tri",
+          "groupZh": "数字与数量",
+          "affix": "tri-",
+          "meaningZh": "三",
+          "examples": [
+            { "word": "triangle", "meaningZh": "三角形" },
+            { "word": "tricycle", "meaningZh": "三轮车" },
+            { "word": "tripod", "meaningZh": "三脚架" }
+          ],
+          "sentenceEn": "A triangle has three sides.",
+          "sentenceZh": "三角形有三条边。"
+        },
+        {
+          "id": "multi",
+          "groupZh": "数字与数量",
+          "affix": "multi-",
+          "meaningZh": "多",
+          "examples": [
+            { "word": "multimedia", "meaningZh": "多媒体" },
+            { "word": "multitask", "meaningZh": "多任务" },
+            { "word": "multicultural", "meaningZh": "多元文化的" }
+          ],
+          "sentenceEn": "We live in a multicultural city.",
+          "sentenceZh": "我们住在一个多元文化的城市。"
+        },
+        {
+          "id": "tele",
+          "groupZh": "远距离",
+          "affix": "tele-",
+          "meaningZh": "远",
+          "examples": [
+            { "word": "telephone", "meaningZh": "电话" },
+            { "word": "television", "meaningZh": "电视" },
+            { "word": "telescope", "meaningZh": "望远镜" }
+          ],
+          "sentenceEn": "We watch television at night.",
+          "sentenceZh": "我们晚上看电视。"
+        },
+        {
+          "id": "micro",
+          "groupZh": "大小与程度",
+          "affix": "micro-",
+          "meaningZh": "微小",
+          "examples": [
+            { "word": "microscope", "meaningZh": "显微镜" },
+            { "word": "microwave", "meaningZh": "微波炉" },
+            { "word": "microphone", "meaningZh": "麦克风" }
+          ],
+          "sentenceEn": "Use a microphone, please.",
+          "sentenceZh": "请使用麦克风。"
+        },
+        {
+          "id": "out",
+          "groupZh": "方向与超过",
+          "affix": "out-",
+          "meaningZh": "向外、超过",
+          "examples": [
+            { "word": "outside", "meaningZh": "外面" },
+            { "word": "outdoor", "meaningZh": "户外的" },
+            { "word": "outrun", "meaningZh": "跑得更快" }
+          ],
+          "sentenceEn": "The children play outside.",
+          "sentenceZh": "孩子们在外面玩。"
+        },
+        {
+          "id": "self",
+          "groupZh": "自我与自动",
+          "affix": "self-",
+          "meaningZh": "自我、自身",
+          "examples": [
+            { "word": "myself", "meaningZh": "我自己" },
+            { "word": "yourself", "meaningZh": "你自己" },
+            { "word": "self-service", "meaningZh": "自助" }
+          ],
+          "sentenceEn": "This is a self-service store.",
+          "sentenceZh": "这是一家自助商店。"
+        },
+        {
+          "id": "in",
+          "groupZh": "否定与相反",
+          "affix": "in-",
+          "meaningZh": "不、非",
+          "examples": [
+            { "word": "incorrect", "meaningZh": "不正确的" },
+            { "word": "invisible", "meaningZh": "看不见的" },
+            { "word": "indirect", "meaningZh": "间接的" }
+          ],
+          "sentenceEn": "This answer is incorrect.",
+          "sentenceZh": "这个答案不正确。"
+        },
+        {
+          "id": "ir",
+          "groupZh": "否定与相反",
+          "affix": "ir-",
+          "meaningZh": "不（常用在 r 前）",
+          "examples": [
+            { "word": "irregular", "meaningZh": "不规则的" },
+            { "word": "irresponsible", "meaningZh": "不负责任的" },
+            { "word": "irrelevant", "meaningZh": "不相关的" }
+          ],
+          "sentenceEn": "The shape is a little irregular.",
+          "sentenceZh": "这个形状有点不规则。"
+        },
+        {
+          "id": "semi",
+          "groupZh": "数字与数量",
+          "affix": "semi-",
+          "meaningZh": "半、一半",
+          "examples": [
+            { "word": "semicircle", "meaningZh": "半圆" },
+            { "word": "semifinal", "meaningZh": "半决赛" },
+            { "word": "semicolon", "meaningZh": "分号" }
+          ],
+          "sentenceEn": "We draw a semicircle on paper.",
+          "sentenceZh": "我们在纸上画一个半圆。"
+        },
+        {
+          "id": "mono",
+          "groupZh": "数字与数量",
+          "affix": "mono-",
+          "meaningZh": "单一、一个",
+          "examples": [
+            { "word": "monorail", "meaningZh": "单轨列车" },
+            { "word": "monologue", "meaningZh": "独白" },
+            { "word": "monotone", "meaningZh": "单调" }
+          ],
+          "sentenceEn": "The train runs on a monorail.",
+          "sentenceZh": "列车在单轨上行驶。"
+        },
+        {
+          "id": "poly",
+          "groupZh": "数字与数量",
+          "affix": "poly-",
+          "meaningZh": "多、多个",
+          "examples": [
+            { "word": "polygon", "meaningZh": "多边形" },
+            { "word": "polyglot", "meaningZh": "通晓多种语言的人" },
+            { "word": "polymer", "meaningZh": "聚合物" }
+          ],
+          "sentenceEn": "A square is a polygon.",
+          "sentenceZh": "正方形是一种多边形。"
+        },
+        {
+          "id": "uni",
+          "groupZh": "数字与数量",
+          "affix": "uni-",
+          "meaningZh": "一、单一",
+          "examples": [
+            { "word": "uniform", "meaningZh": "制服" },
+            { "word": "unicycle", "meaningZh": "独轮车" },
+            { "word": "unique", "meaningZh": "独特的" }
+          ],
+          "sentenceEn": "Everyone wears a blue uniform.",
+          "sentenceZh": "每个人都穿蓝色制服。"
+        },
+        {
+          "id": "up",
+          "groupZh": "方向与位置",
+          "affix": "up-",
+          "meaningZh": "向上",
+          "examples": [
+            { "word": "upstairs", "meaningZh": "楼上" },
+            { "word": "upgrade", "meaningZh": "升级" },
+            { "word": "upload", "meaningZh": "上传" }
+          ],
+          "sentenceEn": "I upload a photo online.",
+          "sentenceZh": "我在网上上传一张照片。"
+        },
+        {
+          "id": "down",
+          "groupZh": "方向与位置",
+          "affix": "down-",
+          "meaningZh": "向下",
+          "examples": [
+            { "word": "download", "meaningZh": "下载" },
+            { "word": "downstairs", "meaningZh": "楼下" },
+            { "word": "downhill", "meaningZh": "下坡的" }
+          ],
+          "sentenceEn": "We download the new song.",
+          "sentenceZh": "我们下载这首新歌。"
+        },
+        {
+          "id": "hyper",
+          "groupZh": "程度与位置",
+          "affix": "hyper-",
+          "meaningZh": "过度、超",
+          "examples": [
+            { "word": "hyperactive", "meaningZh": "极度活跃的" },
+            { "word": "hyperlink", "meaningZh": "超链接" },
+            { "word": "hypermarket", "meaningZh": "大型超市" }
+          ],
+          "sentenceEn": "Click the hyperlink to read more.",
+          "sentenceZh": "点击超链接阅读更多内容。"
+        },
+        {
+          "id": "mega",
+          "groupZh": "大小与程度",
+          "affix": "mega-",
+          "meaningZh": "巨大、百万",
+          "examples": [
+            { "word": "megaphone", "meaningZh": "扩音器" },
+            { "word": "megacity", "meaningZh": "特大城市" },
+            { "word": "megabyte", "meaningZh": "兆字节" }
+          ],
+          "sentenceEn": "He speaks through a megaphone.",
+          "sentenceZh": "他通过扩音器讲话。"
+        },
+        {
+          "id": "ab",
+          "groupZh": "方向与否定",
+          "affix": "ab-",
+          "meaningZh": "离开、偏离",
+          "examples": [
+            { "word": "absent", "meaningZh": "缺席的" },
+            { "word": "abnormal", "meaningZh": "反常的" },
+            { "word": "absorb", "meaningZh": "吸收" }
+          ],
+          "sentenceEn": "Tom is absent from school today.",
+          "sentenceZh": "汤姆今天没来上学。"
+        },
+        {
+          "id": "ad",
+          "groupZh": "方向与态度",
+          "affix": "ad-",
+          "meaningZh": "朝向、加强",
+          "examples": [
+            { "word": "advance", "meaningZh": "前进" },
+            { "word": "advise", "meaningZh": "建议" },
+            { "word": "adapt", "meaningZh": "适应" }
+          ],
+          "sentenceEn": "We adapt to the new class.",
+          "sentenceZh": "我们适应了新的班级。"
+        },
+        {
+          "id": "ambi",
+          "groupZh": "共同与相互",
+          "affix": "ambi-",
+          "meaningZh": "两边、双",
+          "examples": [
+            { "word": "ambition", "meaningZh": "志向" },
+            { "word": "ambitious", "meaningZh": "有雄心的" },
+            { "word": "amphibian", "meaningZh": "两栖动物" }
+          ],
+          "sentenceEn": "She is an ambitious young writer.",
+          "sentenceZh": "她是一位有雄心的年轻作家。"
+        },
+        {
+          "id": "circum",
+          "groupZh": "方向与位置",
+          "affix": "circum-",
+          "meaningZh": "环绕、周围",
+          "examples": [
+            { "word": "circumference", "meaningZh": "圆周" },
+            { "word": "circumstance", "meaningZh": "境况" },
+            { "word": "circus", "meaningZh": "马戏团" }
+          ],
+          "sentenceEn": "The circus is in our town.",
+          "sentenceZh": "马戏团就在我们镇上。"
+        },
+        {
+          "id": "dia",
+          "groupZh": "横跨与转移",
+          "affix": "dia-",
+          "meaningZh": "穿过、横过",
+          "examples": [
+            { "word": "diagonal", "meaningZh": "对角线的" },
+            { "word": "dial", "meaningZh": "表盘" },
+            { "word": "dialogue", "meaningZh": "对话" }
+          ],
+          "sentenceEn": "The line across the square is diagonal.",
+          "sentenceZh": "穿过正方形的那条线是对角线。"
+        },
+        {
+          "id": "epi",
+          "groupZh": "方向与位置",
+          "affix": "epi-",
+          "meaningZh": "在……之上、附加",
+          "examples": [
+            { "word": "episode", "meaningZh": "一集" },
+            { "word": "epic", "meaningZh": "史诗" },
+            { "word": "epilogue", "meaningZh": "尾声" }
+          ],
+          "sentenceEn": "We watch a new episode today.",
+          "sentenceZh": "我们今天看新的一集。"
+        },
+        {
+          "id": "extra",
+          "groupZh": "方向与超过",
+          "affix": "extra-",
+          "meaningZh": "超出、额外",
+          "examples": [
+            { "word": "extra", "meaningZh": "额外的" },
+            { "word": "extraordinary", "meaningZh": "非凡的" },
+            { "word": "extracurricular", "meaningZh": "课外的" }
+          ],
+          "sentenceEn": "She joins an extracurricular reading club.",
+          "sentenceZh": "她参加了课外阅读社团。"
+        },
+        {
+          "id": "il",
+          "groupZh": "否定与相反",
+          "affix": "il-",
+          "meaningZh": "不（常用在 l 前）",
+          "examples": [
+            { "word": "illogical", "meaningZh": "不合逻辑的" },
+            { "word": "illegible", "meaningZh": "难以辨认的" },
+            { "word": "illiterate", "meaningZh": "不识字的" }
+          ],
+          "sentenceEn": "This sentence looks a little illogical.",
+          "sentenceZh": "这个句子看起来有点不合逻辑。"
+        },
+        {
+          "id": "mid",
+          "groupZh": "时间与位置",
+          "affix": "mid-",
+          "meaningZh": "中间",
+          "examples": [
+            { "word": "midnight", "meaningZh": "午夜" },
+            { "word": "midday", "meaningZh": "正午" },
+            { "word": "midterm", "meaningZh": "期中" }
+          ],
+          "sentenceEn": "We have a midterm test on Monday.",
+          "sentenceZh": "我们周一有期中考试。"
+        },
+        {
+          "id": "mini",
+          "groupZh": "大小与程度",
+          "affix": "mini-",
+          "meaningZh": "小、迷你",
+          "examples": [
+            { "word": "minibus", "meaningZh": "小型客车" },
+            { "word": "minigolf", "meaningZh": "迷你高尔夫" },
+            { "word": "miniature", "meaningZh": "微型的" }
+          ],
+          "sentenceEn": "We go to school by minibus.",
+          "sentenceZh": "我们坐小型客车去上学。"
+        },
+        {
+          "id": "neo",
+          "groupZh": "时间与顺序",
+          "affix": "neo-",
+          "meaningZh": "新的、新式的",
+          "examples": [
+            { "word": "neon", "meaningZh": "霓虹灯" },
+            { "word": "neolithic", "meaningZh": "新石器时代的" },
+            { "word": "neologism", "meaningZh": "新词" }
+          ],
+          "sentenceEn": "The shop sign uses bright neon.",
+          "sentenceZh": "这家店的招牌用明亮的霓虹灯。"
+        },
+        {
+          "id": "oct",
+          "groupZh": "数字与数量",
+          "affix": "oct-",
+          "meaningZh": "八",
+          "examples": [
+            { "word": "octopus", "meaningZh": "章鱼" },
+            { "word": "octagon", "meaningZh": "八边形" },
+            { "word": "October", "meaningZh": "十月" }
+          ],
+          "sentenceEn": "An octopus has eight arms.",
+          "sentenceZh": "章鱼有八条腕。"
+        },
+        {
+          "id": "para",
+          "groupZh": "方向与位置",
+          "affix": "para-",
+          "meaningZh": "旁边、平行",
+          "examples": [
+            { "word": "parallel", "meaningZh": "平行的" },
+            { "word": "paragraph", "meaningZh": "段落" },
+            { "word": "parasol", "meaningZh": "遮阳伞" }
+          ],
+          "sentenceEn": "The two roads run parallel.",
+          "sentenceZh": "这两条路平行延伸。"
+        },
+        {
+          "id": "peri",
+          "groupZh": "方向与位置",
+          "affix": "peri-",
+          "meaningZh": "周围、环绕",
+          "examples": [
+            { "word": "perimeter", "meaningZh": "周长" },
+            { "word": "periscope", "meaningZh": "潜望镜" },
+            { "word": "period", "meaningZh": "时期" }
+          ],
+          "sentenceEn": "We measure the perimeter of the field.",
+          "sentenceZh": "我们测量这块场地的周长。"
+        },
+        {
+          "id": "pseudo",
+          "groupZh": "否定与错误",
+          "affix": "pseudo-",
+          "meaningZh": "假的、伪的",
+          "examples": [
+            { "word": "pseudonym", "meaningZh": "笔名" },
+            { "word": "pseudoscience", "meaningZh": "伪科学" },
+            { "word": "pseudopod", "meaningZh": "伪足" }
+          ],
+          "sentenceEn": "The writer uses a pseudonym online.",
+          "sentenceZh": "这位作家在网上使用笔名。"
+        },
+        {
+          "id": "quad",
+          "groupZh": "数字与数量",
+          "affix": "quad-",
+          "meaningZh": "四",
+          "examples": [
+            { "word": "quadrilateral", "meaningZh": "四边形" },
+            { "word": "quadruped", "meaningZh": "四足动物" },
+            { "word": "quartet", "meaningZh": "四重奏" }
+          ],
+          "sentenceEn": "A square is a quadrilateral.",
+          "sentenceZh": "正方形是一种四边形。"
+        },
+        {
+          "id": "syn",
+          "groupZh": "共同与相互",
+          "affix": "syn-",
+          "meaningZh": "共同、一起",
+          "examples": [
+            { "word": "synonym", "meaningZh": "同义词" },
+            { "word": "symbol", "meaningZh": "符号" },
+            { "word": "syllable", "meaningZh": "音节" }
+          ],
+          "sentenceEn": "These two words are synonyms.",
+          "sentenceZh": "这两个词是同义词。"
+        },
+        {
+          "id": "ultra",
+          "groupZh": "程度与位置",
+          "affix": "ultra-",
+          "meaningZh": "极、超",
+          "examples": [
+            { "word": "ultramodern", "meaningZh": "极其现代的" },
+            { "word": "ultraviolet", "meaningZh": "紫外线的" },
+            { "word": "ultralight", "meaningZh": "超轻的" }
+          ],
+          "sentenceEn": "This ultramodern school is very bright.",
+          "sentenceZh": "这所极其现代的学校非常明亮。"
+        },
+        {
+          "id": "with",
+          "groupZh": "方向与否定",
+          "affix": "with-",
+          "meaningZh": "向后、相反",
+          "examples": [
+            { "word": "withdraw", "meaningZh": "撤回" },
+            { "word": "withhold", "meaningZh": "暂不给出" },
+            { "word": "withstand", "meaningZh": "经受住" }
+          ],
+          "sentenceEn": "The bridge can withstand strong wind.",
+          "sentenceZh": "这座桥能经受住强风。"
+        },
+        {
+          "id": "off",
+          "groupZh": "方向与超过",
+          "affix": "off-",
+          "meaningZh": "离开、非",
+          "examples": [
+            { "word": "offline", "meaningZh": "离线的" },
+            { "word": "offstage", "meaningZh": "台下的" },
+            { "word": "offset", "meaningZh": "抵消" }
+          ],
+          "sentenceEn": "We read the notes offline.",
+          "sentenceZh": "我们离线阅读这些笔记。"
+        },
+        {
+          "id": "well",
+          "groupZh": "程度与位置",
+          "affix": "well-",
+          "meaningZh": "好、充分",
+          "examples": [
+            { "word": "well-known", "meaningZh": "著名的" },
+            { "word": "well-done", "meaningZh": "做得好的" },
+            { "word": "well-being", "meaningZh": "健康幸福" }
+          ],
+          "sentenceEn": "She is a well-known writer here.",
+          "sentenceZh": "她是这里人人皆知的作家。"
+        },
+        {
+          "id": "aero",
+          "groupZh": "天空与太空",
+          "affix": "aero-",
+          "meaningZh": "空气、航空",
+          "examples": [
+            { "word": "aeroplane", "meaningZh": "飞机" },
+            { "word": "aerobics", "meaningZh": "有氧运动" },
+            { "word": "aerodrome", "meaningZh": "小型机场" }
+          ],
+          "sentenceEn": "The aeroplane flies over our town.",
+          "sentenceZh": "飞机飞过我们的小镇。"
+        },
+        {
+          "id": "astro",
+          "groupZh": "天空与太空",
+          "affix": "astro-",
+          "meaningZh": "星、太空",
+          "examples": [
+            { "word": "astronaut", "meaningZh": "宇航员" },
+            { "word": "astronomy", "meaningZh": "天文学" },
+            { "word": "asteroid", "meaningZh": "小行星" }
+          ],
+          "sentenceEn": "The astronaut waves to the children.",
+          "sentenceZh": "宇航员向孩子们挥手。"
+        },
+        {
+          "id": "eco",
+          "groupZh": "自然与环境",
+          "affix": "eco-",
+          "meaningZh": "生态、环境",
+          "examples": [
+            { "word": "ecology", "meaningZh": "生态学" },
+            { "word": "ecosystem", "meaningZh": "生态系统" },
+            { "word": "eco-friendly", "meaningZh": "环保的" }
+          ],
+          "sentenceEn": "We learn about ecology in class.",
+          "sentenceZh": "我们在课上学生态学。"
+        },
+        {
+          "id": "electro",
+          "groupZh": "电与能量",
+          "affix": "electro-",
+          "meaningZh": "电、电动",
+          "examples": [
+            { "word": "electronic", "meaningZh": "电子的" },
+            { "word": "electricity", "meaningZh": "电" },
+            { "word": "electrician", "meaningZh": "电工" }
+          ],
+          "sentenceEn": "This is an electronic dictionary.",
+          "sentenceZh": "这是一本电子词典。"
+        },
+        {
+          "id": "kilo",
+          "groupZh": "数字与数量",
+          "affix": "kilo-",
+          "meaningZh": "千",
+          "examples": [
+            { "word": "kilogram", "meaningZh": "千克" },
+            { "word": "kilobyte", "meaningZh": "千字节" },
+            { "word": "kilowatt", "meaningZh": "千瓦" }
+          ],
+          "sentenceEn": "This bag weighs one kilogram.",
+          "sentenceZh": "这个包重一千克。"
+        },
+        {
+          "id": "milli",
+          "groupZh": "数字与数量",
+          "affix": "milli-",
+          "meaningZh": "千分之一",
+          "examples": [
+            { "word": "millimeter", "meaningZh": "毫米" },
+            { "word": "millisecond", "meaningZh": "毫秒" },
+            { "word": "milliliter", "meaningZh": "毫升" }
+          ],
+          "sentenceEn": "The line is two millimeters long.",
+          "sentenceZh": "这条线两毫米长。"
+        },
+        {
+          "id": "nano",
+          "groupZh": "数字与数量",
+          "affix": "nano-",
+          "meaningZh": "纳、十亿分之一",
+          "examples": [
+            { "word": "nanosecond", "meaningZh": "纳秒" },
+            { "word": "nanotechnology", "meaningZh": "纳米技术" },
+            { "word": "nanometer", "meaningZh": "纳米" }
+          ],
+          "sentenceEn": "A nanosecond is very short.",
+          "sentenceZh": "一纳秒非常短。"
+        },
+        {
+          "id": "photo",
+          "groupZh": "光与影像",
+          "affix": "photo-",
+          "meaningZh": "光、照相",
+          "examples": [
+            { "word": "photograph", "meaningZh": "照片" },
+            { "word": "photographer", "meaningZh": "摄影师" },
+            { "word": "photocopy", "meaningZh": "复印件" }
+          ],
+          "sentenceEn": "The photographer takes a photo of us.",
+          "sentenceZh": "摄影师给我们拍了一张照片。"
+        },
+        {
+          "id": "counter",
+          "groupZh": "反对与抵抗",
+          "affix": "counter-",
+          "meaningZh": "相反、对抗",
+          "examples": [
+            { "word": "counterclockwise", "meaningZh": "逆时针的" },
+            { "word": "counterpart", "meaningZh": "对应的人或物" },
+            { "word": "counterweight", "meaningZh": "配重" }
+          ],
+          "sentenceEn": "Turn the handle counterclockwise, please.",
+          "sentenceZh": "请逆时针转动把手。"
         }
       ]
     },
@@ -202,8 +982,8 @@
             { "word": "happiness", "meaningZh": "快乐" },
             { "word": "weakness", "meaningZh": "弱点" }
           ],
-          "sentenceEn": "Kindness is important.",
-          "sentenceZh": "善良很重要。"
+          "sentenceEn": "Kindness is very important.",
+          "sentenceZh": "善良非常重要。"
         },
         {
           "id": "ment",
@@ -230,6 +1010,786 @@
           ],
           "sentenceEn": "Thank you for your invitation.",
           "sentenceZh": "谢谢你的邀请。"
+        },
+        {
+          "id": "ist",
+          "groupZh": "做……的人",
+          "affix": "-ist",
+          "meaningZh": "……的人、……专家",
+          "examples": [
+            { "word": "artist", "meaningZh": "艺术家" },
+            { "word": "scientist", "meaningZh": "科学家" },
+            { "word": "tourist", "meaningZh": "游客" }
+          ],
+          "sentenceEn": "The artist draws a picture.",
+          "sentenceZh": "这位艺术家画画。"
+        },
+        {
+          "id": "ian",
+          "groupZh": "做……的人",
+          "affix": "-ian",
+          "meaningZh": "……的人、……专家",
+          "examples": [
+            { "word": "musician", "meaningZh": "音乐家" },
+            { "word": "librarian", "meaningZh": "图书管理员" },
+            { "word": "historian", "meaningZh": "历史学家" }
+          ],
+          "sentenceEn": "She is a musician.",
+          "sentenceZh": "她是一位音乐家。"
+        },
+        {
+          "id": "ant",
+          "groupZh": "做……的人",
+          "affix": "-ant",
+          "meaningZh": "……的人、……的",
+          "examples": [
+            { "word": "assistant", "meaningZh": "助手" },
+            { "word": "servant", "meaningZh": "仆人" },
+            { "word": "important", "meaningZh": "重要的" }
+          ],
+          "sentenceEn": "The assistant is helpful.",
+          "sentenceZh": "这位助手很乐于助人。"
+        },
+        {
+          "id": "ent",
+          "groupZh": "做……的人",
+          "affix": "-ent",
+          "meaningZh": "……的人、……的",
+          "examples": [
+            { "word": "student", "meaningZh": "学生" },
+            { "word": "resident", "meaningZh": "居民" },
+            { "word": "different", "meaningZh": "不同的" }
+          ],
+          "sentenceEn": "The student reads a book.",
+          "sentenceZh": "这个学生读书。"
+        },
+        {
+          "id": "ee",
+          "groupZh": "受动者",
+          "affix": "-ee",
+          "meaningZh": "被……的人",
+          "examples": [
+            { "word": "employee", "meaningZh": "员工" },
+            { "word": "trainee", "meaningZh": "受训者" },
+            { "word": "interviewee", "meaningZh": "受访者" }
+          ],
+          "sentenceEn": "The employee works here.",
+          "sentenceZh": "这名员工在这里工作。"
+        },
+        {
+          "id": "hood",
+          "groupZh": "名词：身份与状态",
+          "affix": "-hood",
+          "meaningZh": "身份、状态、时期",
+          "examples": [
+            { "word": "childhood", "meaningZh": "童年" },
+            { "word": "neighborhood", "meaningZh": "社区" },
+            { "word": "brotherhood", "meaningZh": "兄弟情谊" }
+          ],
+          "sentenceEn": "I had a happy childhood.",
+          "sentenceZh": "我童年很快乐。"
+        },
+        {
+          "id": "ship",
+          "groupZh": "名词：状态与关系",
+          "affix": "-ship",
+          "meaningZh": "状态、关系、身份",
+          "examples": [
+            { "word": "friendship", "meaningZh": "友谊" },
+            { "word": "leadership", "meaningZh": "领导力" },
+            { "word": "membership", "meaningZh": "会员资格" }
+          ],
+          "sentenceEn": "Friendship is very important.",
+          "sentenceZh": "友谊非常重要。"
+        },
+        {
+          "id": "dom",
+          "groupZh": "名词：状态与领域",
+          "affix": "-dom",
+          "meaningZh": "状态、领域",
+          "examples": [
+            { "word": "freedom", "meaningZh": "自由" },
+            { "word": "kingdom", "meaningZh": "王国" },
+            { "word": "wisdom", "meaningZh": "智慧" }
+          ],
+          "sentenceEn": "We all love freedom.",
+          "sentenceZh": "我们都热爱自由。"
+        },
+        {
+          "id": "ity",
+          "groupZh": "名词：性质与状态",
+          "affix": "-ity",
+          "meaningZh": "性质、状态",
+          "examples": [
+            { "word": "activity", "meaningZh": "活动" },
+            { "word": "ability", "meaningZh": "能力" },
+            { "word": "quality", "meaningZh": "质量" }
+          ],
+          "sentenceEn": "Reading is a good activity.",
+          "sentenceZh": "阅读是一项好活动。"
+        },
+        {
+          "id": "ance",
+          "groupZh": "名词：状态与行为",
+          "affix": "-ance",
+          "meaningZh": "状态、行为",
+          "examples": [
+            { "word": "performance", "meaningZh": "表演" },
+            { "word": "importance", "meaningZh": "重要性" },
+            { "word": "assistance", "meaningZh": "帮助" }
+          ],
+          "sentenceEn": "The performance is good.",
+          "sentenceZh": "表演很好。"
+        },
+        {
+          "id": "al",
+          "groupZh": "形容词：……的",
+          "affix": "-al",
+          "meaningZh": "与……有关的",
+          "examples": [
+            { "word": "natural", "meaningZh": "自然的" },
+            { "word": "personal", "meaningZh": "个人的" },
+            { "word": "national", "meaningZh": "国家的" }
+          ],
+          "sentenceEn": "This is a natural park.",
+          "sentenceZh": "这是一个自然公园。"
+        },
+        {
+          "id": "ic",
+          "groupZh": "形容词：……的",
+          "affix": "-ic",
+          "meaningZh": "与……有关的",
+          "examples": [
+            { "word": "basic", "meaningZh": "基本的" },
+            { "word": "classic", "meaningZh": "经典的" },
+            { "word": "public", "meaningZh": "公共的" }
+          ],
+          "sentenceEn": "This is a basic rule.",
+          "sentenceZh": "这是一条基本规则。"
+        },
+        {
+          "id": "ive",
+          "groupZh": "形容词：……的",
+          "affix": "-ive",
+          "meaningZh": "有……性质的",
+          "examples": [
+            { "word": "active", "meaningZh": "积极的" },
+            { "word": "creative", "meaningZh": "有创造力的" },
+            { "word": "attractive", "meaningZh": "有吸引力的" }
+          ],
+          "sentenceEn": "She is a creative student.",
+          "sentenceZh": "她是一个有创造力的学生。"
+        },
+        {
+          "id": "ous",
+          "groupZh": "形容词：……的",
+          "affix": "-ous",
+          "meaningZh": "充满……的",
+          "examples": [
+            { "word": "famous", "meaningZh": "著名的" },
+            { "word": "dangerous", "meaningZh": "危险的" },
+            { "word": "delicious", "meaningZh": "美味的" }
+          ],
+          "sentenceEn": "The food is delicious.",
+          "sentenceZh": "食物很美味。"
+        },
+        {
+          "id": "ly",
+          "groupZh": "副词与形容词",
+          "affix": "-ly",
+          "meaningZh": "以……方式、……的",
+          "examples": [
+            { "word": "quickly", "meaningZh": "快速地" },
+            { "word": "happily", "meaningZh": "快乐地" },
+            { "word": "friendly", "meaningZh": "友好的" }
+          ],
+          "sentenceEn": "He runs very quickly.",
+          "sentenceZh": "他跑得非常快。"
+        },
+        {
+          "id": "ize",
+          "groupZh": "动词：使……",
+          "affix": "-ize",
+          "meaningZh": "使……化、使成为",
+          "examples": [
+            { "word": "organize", "meaningZh": "组织" },
+            { "word": "realize", "meaningZh": "意识到" },
+            { "word": "modernize", "meaningZh": "现代化" }
+          ],
+          "sentenceEn": "We organize a party.",
+          "sentenceZh": "我们组织一个聚会。"
+        },
+        {
+          "id": "ify",
+          "groupZh": "动词：使……",
+          "affix": "-ify",
+          "meaningZh": "使……成为",
+          "examples": [
+            { "word": "simplify", "meaningZh": "简化" },
+            { "word": "classify", "meaningZh": "分类" },
+            { "word": "beautify", "meaningZh": "美化" }
+          ],
+          "sentenceEn": "Please simplify the question.",
+          "sentenceZh": "请简化这个问题。"
+        },
+        {
+          "id": "ward",
+          "groupZh": "方向与方式",
+          "affix": "-ward",
+          "meaningZh": "朝……方向",
+          "examples": [
+            { "word": "forward", "meaningZh": "向前" },
+            { "word": "backward", "meaningZh": "向后" },
+            { "word": "homeward", "meaningZh": "回家方向" }
+          ],
+          "sentenceEn": "We look forward to the trip.",
+          "sentenceZh": "我们期待这次旅行。"
+        },
+        {
+          "id": "age",
+          "groupZh": "名词：行为与结果",
+          "affix": "-age",
+          "meaningZh": "行为、结果、集合",
+          "examples": [
+            { "word": "package", "meaningZh": "包裹" },
+            { "word": "message", "meaningZh": "消息" },
+            { "word": "village", "meaningZh": "村庄" }
+          ],
+          "sentenceEn": "I get a message.",
+          "sentenceZh": "我收到一条消息。"
+        },
+        {
+          "id": "ism",
+          "groupZh": "名词：主义与行为",
+          "affix": "-ism",
+          "meaningZh": "主义、行为、特征",
+          "examples": [
+            { "word": "tourism", "meaningZh": "旅游业" },
+            { "word": "realism", "meaningZh": "现实主义" },
+            { "word": "heroism", "meaningZh": "英雄主义" }
+          ],
+          "sentenceEn": "Tourism is popular in spring.",
+          "sentenceZh": "春季旅游业很受欢迎。"
+        },
+        {
+          "id": "ence",
+          "groupZh": "名词：状态与行为",
+          "affix": "-ence",
+          "meaningZh": "状态、性质",
+          "examples": [
+            { "word": "difference", "meaningZh": "差别" },
+            { "word": "patience", "meaningZh": "耐心" },
+            { "word": "silence", "meaningZh": "安静" }
+          ],
+          "sentenceEn": "There is a small difference.",
+          "sentenceZh": "这里有一点小差别。"
+        },
+        {
+          "id": "th",
+          "groupZh": "名词：性质与状态",
+          "affix": "-th",
+          "meaningZh": "性质、状态、数量",
+          "examples": [
+            { "word": "truth", "meaningZh": "真相" },
+            { "word": "growth", "meaningZh": "成长" },
+            { "word": "width", "meaningZh": "宽度" }
+          ],
+          "sentenceEn": "Please tell me the truth.",
+          "sentenceZh": "请告诉我真相。"
+        },
+        {
+          "id": "ure",
+          "groupZh": "名词：行为与结果",
+          "affix": "-ure",
+          "meaningZh": "行为、结果",
+          "examples": [
+            { "word": "pleasure", "meaningZh": "乐趣" },
+            { "word": "failure", "meaningZh": "失败" },
+            { "word": "mixture", "meaningZh": "混合物" }
+          ],
+          "sentenceEn": "Reading gives me great pleasure.",
+          "sentenceZh": "阅读给我很大乐趣。"
+        },
+        {
+          "id": "tude",
+          "groupZh": "名词：性质与状态",
+          "affix": "-tude",
+          "meaningZh": "状态、性质",
+          "examples": [
+            { "word": "attitude", "meaningZh": "态度" },
+            { "word": "altitude", "meaningZh": "高度" },
+            { "word": "solitude", "meaningZh": "独处" }
+          ],
+          "sentenceEn": "She has a good attitude.",
+          "sentenceZh": "她的态度很好。"
+        },
+        {
+          "id": "y",
+          "groupZh": "形容词：……的",
+          "affix": "-y",
+          "meaningZh": "有……的、多……的",
+          "examples": [
+            { "word": "rainy", "meaningZh": "下雨的" },
+            { "word": "sunny", "meaningZh": "晴朗的" },
+            { "word": "windy", "meaningZh": "有风的" }
+          ],
+          "sentenceEn": "It is a rainy day today.",
+          "sentenceZh": "今天是个下雨天。"
+        },
+        {
+          "id": "en",
+          "groupZh": "动词：使……",
+          "affix": "-en",
+          "meaningZh": "使……、变得",
+          "examples": [
+            { "word": "sharpen", "meaningZh": "削尖" },
+            { "word": "widen", "meaningZh": "加宽" },
+            { "word": "strengthen", "meaningZh": "加强" }
+          ],
+          "sentenceEn": "Please sharpen your pencil.",
+          "sentenceZh": "请削尖你的铅笔。"
+        },
+        {
+          "id": "ish",
+          "groupZh": "形容词：……的",
+          "affix": "-ish",
+          "meaningZh": "有点……的、像……的",
+          "examples": [
+            { "word": "reddish", "meaningZh": "微红的" },
+            { "word": "childish", "meaningZh": "孩子气的" },
+            { "word": "selfish", "meaningZh": "自私的" }
+          ],
+          "sentenceEn": "The wall is reddish.",
+          "sentenceZh": "这面墙带点红色。"
+        },
+        {
+          "id": "ate",
+          "groupZh": "动词：使……",
+          "affix": "-ate",
+          "meaningZh": "使……、做……",
+          "examples": [
+            { "word": "celebrate", "meaningZh": "庆祝" },
+            { "word": "decorate", "meaningZh": "装饰" },
+            { "word": "calculate", "meaningZh": "计算" }
+          ],
+          "sentenceEn": "We celebrate her birthday today.",
+          "sentenceZh": "我们今天庆祝她的生日。"
+        },
+        {
+          "id": "ory",
+          "groupZh": "名词：场所与结果",
+          "affix": "-ory",
+          "meaningZh": "场所、与……有关的",
+          "examples": [
+            { "word": "factory", "meaningZh": "工厂" },
+            { "word": "history", "meaningZh": "历史" },
+            { "word": "memory", "meaningZh": "记忆" }
+          ],
+          "sentenceEn": "The factory makes many toys.",
+          "sentenceZh": "这家工厂生产许多玩具。"
+        },
+        {
+          "id": "logy",
+          "groupZh": "名词：学科",
+          "affix": "-logy",
+          "meaningZh": "……学、……研究",
+          "examples": [
+            { "word": "technology", "meaningZh": "技术" },
+            { "word": "biology", "meaningZh": "生物学" },
+            { "word": "psychology", "meaningZh": "心理学" }
+          ],
+          "sentenceEn": "Technology helps us learn fast.",
+          "sentenceZh": "技术帮助我们快速学习。"
+        },
+        {
+          "id": "cy",
+          "groupZh": "名词：性质与状态",
+          "affix": "-cy",
+          "meaningZh": "性质、状态、机构",
+          "examples": [
+            { "word": "accuracy", "meaningZh": "准确性" },
+            { "word": "agency", "meaningZh": "机构" },
+            { "word": "emergency", "meaningZh": "紧急情况" }
+          ],
+          "sentenceEn": "This work needs great accuracy.",
+          "sentenceZh": "这项工作需要很高的准确性。"
+        },
+        {
+          "id": "ency",
+          "groupZh": "名词：性质与状态",
+          "affix": "-ency",
+          "meaningZh": "性质、状态",
+          "examples": [
+            { "word": "efficiency", "meaningZh": "效率" },
+            { "word": "frequency", "meaningZh": "频率" },
+            { "word": "fluency", "meaningZh": "流利" }
+          ],
+          "sentenceEn": "The machine works with high efficiency.",
+          "sentenceZh": "这台机器工作效率很高。"
+        },
+        {
+          "id": "ade",
+          "groupZh": "名词：行为与结果",
+          "affix": "-ade",
+          "meaningZh": "行为、物品、时期",
+          "examples": [
+            { "word": "lemonade", "meaningZh": "柠檬水" },
+            { "word": "parade", "meaningZh": "游行" },
+            { "word": "decade", "meaningZh": "十年" }
+          ],
+          "sentenceEn": "I drink cold lemonade in summer.",
+          "sentenceZh": "夏天我喝冰柠檬水。"
+        },
+        {
+          "id": "eer",
+          "groupZh": "做……的人",
+          "affix": "-eer",
+          "meaningZh": "从事……的人",
+          "examples": [
+            { "word": "engineer", "meaningZh": "工程师" },
+            { "word": "volunteer", "meaningZh": "志愿者" },
+            { "word": "pioneer", "meaningZh": "先锋" }
+          ],
+          "sentenceEn": "My uncle is a kind engineer.",
+          "sentenceZh": "我叔叔是一位和善的工程师。"
+        },
+        {
+          "id": "ess",
+          "groupZh": "做……的人",
+          "affix": "-ess",
+          "meaningZh": "女性……者",
+          "examples": [
+            { "word": "waitress", "meaningZh": "女服务员" },
+            { "word": "actress", "meaningZh": "女演员" },
+            { "word": "hostess", "meaningZh": "女主人" }
+          ],
+          "sentenceEn": "The waitress brings us two cups.",
+          "sentenceZh": "女服务员给我们送来两个杯子。"
+        },
+        {
+          "id": "let",
+          "groupZh": "名词：大小与物品",
+          "affix": "-let",
+          "meaningZh": "小",
+          "examples": [
+            { "word": "booklet", "meaningZh": "小册子" },
+            { "word": "leaflet", "meaningZh": "传单" },
+            { "word": "piglet", "meaningZh": "小猪" }
+          ],
+          "sentenceEn": "We read a small booklet about birds.",
+          "sentenceZh": "我们读了一本关于鸟的小册子。"
+        },
+        {
+          "id": "ling",
+          "groupZh": "名词：大小与物品",
+          "affix": "-ling",
+          "meaningZh": "小的……、与……有关的人",
+          "examples": [
+            { "word": "duckling", "meaningZh": "小鸭子" },
+            { "word": "seedling", "meaningZh": "幼苗" },
+            { "word": "sibling", "meaningZh": "兄弟姐妹" }
+          ],
+          "sentenceEn": "The duckling swims after its mother.",
+          "sentenceZh": "小鸭子跟着妈妈游泳。"
+        },
+        {
+          "id": "sion",
+          "groupZh": "名词：性质与状态",
+          "affix": "-sion",
+          "meaningZh": "动作、过程、结果",
+          "examples": [
+            { "word": "decision", "meaningZh": "决定" },
+            { "word": "conclusion", "meaningZh": "结论" },
+            { "word": "expression", "meaningZh": "表达" }
+          ],
+          "sentenceEn": "We make a decision together.",
+          "sentenceZh": "我们一起做决定。"
+        },
+        {
+          "id": "ar",
+          "groupZh": "做……的人",
+          "affix": "-ar",
+          "meaningZh": "……的人、……的物",
+          "examples": [
+            { "word": "scholar", "meaningZh": "学者" },
+            { "word": "calendar", "meaningZh": "日历" },
+            { "word": "pillar", "meaningZh": "柱子" }
+          ],
+          "sentenceEn": "The scholar reads many old books.",
+          "sentenceZh": "这位学者读很多古旧的书。"
+        },
+        {
+          "id": "some",
+          "groupZh": "形容词：……的",
+          "affix": "-some",
+          "meaningZh": "有……倾向的、令人……的",
+          "examples": [
+            { "word": "handsome", "meaningZh": "英俊的" },
+            { "word": "troublesome", "meaningZh": "麻烦的" },
+            { "word": "awesome", "meaningZh": "了不起的" }
+          ],
+          "sentenceEn": "The new game is really awesome.",
+          "sentenceZh": "这个新游戏真的很棒。"
+        },
+        {
+          "id": "ible",
+          "groupZh": "形容词：……的",
+          "affix": "-ible",
+          "meaningZh": "能……的",
+          "examples": [
+            { "word": "possible", "meaningZh": "可能的" },
+            { "word": "flexible", "meaningZh": "灵活的" },
+            { "word": "sensible", "meaningZh": "明智的" }
+          ],
+          "sentenceEn": "A flexible plan is often better.",
+          "sentenceZh": "灵活的计划往往更好。"
+        },
+        {
+          "id": "ial",
+          "groupZh": "形容词：……的",
+          "affix": "-ial",
+          "meaningZh": "与……有关的",
+          "examples": [
+            { "word": "special", "meaningZh": "特别的" },
+            { "word": "official", "meaningZh": "官方的" },
+            { "word": "social", "meaningZh": "社会的" }
+          ],
+          "sentenceEn": "Today is a special day for us.",
+          "sentenceZh": "今天对我们来说是特别的一天。"
+        },
+        {
+          "id": "ical",
+          "groupZh": "形容词：……的",
+          "affix": "-ical",
+          "meaningZh": "与……有关的",
+          "examples": [
+            { "word": "musical", "meaningZh": "音乐的" },
+            { "word": "physical", "meaningZh": "身体的" },
+            { "word": "practical", "meaningZh": "实用的" }
+          ],
+          "sentenceEn": "We do physical exercise every morning.",
+          "sentenceZh": "我们每天早上做体育锻炼。"
+        },
+        {
+          "id": "ary",
+          "groupZh": "形容词：……的",
+          "affix": "-ary",
+          "meaningZh": "与……有关的",
+          "examples": [
+            { "word": "necessary", "meaningZh": "必要的" },
+            { "word": "ordinary", "meaningZh": "普通的" },
+            { "word": "imaginary", "meaningZh": "想象中的" }
+          ],
+          "sentenceEn": "Water is necessary for all plants.",
+          "sentenceZh": "水对所有植物都是必要的。"
+        },
+        {
+          "id": "proof",
+          "groupZh": "形容词：……的",
+          "affix": "-proof",
+          "meaningZh": "防……的、抗……的",
+          "examples": [
+            { "word": "waterproof", "meaningZh": "防水的" },
+            { "word": "soundproof", "meaningZh": "隔音的" },
+            { "word": "fireproof", "meaningZh": "防火的" }
+          ],
+          "sentenceEn": "This jacket is waterproof and warm.",
+          "sentenceZh": "这件夹克防水又保暖。"
+        },
+        {
+          "id": "free",
+          "groupZh": "形容词：……的",
+          "affix": "-free",
+          "meaningZh": "无……的、免……的",
+          "examples": [
+            { "word": "sugar-free", "meaningZh": "无糖的" },
+            { "word": "carefree", "meaningZh": "无忧无虑的" },
+            { "word": "duty-free", "meaningZh": "免税的" }
+          ],
+          "sentenceEn": "The shop sells sugar-free drinks.",
+          "sentenceZh": "这家店卖无糖饮料。"
+        },
+        {
+          "id": "wise",
+          "groupZh": "副词与形容词",
+          "affix": "-wise",
+          "meaningZh": "方向、方式",
+          "examples": [
+            { "word": "clockwise", "meaningZh": "顺时针的" },
+            { "word": "otherwise", "meaningZh": "否则" },
+            { "word": "likewise", "meaningZh": "同样地" }
+          ],
+          "sentenceEn": "Move the clock hand clockwise.",
+          "sentenceZh": "顺时针拨动钟表的指针。"
+        },
+        {
+          "id": "teen",
+          "groupZh": "数字与数量",
+          "affix": "-teen",
+          "meaningZh": "十几、十加几",
+          "examples": [
+            { "word": "thirteen", "meaningZh": "十三" },
+            { "word": "fifteen", "meaningZh": "十五" },
+            { "word": "eighteen", "meaningZh": "十八" }
+          ],
+          "sentenceEn": "My cousin is thirteen years old.",
+          "sentenceZh": "我表弟十三岁。"
+        },
+        {
+          "id": "ty",
+          "groupZh": "数字与数量",
+          "affix": "-ty",
+          "meaningZh": "几十、整十",
+          "examples": [
+            { "word": "twenty", "meaningZh": "二十" },
+            { "word": "thirty", "meaningZh": "三十" },
+            { "word": "sixty", "meaningZh": "六十" }
+          ],
+          "sentenceEn": "There are twenty students in class.",
+          "sentenceZh": "班上有二十名学生。"
+        },
+        {
+          "id": "like",
+          "groupZh": "形容词：……的",
+          "affix": "-like",
+          "meaningZh": "像……一样的",
+          "examples": [
+            { "word": "childlike", "meaningZh": "孩子般的" },
+            { "word": "lifelike", "meaningZh": "逼真的" },
+            { "word": "dreamlike", "meaningZh": "梦幻般的" }
+          ],
+          "sentenceEn": "The painting looks very lifelike.",
+          "sentenceZh": "这幅画看起来非常逼真。"
+        },
+        {
+          "id": "graphy",
+          "groupZh": "名词：学科",
+          "affix": "-graphy",
+          "meaningZh": "……学、……术",
+          "examples": [
+            { "word": "photography", "meaningZh": "摄影术" },
+            { "word": "calligraphy", "meaningZh": "书法" },
+            { "word": "choreography", "meaningZh": "编舞" }
+          ],
+          "sentenceEn": "She studies photography at school.",
+          "sentenceZh": "她在学校学习摄影。"
+        },
+        {
+          "id": "scope",
+          "groupZh": "名词：工具与器材",
+          "affix": "-scope",
+          "meaningZh": "观察用的仪器",
+          "examples": [
+            { "word": "telescope", "meaningZh": "望远镜" },
+            { "word": "microscope", "meaningZh": "显微镜" },
+            { "word": "kaleidoscope", "meaningZh": "万花筒" }
+          ],
+          "sentenceEn": "We look at the stars with a telescope.",
+          "sentenceZh": "我们用望远镜看星星。"
+        },
+        {
+          "id": "phone",
+          "groupZh": "名词：工具与器材",
+          "affix": "-phone",
+          "meaningZh": "声音、乐器",
+          "examples": [
+            { "word": "headphone", "meaningZh": "耳机" },
+            { "word": "saxophone", "meaningZh": "萨克斯管" },
+            { "word": "gramophone", "meaningZh": "留声机" }
+          ],
+          "sentenceEn": "He plays the saxophone very well.",
+          "sentenceZh": "他萨克斯吹得很好。"
+        },
+        {
+          "id": "ery",
+          "groupZh": "名词：场所与结果",
+          "affix": "-ery",
+          "meaningZh": "场所、总称、行为",
+          "examples": [
+            { "word": "bakery", "meaningZh": "面包店" },
+            { "word": "grocery", "meaningZh": "食品杂货店" },
+            { "word": "machinery", "meaningZh": "机械" }
+          ],
+          "sentenceEn": "We buy fresh bread at the bakery.",
+          "sentenceZh": "我们在面包店买新鲜面包。"
+        },
+        {
+          "id": "land",
+          "groupZh": "名词：场所与结果",
+          "affix": "-land",
+          "meaningZh": "地方、土地",
+          "examples": [
+            { "word": "homeland", "meaningZh": "家园" },
+            { "word": "farmland", "meaningZh": "农田" },
+            { "word": "woodland", "meaningZh": "林地" }
+          ],
+          "sentenceEn": "The woodland is full of birds.",
+          "sentenceZh": "这片林地里到处是鸟。"
+        },
+        {
+          "id": "work",
+          "groupZh": "名词：行为与结果",
+          "affix": "-work",
+          "meaningZh": "工作、制品",
+          "examples": [
+            { "word": "homework", "meaningZh": "作业" },
+            { "word": "housework", "meaningZh": "家务" },
+            { "word": "network", "meaningZh": "网络" }
+          ],
+          "sentenceEn": "I finish my homework before dinner.",
+          "sentenceZh": "我在晚饭前完成作业。"
+        },
+        {
+          "id": "ware",
+          "groupZh": "名词：工具与器材",
+          "affix": "-ware",
+          "meaningZh": "制品、器皿",
+          "examples": [
+            { "word": "software", "meaningZh": "软件" },
+            { "word": "hardware", "meaningZh": "硬件" },
+            { "word": "kitchenware", "meaningZh": "厨房用具" }
+          ],
+          "sentenceEn": "This software is easy to use.",
+          "sentenceZh": "这个软件很容易使用。"
+        },
+        {
+          "id": "craft",
+          "groupZh": "名词：工具与器材",
+          "affix": "-craft",
+          "meaningZh": "技艺、飞行器",
+          "examples": [
+            { "word": "aircraft", "meaningZh": "飞机" },
+            { "word": "handicraft", "meaningZh": "手工艺品" },
+            { "word": "spacecraft", "meaningZh": "宇宙飞船" }
+          ],
+          "sentenceEn": "The children make a paper handicraft.",
+          "sentenceZh": "孩子们做了一件纸手工艺品。"
+        },
+        {
+          "id": "vore",
+          "groupZh": "名词：动物与习性",
+          "affix": "-vore",
+          "meaningZh": "食……的动物",
+          "examples": [
+            { "word": "carnivore", "meaningZh": "食肉动物" },
+            { "word": "herbivore", "meaningZh": "食草动物" },
+            { "word": "omnivore", "meaningZh": "杂食动物" }
+          ],
+          "sentenceEn": "A rabbit is a herbivore.",
+          "sentenceZh": "兔子是食草动物。"
+        },
+        {
+          "id": "oid",
+          "groupZh": "形容词：……的",
+          "affix": "-oid",
+          "meaningZh": "像……的、……状的",
+          "examples": [
+            { "word": "humanoid", "meaningZh": "类人的" },
+            { "word": "android", "meaningZh": "人形机器人" },
+            { "word": "cuboid", "meaningZh": "长方体的" }
+          ],
+          "sentenceEn": "The toy robot is a small humanoid.",
+          "sentenceZh": "这个玩具机器人是个小型人形机器人。"
         }
       ]
     },
@@ -299,8 +1859,8 @@
             { "word": "produce", "meaningZh": "生产" },
             { "word": "educate", "meaningZh": "教育" }
           ],
-          "sentenceEn": "Schools educate children.",
-          "sentenceZh": "学校教育孩子。"
+          "sentenceEn": "Schools educate children every day.",
+          "sentenceZh": "学校每天教育孩子。"
         },
         {
           "id": "cede",
@@ -314,9 +1874,1087 @@
           ],
           "sentenceEn": "Practice helps you succeed.",
           "sentenceZh": "练习能帮你成功。"
+        },
+        {
+          "id": "port",
+          "groupZh": "携带与运送",
+          "affix": "port",
+          "meaningZh": "携带、运送",
+          "examples": [
+            { "word": "transport", "meaningZh": "运输" },
+            { "word": "export", "meaningZh": "出口" },
+            { "word": "import", "meaningZh": "进口" }
+          ],
+          "sentenceEn": "We import fruit from other countries.",
+          "sentenceZh": "我们从其他国家进口水果。"
+        },
+        {
+          "id": "form",
+          "groupZh": "形状与形成",
+          "affix": "form",
+          "meaningZh": "形状、形成",
+          "examples": [
+            { "word": "inform", "meaningZh": "通知" },
+            { "word": "reform", "meaningZh": "改革" },
+            { "word": "uniform", "meaningZh": "制服" }
+          ],
+          "sentenceEn": "Please inform me about the trip.",
+          "sentenceZh": "请告诉我这次旅行的情况。"
+        },
+        {
+          "id": "struct",
+          "groupZh": "建造",
+          "affix": "struct",
+          "meaningZh": "建造、堆叠",
+          "examples": [
+            { "word": "structure", "meaningZh": "结构" },
+            { "word": "construct", "meaningZh": "建造" },
+            { "word": "instruct", "meaningZh": "指导" }
+          ],
+          "sentenceEn": "They construct a bridge.",
+          "sentenceZh": "他们建造一座桥。"
+        },
+        {
+          "id": "ject",
+          "groupZh": "投与扔",
+          "affix": "ject",
+          "meaningZh": "投、扔",
+          "examples": [
+            { "word": "project", "meaningZh": "项目" },
+            { "word": "reject", "meaningZh": "拒绝" },
+            { "word": "inject", "meaningZh": "注射" }
+          ],
+          "sentenceEn": "We finish the project.",
+          "sentenceZh": "我们完成这个项目。"
+        },
+        {
+          "id": "tract",
+          "groupZh": "拉与拖",
+          "affix": "tract",
+          "meaningZh": "拉、拖",
+          "examples": [
+            { "word": "tractor", "meaningZh": "拖拉机" },
+            { "word": "attract", "meaningZh": "吸引" },
+            { "word": "contract", "meaningZh": "合同" }
+          ],
+          "sentenceEn": "The tractor works on the farm.",
+          "sentenceZh": "拖拉机在农场工作。"
+        },
+        {
+          "id": "mit",
+          "groupZh": "送与发",
+          "affix": "mit / miss",
+          "meaningZh": "送、发",
+          "examples": [
+            { "word": "submit", "meaningZh": "提交" },
+            { "word": "permit", "meaningZh": "允许" },
+            { "word": "mission", "meaningZh": "任务" }
+          ],
+          "sentenceEn": "Please submit your paper.",
+          "sentenceZh": "请提交你的论文。"
+        },
+        {
+          "id": "pos",
+          "groupZh": "放置",
+          "affix": "pos / pon",
+          "meaningZh": "放置",
+          "examples": [
+            { "word": "position", "meaningZh": "位置" },
+            { "word": "compose", "meaningZh": "组成" },
+            { "word": "postpone", "meaningZh": "推迟" }
+          ],
+          "sentenceEn": "We postpone the meeting.",
+          "sentenceZh": "我们推迟会议。"
+        },
+        {
+          "id": "cred",
+          "groupZh": "相信",
+          "affix": "cred",
+          "meaningZh": "相信",
+          "examples": [
+            { "word": "credit", "meaningZh": "信用" },
+            { "word": "credible", "meaningZh": "可信的" },
+            { "word": "incredible", "meaningZh": "难以置信的" }
+          ],
+          "sentenceEn": "This story is incredible.",
+          "sentenceZh": "这个故事难以置信。"
+        },
+        {
+          "id": "fer",
+          "groupZh": "带来与拿",
+          "affix": "fer",
+          "meaningZh": "带来、拿",
+          "examples": [
+            { "word": "transfer", "meaningZh": "转移" },
+            { "word": "offer", "meaningZh": "提供" },
+            { "word": "differ", "meaningZh": "不同" }
+          ],
+          "sentenceEn": "They offer help to us.",
+          "sentenceZh": "他们向我们提供帮助。"
+        },
+        {
+          "id": "log",
+          "groupZh": "说与学科",
+          "affix": "log / logue",
+          "meaningZh": "说、学科",
+          "examples": [
+            { "word": "dialogue", "meaningZh": "对话" },
+            { "word": "logic", "meaningZh": "逻辑" },
+            { "word": "technology", "meaningZh": "技术" }
+          ],
+          "sentenceEn": "We have a dialogue.",
+          "sentenceZh": "我们进行对话。"
+        },
+        {
+          "id": "phon",
+          "groupZh": "声音",
+          "affix": "phon",
+          "meaningZh": "声音",
+          "examples": [
+            { "word": "telephone", "meaningZh": "电话" },
+            { "word": "microphone", "meaningZh": "麦克风" },
+            { "word": "symphony", "meaningZh": "交响乐" }
+          ],
+          "sentenceEn": "The telephone is ringing.",
+          "sentenceZh": "电话在响。"
+        },
+        {
+          "id": "bio",
+          "groupZh": "生命",
+          "affix": "bio",
+          "meaningZh": "生命",
+          "examples": [
+            { "word": "biology", "meaningZh": "生物学" },
+            { "word": "biography", "meaningZh": "传记" },
+            { "word": "antibiotic", "meaningZh": "抗生素" }
+          ],
+          "sentenceEn": "Biology is very interesting.",
+          "sentenceZh": "生物学非常有趣。"
+        },
+        {
+          "id": "geo",
+          "groupZh": "地球与土地",
+          "affix": "geo",
+          "meaningZh": "地球、土地",
+          "examples": [
+            { "word": "geography", "meaningZh": "地理" },
+            { "word": "geology", "meaningZh": "地质学" },
+            { "word": "geometry", "meaningZh": "几何" }
+          ],
+          "sentenceEn": "We study geography at school.",
+          "sentenceZh": "我们在学校学习地理。"
+        },
+        {
+          "id": "therm",
+          "groupZh": "热",
+          "affix": "therm",
+          "meaningZh": "热",
+          "examples": [
+            { "word": "thermometer", "meaningZh": "温度计" },
+            { "word": "thermal", "meaningZh": "热的" },
+            { "word": "thermostat", "meaningZh": "恒温器" }
+          ],
+          "sentenceEn": "The thermometer shows ten degrees.",
+          "sentenceZh": "温度计显示十度。"
+        },
+        {
+          "id": "aqua",
+          "groupZh": "水",
+          "affix": "aqua / hydr",
+          "meaningZh": "水",
+          "examples": [
+            { "word": "aquarium", "meaningZh": "水族馆" },
+            { "word": "hydrate", "meaningZh": "水合" },
+            { "word": "hydrogen", "meaningZh": "氢" }
+          ],
+          "sentenceEn": "Fish live in an aquarium.",
+          "sentenceZh": "鱼生活在水族馆里。"
+        },
+        {
+          "id": "chron",
+          "groupZh": "时间",
+          "affix": "chron",
+          "meaningZh": "时间",
+          "examples": [
+            { "word": "chronic", "meaningZh": "慢性的" },
+            { "word": "synchronize", "meaningZh": "同步" },
+            { "word": "chronology", "meaningZh": "年表" }
+          ],
+          "sentenceEn": "Please synchronize the clocks.",
+          "sentenceZh": "请把钟表调同步。"
+        },
+        {
+          "id": "meter",
+          "groupZh": "测量",
+          "affix": "meter / metr",
+          "meaningZh": "测量",
+          "examples": [
+            { "word": "centimeter", "meaningZh": "厘米" },
+            { "word": "kilometer", "meaningZh": "千米" },
+            { "word": "diameter", "meaningZh": "直径" }
+          ],
+          "sentenceEn": "This road is one kilometer long.",
+          "sentenceZh": "这条路一千米长。"
+        },
+        {
+          "id": "ped",
+          "groupZh": "脚",
+          "affix": "ped / pod",
+          "meaningZh": "脚",
+          "examples": [
+            { "word": "pedal", "meaningZh": "踏板" },
+            { "word": "pedestrian", "meaningZh": "行人" },
+            { "word": "tripod", "meaningZh": "三脚架" }
+          ],
+          "sentenceEn": "A pedestrian walks on the road.",
+          "sentenceZh": "行人走在路上。"
+        },
+        {
+          "id": "manu",
+          "groupZh": "手",
+          "affix": "manu",
+          "meaningZh": "手",
+          "examples": [
+            { "word": "manual", "meaningZh": "手册" },
+            { "word": "manufacture", "meaningZh": "制造" },
+            { "word": "manuscript", "meaningZh": "手稿" }
+          ],
+          "sentenceEn": "Read the manual first.",
+          "sentenceZh": "先读手册。"
+        },
+        {
+          "id": "civ",
+          "groupZh": "公民与社会",
+          "affix": "civ",
+          "meaningZh": "公民、城市",
+          "examples": [
+            { "word": "civil", "meaningZh": "公民的" },
+            { "word": "civilian", "meaningZh": "平民" },
+            { "word": "civilization", "meaningZh": "文明" }
+          ],
+          "sentenceEn": "We learn about civilization.",
+          "sentenceZh": "我们学习文明。"
+        },
+        {
+          "id": "graph",
+          "groupZh": "写与画",
+          "affix": "graph / gram",
+          "meaningZh": "写、画、记录",
+          "examples": [
+            { "word": "diagram", "meaningZh": "图表" },
+            { "word": "telegram", "meaningZh": "电报" },
+            { "word": "grammar", "meaningZh": "语法" }
+          ],
+          "sentenceEn": "This diagram is easy to read.",
+          "sentenceZh": "这张图表很容易看懂。"
+        },
+        {
+          "id": "aud",
+          "groupZh": "听与说",
+          "affix": "aud",
+          "meaningZh": "听",
+          "examples": [
+            { "word": "audience", "meaningZh": "观众" },
+            { "word": "audio", "meaningZh": "音频" },
+            { "word": "audible", "meaningZh": "听得见的" }
+          ],
+          "sentenceEn": "The audio is very clear.",
+          "sentenceZh": "音频非常清楚。"
+        },
+        {
+          "id": "viv",
+          "groupZh": "生命",
+          "affix": "viv / vit",
+          "meaningZh": "生命、活着",
+          "examples": [
+            { "word": "survive", "meaningZh": "生存" },
+            { "word": "vitamin", "meaningZh": "维生素" },
+            { "word": "vital", "meaningZh": "至关重要的" }
+          ],
+          "sentenceEn": "Plants survive in warm water.",
+          "sentenceZh": "植物在温水中能存活。"
+        },
+        {
+          "id": "vent",
+          "groupZh": "来与去",
+          "affix": "vent / ven",
+          "meaningZh": "来",
+          "examples": [
+            { "word": "event", "meaningZh": "事件" },
+            { "word": "invent", "meaningZh": "发明" },
+            { "word": "adventure", "meaningZh": "冒险" }
+          ],
+          "sentenceEn": "We invent a new game.",
+          "sentenceZh": "我们发明一个新游戏。"
+        },
+        {
+          "id": "cap",
+          "groupZh": "抓与拿",
+          "affix": "cap / capt",
+          "meaningZh": "抓、拿、头",
+          "examples": [
+            { "word": "capital", "meaningZh": "首都" },
+            { "word": "captain", "meaningZh": "队长" },
+            { "word": "capacity", "meaningZh": "容量" }
+          ],
+          "sentenceEn": "Paris is a famous capital.",
+          "sentenceZh": "巴黎是一座著名的首都。"
+        },
+        {
+          "id": "flu",
+          "groupZh": "流动",
+          "affix": "flu",
+          "meaningZh": "流",
+          "examples": [
+            { "word": "fluent", "meaningZh": "流利的" },
+            { "word": "fluid", "meaningZh": "液体" },
+            { "word": "influence", "meaningZh": "影响" }
+          ],
+          "sentenceEn": "She speaks fluent English.",
+          "sentenceZh": "她说一口流利的英语。"
+        },
+        {
+          "id": "grat",
+          "groupZh": "感谢与喜欢",
+          "affix": "grat",
+          "meaningZh": "感谢、喜欢",
+          "examples": [
+            { "word": "grateful", "meaningZh": "感激的" },
+            { "word": "gratitude", "meaningZh": "感激" },
+            { "word": "congratulate", "meaningZh": "祝贺" }
+          ],
+          "sentenceEn": "I am grateful for your help.",
+          "sentenceZh": "我很感激你的帮助。"
+        },
+        {
+          "id": "temp",
+          "groupZh": "时间",
+          "affix": "temp / tempor",
+          "meaningZh": "时间、时期",
+          "examples": [
+            { "word": "temporary", "meaningZh": "暂时的" },
+            { "word": "temperature", "meaningZh": "温度" },
+            { "word": "tempo", "meaningZh": "节奏" }
+          ],
+          "sentenceEn": "This is a temporary job.",
+          "sentenceZh": "这是一份临时工作。"
+        },
+        {
+          "id": "loc",
+          "groupZh": "地方与位置",
+          "affix": "loc",
+          "meaningZh": "地方、位置",
+          "examples": [
+            { "word": "local", "meaningZh": "当地的" },
+            { "word": "locate", "meaningZh": "找到位置" },
+            { "word": "location", "meaningZh": "地点" }
+          ],
+          "sentenceEn": "We shop at the local market.",
+          "sentenceZh": "我们在当地市场购物。"
+        },
+        {
+          "id": "nat",
+          "groupZh": "出生与自然",
+          "affix": "nat / nasc",
+          "meaningZh": "出生、自然",
+          "examples": [
+            { "word": "nature", "meaningZh": "自然" },
+            { "word": "native", "meaningZh": "本地的" },
+            { "word": "nation", "meaningZh": "国家" }
+          ],
+          "sentenceEn": "We enjoy nature in spring.",
+          "sentenceZh": "我们在春天享受自然。"
+        },
+        {
+          "id": "sens",
+          "groupZh": "感觉",
+          "affix": "sens / sent",
+          "meaningZh": "感觉、感知",
+          "examples": [
+            { "word": "sense", "meaningZh": "感觉" },
+            { "word": "sensitive", "meaningZh": "敏感的" },
+            { "word": "sensor", "meaningZh": "传感器" }
+          ],
+          "sentenceEn": "The machine has a small sensor.",
+          "sentenceZh": "这台机器有一个小传感器。"
+        },
+        {
+          "id": "lev",
+          "groupZh": "举起与轻",
+          "affix": "lev",
+          "meaningZh": "举起、轻",
+          "examples": [
+            { "word": "level", "meaningZh": "水平" },
+            { "word": "elevator", "meaningZh": "电梯" },
+            { "word": "lever", "meaningZh": "杠杆" }
+          ],
+          "sentenceEn": "We take the elevator up.",
+          "sentenceZh": "我们乘电梯上去。"
+        },
+        {
+          "id": "cur",
+          "groupZh": "跑与发生",
+          "affix": "cur / curr",
+          "meaningZh": "跑、发生",
+          "examples": [
+            { "word": "current", "meaningZh": "当前的" },
+            { "word": "curious", "meaningZh": "好奇的" },
+            { "word": "occur", "meaningZh": "发生" }
+          ],
+          "sentenceEn": "The children are curious about stars.",
+          "sentenceZh": "孩子们对星星很好奇。"
+        },
+        {
+          "id": "cord",
+          "groupZh": "心与勇气",
+          "affix": "cord / cour",
+          "meaningZh": "心",
+          "examples": [
+            { "word": "courage", "meaningZh": "勇气" },
+            { "word": "record", "meaningZh": "记录" },
+            { "word": "cordial", "meaningZh": "热情的" }
+          ],
+          "sentenceEn": "He shows great courage in the game.",
+          "sentenceZh": "他在比赛中表现得非常勇敢。"
+        },
+        {
+          "id": "sequ",
+          "groupZh": "跟随与顺序",
+          "affix": "sequ / secut",
+          "meaningZh": "跟随",
+          "examples": [
+            { "word": "sequence", "meaningZh": "顺序" },
+            { "word": "consequence", "meaningZh": "结果" },
+            { "word": "subsequent", "meaningZh": "随后的" }
+          ],
+          "sentenceEn": "Please put the photos in sequence.",
+          "sentenceZh": "请按顺序排列这些照片。"
+        },
+        {
+          "id": "plac",
+          "groupZh": "使高兴与平静",
+          "affix": "plac",
+          "meaningZh": "使高兴、使平静",
+          "examples": [
+            { "word": "pleasant", "meaningZh": "令人愉快的" },
+            { "word": "please", "meaningZh": "使满意" },
+            { "word": "placid", "meaningZh": "宁静的" }
+          ],
+          "sentenceEn": "The garden is a pleasant place.",
+          "sentenceZh": "这个花园是个令人愉快的地方。"
+        },
+        {
+          "id": "leg",
+          "groupZh": "读与收集",
+          "affix": "leg / lect",
+          "meaningZh": "读、选、收集",
+          "examples": [
+            { "word": "legend", "meaningZh": "传说" },
+            { "word": "legible", "meaningZh": "清晰易读的" },
+            { "word": "collect", "meaningZh": "收集" }
+          ],
+          "sentenceEn": "We collect leaves in the park.",
+          "sentenceZh": "我们在公园里收集树叶。"
+        },
+        {
+          "id": "reg",
+          "groupZh": "规则与统治",
+          "affix": "reg",
+          "meaningZh": "规则、统治",
+          "examples": [
+            { "word": "regular", "meaningZh": "规则的" },
+            { "word": "region", "meaningZh": "地区" },
+            { "word": "regulate", "meaningZh": "管理" }
+          ],
+          "sentenceEn": "We have a regular reading class.",
+          "sentenceZh": "我们有固定的阅读课。"
+        },
+        {
+          "id": "sci",
+          "groupZh": "知道与科学",
+          "affix": "sci",
+          "meaningZh": "知道",
+          "examples": [
+            { "word": "science", "meaningZh": "科学" },
+            { "word": "conscious", "meaningZh": "有意识的" },
+            { "word": "scientific", "meaningZh": "科学的" }
+          ],
+          "sentenceEn": "Science helps us understand the world.",
+          "sentenceZh": "科学帮助我们认识世界。"
+        },
+        {
+          "id": "val",
+          "groupZh": "价值与力量",
+          "affix": "val",
+          "meaningZh": "价值、强壮",
+          "examples": [
+            { "word": "value", "meaningZh": "价值" },
+            { "word": "valuable", "meaningZh": "贵重的" },
+            { "word": "valid", "meaningZh": "有效的" }
+          ],
+          "sentenceEn": "This old book is very valuable.",
+          "sentenceZh": "这本旧书非常珍贵。"
+        },
+        {
+          "id": "voc",
+          "groupZh": "叫与声音",
+          "affix": "voc / vok",
+          "meaningZh": "叫、声音",
+          "examples": [
+            { "word": "voice", "meaningZh": "声音" },
+            { "word": "vocal", "meaningZh": "嗓音的" },
+            { "word": "vocabulary", "meaningZh": "词汇" }
+          ],
+          "sentenceEn": "Her voice is soft and clear.",
+          "sentenceZh": "她的声音轻柔而清晰。"
+        },
+        {
+          "id": "mot",
+          "groupZh": "移动",
+          "affix": "mot / mov",
+          "meaningZh": "移动",
+          "examples": [
+            { "word": "motor", "meaningZh": "发动机" },
+            { "word": "motion", "meaningZh": "运动" },
+            { "word": "remote", "meaningZh": "遥远的" }
+          ],
+          "sentenceEn": "The motor makes a soft sound.",
+          "sentenceZh": "发动机发出轻柔的声音。"
+        },
+        {
+          "id": "path",
+          "groupZh": "感觉与情感",
+          "affix": "path",
+          "meaningZh": "感觉、情感",
+          "examples": [
+            { "word": "empathy", "meaningZh": "共情" },
+            { "word": "sympathy", "meaningZh": "同情" },
+            { "word": "apathy", "meaningZh": "冷漠" }
+          ],
+          "sentenceEn": "She shows sympathy for her friend.",
+          "sentenceZh": "她对朋友表示同情。"
+        },
+        {
+          "id": "phys",
+          "groupZh": "自然与身体",
+          "affix": "phys",
+          "meaningZh": "自然、身体",
+          "examples": [
+            { "word": "physics", "meaningZh": "物理" },
+            { "word": "physicist", "meaningZh": "物理学家" },
+            { "word": "physical", "meaningZh": "身体的" }
+          ],
+          "sentenceEn": "We study physics on Tuesday.",
+          "sentenceZh": "我们周二学习物理。"
+        },
+        {
+          "id": "anim",
+          "groupZh": "生命与精神",
+          "affix": "anim",
+          "meaningZh": "生命、精神",
+          "examples": [
+            { "word": "animal", "meaningZh": "动物" },
+            { "word": "animation", "meaningZh": "动画" },
+            { "word": "animate", "meaningZh": "使有生气" }
+          ],
+          "sentenceEn": "We watch a funny animation.",
+          "sentenceZh": "我们看一部有趣的动画片。"
+        },
+        {
+          "id": "tact",
+          "groupZh": "触摸",
+          "affix": "tact / tang",
+          "meaningZh": "触摸",
+          "examples": [
+            { "word": "contact", "meaningZh": "联系" },
+            { "word": "tactile", "meaningZh": "触觉的" },
+            { "word": "tangible", "meaningZh": "可触摸的" }
+          ],
+          "sentenceEn": "We keep in contact by email.",
+          "sentenceZh": "我们通过电子邮件保持联系。"
+        },
+        {
+          "id": "plic",
+          "groupZh": "折叠与复杂",
+          "affix": "plic / plex",
+          "meaningZh": "折叠、交错",
+          "examples": [
+            { "word": "complex", "meaningZh": "复杂的" },
+            { "word": "simple", "meaningZh": "简单的" },
+            { "word": "duplicate", "meaningZh": "复制品" }
+          ],
+          "sentenceEn": "This is a simple question.",
+          "sentenceZh": "这是一个简单的问题。"
+        },
+        {
+          "id": "grad",
+          "groupZh": "步与级",
+          "affix": "grad / gress",
+          "meaningZh": "走、步、级",
+          "examples": [
+            { "word": "grade", "meaningZh": "年级" },
+            { "word": "gradual", "meaningZh": "逐渐的" },
+            { "word": "graduation", "meaningZh": "毕业" }
+          ],
+          "sentenceEn": "She is in grade five now.",
+          "sentenceZh": "她现在上五年级。"
+        },
+        {
+          "id": "migr",
+          "groupZh": "迁徙",
+          "affix": "migr",
+          "meaningZh": "迁移",
+          "examples": [
+            { "word": "migrate", "meaningZh": "迁徙" },
+            { "word": "migration", "meaningZh": "迁徙" },
+            { "word": "migratory", "meaningZh": "有迁徙习惯的" }
+          ],
+          "sentenceEn": "Birds migrate in the autumn.",
+          "sentenceZh": "鸟在秋天迁徙。"
+        },
+        {
+          "id": "rupt",
+          "groupZh": "打破",
+          "affix": "rupt",
+          "meaningZh": "破、断",
+          "examples": [
+            { "word": "interrupt", "meaningZh": "打断" },
+            { "word": "erupt", "meaningZh": "喷发" },
+            { "word": "abrupt", "meaningZh": "突然的" }
+          ],
+          "sentenceEn": "Please do not interrupt the class.",
+          "sentenceZh": "请不要打断上课。"
+        },
+        {
+          "id": "tend",
+          "groupZh": "伸展",
+          "affix": "tend / tens",
+          "meaningZh": "伸展、拉紧",
+          "examples": [
+            { "word": "extend", "meaningZh": "延伸" },
+            { "word": "tendency", "meaningZh": "倾向" },
+            { "word": "tension", "meaningZh": "紧张" }
+          ],
+          "sentenceEn": "The road extends to the hill.",
+          "sentenceZh": "这条路一直延伸到小山。"
+        },
+        {
+          "id": "fact",
+          "groupZh": "做与事实",
+          "affix": "fact / fac",
+          "meaningZh": "做、事实",
+          "examples": [
+            { "word": "fact", "meaningZh": "事实" },
+            { "word": "perfect", "meaningZh": "完美的" },
+            { "word": "factor", "meaningZh": "因素" }
+          ],
+          "sentenceEn": "We learn a simple fact today.",
+          "sentenceZh": "我们今天学了一个简单的事实。"
+        },
+        {
+          "id": "junct",
+          "groupZh": "连接",
+          "affix": "junct / join",
+          "meaningZh": "连接",
+          "examples": [
+            { "word": "junction", "meaningZh": "交叉路口" },
+            { "word": "conjunction", "meaningZh": "连词" },
+            { "word": "joint", "meaningZh": "接合处" }
+          ],
+          "sentenceEn": "Turn left at the busy junction.",
+          "sentenceZh": "在繁忙的路口向左转。"
+        },
+        {
+          "id": "lit",
+          "groupZh": "文字",
+          "affix": "lit / liter",
+          "meaningZh": "文字",
+          "examples": [
+            { "word": "literature", "meaningZh": "文学" },
+            { "word": "literal", "meaningZh": "字面的" },
+            { "word": "literacy", "meaningZh": "读写能力" }
+          ],
+          "sentenceEn": "She reads English literature for fun.",
+          "sentenceZh": "她读英语文学作为消遣。"
+        },
+        {
+          "id": "numer",
+          "groupZh": "数字",
+          "affix": "numer",
+          "meaningZh": "数字",
+          "examples": [
+            { "word": "number", "meaningZh": "数字" },
+            { "word": "numerous", "meaningZh": "许多的" },
+            { "word": "numeral", "meaningZh": "数字符号" }
+          ],
+          "sentenceEn": "The number on the door is seven.",
+          "sentenceZh": "门上的数字是七。"
+        },
+        {
+          "id": "ordin",
+          "groupZh": "顺序与规则",
+          "affix": "ordin",
+          "meaningZh": "顺序、规则",
+          "examples": [
+            { "word": "order", "meaningZh": "顺序" },
+            { "word": "ordinary", "meaningZh": "普通的" },
+            { "word": "orderly", "meaningZh": "整齐的" }
+          ],
+          "sentenceEn": "Please put the books in order.",
+          "sentenceZh": "请把书按顺序放好。"
+        },
+        {
+          "id": "magn",
+          "groupZh": "大",
+          "affix": "magn",
+          "meaningZh": "大",
+          "examples": [
+            { "word": "magnificent", "meaningZh": "壮丽的" },
+            { "word": "magnify", "meaningZh": "放大" },
+            { "word": "magnet", "meaningZh": "磁铁" }
+          ],
+          "sentenceEn": "The mountain view is magnificent.",
+          "sentenceZh": "山间的景色非常壮丽。"
+        },
+        {
+          "id": "clar",
+          "groupZh": "清楚",
+          "affix": "clar",
+          "meaningZh": "清楚、明亮",
+          "examples": [
+            { "word": "clarity", "meaningZh": "清晰" },
+            { "word": "clarify", "meaningZh": "说明" },
+            { "word": "declare", "meaningZh": "宣布" }
+          ],
+          "sentenceEn": "Please clarify the first question.",
+          "sentenceZh": "请说明第一个问题。"
+        },
+        {
+          "id": "vac",
+          "groupZh": "空",
+          "affix": "vac",
+          "meaningZh": "空、空闲",
+          "examples": [
+            { "word": "vacation", "meaningZh": "假期" },
+            { "word": "vacant", "meaningZh": "空的" },
+            { "word": "vacuum", "meaningZh": "真空" }
+          ],
+          "sentenceEn": "We travel in the summer vacation.",
+          "sentenceZh": "我们在暑假旅行。"
+        },
+        {
+          "id": "sol",
+          "groupZh": "独自与太阳",
+          "affix": "sol",
+          "meaningZh": "独自、太阳",
+          "examples": [
+            { "word": "solo", "meaningZh": "独唱" },
+            { "word": "solar", "meaningZh": "太阳的" },
+            { "word": "sole", "meaningZh": "唯一的" }
+          ],
+          "sentenceEn": "The sun gives us solar power.",
+          "sentenceZh": "太阳给我们太阳能。"
+        },
+        {
+          "id": "terr",
+          "groupZh": "土地",
+          "affix": "terr",
+          "meaningZh": "土地、地方",
+          "examples": [
+            { "word": "terrace", "meaningZh": "露台" },
+            { "word": "terrain", "meaningZh": "地形" },
+            { "word": "terrarium", "meaningZh": "饲养箱" }
+          ],
+          "sentenceEn": "We grow flowers on the terrace.",
+          "sentenceZh": "我们在露台上种花。"
+        },
+        {
+          "id": "mar",
+          "groupZh": "海",
+          "affix": "mar / marin",
+          "meaningZh": "海",
+          "examples": [
+            { "word": "marine", "meaningZh": "海洋的" },
+            { "word": "marina", "meaningZh": "小艇码头" },
+            { "word": "mariner", "meaningZh": "水手" }
+          ],
+          "sentenceEn": "We study marine animals in class.",
+          "sentenceZh": "我们在课上认识海洋动物。"
+        },
+        {
+          "id": "avi",
+          "groupZh": "鸟与飞行",
+          "affix": "avi",
+          "meaningZh": "鸟",
+          "examples": [
+            { "word": "aviation", "meaningZh": "航空" },
+            { "word": "aviator", "meaningZh": "飞行员" },
+            { "word": "avian", "meaningZh": "鸟类的" }
+          ],
+          "sentenceEn": "He reads a book about aviation.",
+          "sentenceZh": "他读一本关于航空的书。"
+        },
+        {
+          "id": "pac",
+          "groupZh": "和平与平静",
+          "affix": "pac",
+          "meaningZh": "和平、平静",
+          "examples": [
+            { "word": "peace", "meaningZh": "和平" },
+            { "word": "pacify", "meaningZh": "安抚" },
+            { "word": "pacifier", "meaningZh": "安抚物" }
+          ],
+          "sentenceEn": "The soft music can pacify a baby.",
+          "sentenceZh": "轻柔的音乐能安抚婴儿。"
+        },
+        {
+          "id": "fid",
+          "groupZh": "信任",
+          "affix": "fid",
+          "meaningZh": "信任、忠诚",
+          "examples": [
+            { "word": "confident", "meaningZh": "自信的" },
+            { "word": "confidence", "meaningZh": "自信" },
+            { "word": "fidelity", "meaningZh": "忠诚" }
+          ],
+          "sentenceEn": "She is confident before the talk.",
+          "sentenceZh": "演讲前她很自信。"
+        },
+        {
+          "id": "mob",
+          "groupZh": "可动与活动",
+          "affix": "mob / mot",
+          "meaningZh": "移动、活动",
+          "examples": [
+            { "word": "mobile", "meaningZh": "移动的" },
+            { "word": "mobility", "meaningZh": "移动性" },
+            { "word": "immobile", "meaningZh": "不动的" }
+          ],
+          "sentenceEn": "This small robot is mobile.",
+          "sentenceZh": "这个小机器人可以移动。"
+        },
+        {
+          "id": "onym",
+          "groupZh": "名字",
+          "affix": "onym",
+          "meaningZh": "名字",
+          "examples": [
+            { "word": "synonym", "meaningZh": "同义词" },
+            { "word": "antonym", "meaningZh": "反义词" },
+            { "word": "acronym", "meaningZh": "首字母缩写词" }
+          ],
+          "sentenceEn": "Big and small are antonyms.",
+          "sentenceZh": "big 和 small 是反义词。"
+        },
+        {
+          "id": "volv",
+          "groupZh": "卷与转",
+          "affix": "volv / volut",
+          "meaningZh": "卷、转",
+          "examples": [
+            { "word": "involve", "meaningZh": "涉及" },
+            { "word": "revolve", "meaningZh": "旋转" },
+            { "word": "volume", "meaningZh": "音量、卷" }
+          ],
+          "sentenceEn": "The wheels revolve very slowly.",
+          "sentenceZh": "轮子转得非常慢。"
+        },
+        {
+          "id": "stat",
+          "groupZh": "站立",
+          "affix": "stat / sta",
+          "meaningZh": "站立",
+          "examples": [
+            { "word": "station", "meaningZh": "车站" },
+            { "word": "stable", "meaningZh": "稳定的" },
+            { "word": "statue", "meaningZh": "雕像" }
+          ],
+          "sentenceEn": "The train leaves the station at six.",
+          "sentenceZh": "火车六点离开车站。"
+        },
+        {
+          "id": "soci",
+          "groupZh": "社会与同伴",
+          "affix": "soci",
+          "meaningZh": "社会、同伴",
+          "examples": [
+            { "word": "social", "meaningZh": "社会的" },
+            { "word": "society", "meaningZh": "社会" },
+            { "word": "associate", "meaningZh": "联系" }
+          ],
+          "sentenceEn": "We join a social club at school.",
+          "sentenceZh": "我们在学校参加一个社交社团。"
+        },
+        {
+          "id": "techn",
+          "groupZh": "技术与技艺",
+          "affix": "techn",
+          "meaningZh": "技术、技艺",
+          "examples": [
+            { "word": "technique", "meaningZh": "技巧" },
+            { "word": "technical", "meaningZh": "技术的" },
+            { "word": "technician", "meaningZh": "技术员" }
+          ],
+          "sentenceEn": "She learns a new drawing technique.",
+          "sentenceZh": "她学习一种新的绘画技巧。"
+        },
+        {
+          "id": "lingu",
+          "groupZh": "语言",
+          "affix": "lingu",
+          "meaningZh": "语言、舌头",
+          "examples": [
+            { "word": "language", "meaningZh": "语言" },
+            { "word": "linguistics", "meaningZh": "语言学" },
+            { "word": "multilingual", "meaningZh": "多语的" }
+          ],
+          "sentenceEn": "We learn a new language together.",
+          "sentenceZh": "我们一起学习一门新语言。"
+        },
+        {
+          "id": "bene",
+          "groupZh": "好与善",
+          "affix": "bene",
+          "meaningZh": "好、善",
+          "examples": [
+            { "word": "benefit", "meaningZh": "益处" },
+            { "word": "beneficial", "meaningZh": "有益的" },
+            { "word": "benefactor", "meaningZh": "恩人" }
+          ],
+          "sentenceEn": "Reading is beneficial to everyone.",
+          "sentenceZh": "阅读对每个人都有益。"
+        },
+        {
+          "id": "prim",
+          "groupZh": "第一与主要",
+          "affix": "prim / prin",
+          "meaningZh": "第一、主要",
+          "examples": [
+            { "word": "primary", "meaningZh": "初级的" },
+            { "word": "principal", "meaningZh": "校长" },
+            { "word": "primitive", "meaningZh": "原始的" }
+          ],
+          "sentenceEn": "Our principal gives a short talk.",
+          "sentenceZh": "我们的校长做了简短的讲话。"
+        },
+        {
+          "id": "clud",
+          "groupZh": "关闭",
+          "affix": "clud / clus",
+          "meaningZh": "关闭",
+          "examples": [
+            { "word": "include", "meaningZh": "包括" },
+            { "word": "conclude", "meaningZh": "得出结论" },
+            { "word": "closure", "meaningZh": "关闭" }
+          ],
+          "sentenceEn": "The list includes ten new words.",
+          "sentenceZh": "这份清单包括十个新单词。"
+        },
+        {
+          "id": "part",
+          "groupZh": "部分与参与",
+          "affix": "part",
+          "meaningZh": "部分、分开",
+          "examples": [
+            { "word": "part", "meaningZh": "部分" },
+            { "word": "partial", "meaningZh": "部分的" },
+            { "word": "participate", "meaningZh": "参与" }
+          ],
+          "sentenceEn": "We participate in the school show.",
+          "sentenceZh": "我们参加学校的演出。"
+        },
+        {
+          "id": "sign",
+          "groupZh": "标记",
+          "affix": "sign",
+          "meaningZh": "记号、标记",
+          "examples": [
+            { "word": "signal", "meaningZh": "信号" },
+            { "word": "signature", "meaningZh": "签名" },
+            { "word": "design", "meaningZh": "设计" }
+          ],
+          "sentenceEn": "Please write your signature here.",
+          "sentenceZh": "请在这里写下你的签名。"
+        },
+        {
+          "id": "termin",
+          "groupZh": "结束与界限",
+          "affix": "termin",
+          "meaningZh": "结束、界限",
+          "examples": [
+            { "word": "term", "meaningZh": "学期" },
+            { "word": "terminal", "meaningZh": "终点站" },
+            { "word": "terminate", "meaningZh": "终止" }
+          ],
+          "sentenceEn": "The new term starts in September.",
+          "sentenceZh": "新学期在九月开始。"
+        },
+        {
+          "id": "vers",
+          "groupZh": "转与变",
+          "affix": "vers / vert",
+          "meaningZh": "转、变",
+          "examples": [
+            { "word": "version", "meaningZh": "版本" },
+            { "word": "reverse", "meaningZh": "相反的" },
+            { "word": "convert", "meaningZh": "转换" }
+          ],
+          "sentenceEn": "This is a new version of the game.",
+          "sentenceZh": "这是这个游戏的新版本。"
+        },
+        {
+          "id": "spir",
+          "groupZh": "呼吸与精神",
+          "affix": "spir",
+          "meaningZh": "呼吸、精神",
+          "examples": [
+            { "word": "spirit", "meaningZh": "精神" },
+            { "word": "inspire", "meaningZh": "激励" },
+            { "word": "inspiration", "meaningZh": "灵感" }
+          ],
+          "sentenceEn": "Her story can inspire young students.",
+          "sentenceZh": "她的故事能激励年轻学生。"
+        },
+        {
+          "id": "urb",
+          "groupZh": "城市",
+          "affix": "urb",
+          "meaningZh": "城市",
+          "examples": [
+            { "word": "urban", "meaningZh": "城市的" },
+            { "word": "suburb", "meaningZh": "郊区" },
+            { "word": "urbanization", "meaningZh": "城市化" }
+          ],
+          "sentenceEn": "Many people live in the suburbs.",
+          "sentenceZh": "许多人住在郊区。"
+        },
+        {
+          "id": "agri",
+          "groupZh": "农业与土地",
+          "affix": "agri / agro",
+          "meaningZh": "田地、农业",
+          "examples": [
+            { "word": "agriculture", "meaningZh": "农业" },
+            { "word": "agricultural", "meaningZh": "农业的" },
+            { "word": "agronomy", "meaningZh": "农学" }
+          ],
+          "sentenceEn": "They study agriculture at school.",
+          "sentenceZh": "他们在学校学习农业。"
+        },
+        {
+          "id": "hosp",
+          "groupZh": "主人与客人",
+          "affix": "hosp / host",
+          "meaningZh": "主人、客人",
+          "examples": [
+            { "word": "hospital", "meaningZh": "医院" },
+            { "word": "hotel", "meaningZh": "旅馆" },
+            { "word": "host", "meaningZh": "主人" }
+          ],
+          "sentenceEn": "The hotel is near the station.",
+          "sentenceZh": "这家旅馆在车站附近。"
         }
       ]
     }
   ]
 }
-
