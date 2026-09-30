@@ -363,7 +363,201 @@
       "tipsZh": [
         "每天多说 Please 和 Thank you，美国人会觉得你很友善。"
       ]
+    },
+    {
+  "id": "beginner-everyday-slang-sunny",
+  "titleEn": "Beginner Everyday Slang: Sunny & Simple",
+  "titleZh": "初学者日常俚语·阳光版",
+  "descZh": "适合初学者的简单美国俚语，句子短、好记、积极阳光。",
+  "lines": [
+    {
+      "speaker": "A",
+      "en": "What's up?",
+      "zh": "最近怎么样？/ 怎么了？",
+      "keyExpressions": [
+        { "en": "What's up?", "zh": "最近怎么样？/ 怎么了？" },
+        { "en": "Not much.", "zh": "没什么。" }
+      ]
+    },
+    {
+      "speaker": "B",
+      "en": "Not much. I'm happy today.",
+      "zh": "没什么。我今天很开心。",
+      "keyExpressions": []
+    },
+    {
+      "speaker": "A",
+      "en": "Good for you!",
+      "zh": "真为你高兴！",
+      "keyExpressions": [
+        { "en": "Good for you!", "zh": "真为你高兴！/ 真不错！" }
+      ]
+    },
+    {
+      "speaker": "B",
+      "en": "Thanks! Want to grab a bite?",
+      "zh": "谢谢！要不要去吃点东西？",
+      "keyExpressions": [
+        { "en": "grab a bite", "zh": "随便吃点东西" }
+      ]
+    },
+    {
+      "speaker": "A",
+      "en": "Sure, I'm in.",
+      "zh": "好啊，我加入。",
+      "keyExpressions": [
+        { "en": "I'm in.", "zh": "我加入。/ 我去。" }
+      ]
+    },
+    {
+      "speaker": "B",
+      "en": "Great. Let's hang out after work.",
+      "zh": "太好了。下班后一起玩吧。",
+      "keyExpressions": [
+        { "en": "hang out", "zh": "一起玩；闲逛" }
+      ]
+    },
+    {
+      "speaker": "A",
+      "en": "Sounds good. We'll have a blast.",
+      "zh": "听起来不错。我们会玩得很开心。",
+      "keyExpressions": [
+        { "en": "Sounds good.", "zh": "听起来不错。" },
+        { "en": "have a blast", "zh": "玩得很开心" }
+      ]
+    },
+    {
+      "speaker": "B",
+      "en": "The test was a piece of cake.",
+      "zh": "那考试小菜一碟。",
+      "keyExpressions": [
+        { "en": "a piece of cake", "zh": "小菜一碟；很简单" }
+      ]
+    },
+    {
+      "speaker": "A",
+      "en": "Way to go!",
+      "zh": "干得好！",
+      "keyExpressions": [
+        { "en": "Way to go!", "zh": "干得好！" }
+      ]
+    },
+    {
+      "speaker": "B",
+      "en": "Thanks. I'm going to hit the sack early.",
+      "zh": "谢谢。我要早点睡觉。",
+      "keyExpressions": [
+        { "en": "hit the sack", "zh": "睡觉" }
+      ]
+    },
+    {
+      "speaker": "A",
+      "en": "Okay, take it easy.",
+      "zh": "好，放松点。/ 保重。",
+      "keyExpressions": [
+        { "en": "take it easy", "zh": "放松点；别太累" }
+      ]
+    },
+    {
+      "speaker": "B",
+      "en": "You too. Let's call it a day.",
+      "zh": "你也是。今天到此为止吧。",
+      "keyExpressions": [
+        { "en": "call it a day", "zh": "今天到此为止" }
+      ]
     }
+  ],
+  "tipsZh": [
+    "What's up? 常表示“最近怎么样？”或“怎么了？”，回答 Not much 就可以。",
+    "Good for you! 表示“真为你高兴”或“真不错”。",
+    "grab a bite 是“随便吃点东西”，hang out 是“一起玩、闲逛”。",
+    "I'm in 是“我加入、我去”，Sounds good 是“听起来不错”。",
+    "have a blast 是“玩得很开心”，a piece of cake 是“小菜一碟”。",
+    "Way to go! 是“干得好！”，hit the sack 是“睡觉”。",
+    "take it easy 是“放松点、别太累”，call it a day 是“今天到此为止”。"
+  ]
+},
+{
+  "id": "before-trip-chat",
+  "titleEn": "Checking in Before a Trip",
+  "titleZh": "出行前的问候",
+  "descZh": "朋友出行前的小聚，包含关心、帮忙和道别。",
+  "lines": [
+    {
+      "speaker": "A",
+      "en": "What are you up to?",
+      "zh": "你在忙啥呢？",
+      "keyExpressions": [
+        { "en": "What are you up to?", "zh": "你在忙啥呢？" }
+      ]
+    },
+    {
+      "speaker": "B",
+      "en": "Packing for my trip. So far so good.",
+      "zh": "在收拾旅行行李。目前一切顺利。",
+      "keyExpressions": [
+        { "en": "So far so good.", "zh": "目前一切顺利。" }
+      ]
+    },
+    {
+      "speaker": "A",
+      "en": "Can you repeat that?",
+      "zh": "可以重复一遍吗？",
+      "keyExpressions": [
+        { "en": "Can you repeat that?", "zh": "可以重复一遍吗？" }
+      ]
+    },
+    {
+      "speaker": "B",
+      "en": "So far so good. Please sit down.",
+      "zh": "目前一切顺利。请坐。",
+      "keyExpressions": [
+        { "en": "Please sit down.", "zh": "请坐。" }
+      ]
+    },
+    {
+      "speaker": "A",
+      "en": "Thanks a lot. Can you turn off the light?",
+      "zh": "十分感谢。可以把灯关掉吗？",
+      "keyExpressions": [
+        { "en": "Thanks a lot.", "zh": "十分感谢。" },
+        { "en": "Can you turn off the light?", "zh": "可以把灯关掉吗？" }
+      ]
+    },
+    {
+      "speaker": "B",
+      "en": "Right away.",
+      "zh": "马上。",
+      "keyExpressions": [
+        { "en": "Right away.", "zh": "马上。" }
+      ]
+    },
+    {
+      "speaker": "A",
+      "en": "It's fine. Have fun!",
+      "zh": "没事。玩得开心！",
+      "keyExpressions": [
+        { "en": "It's fine.", "zh": "没事。" },
+        { "en": "Have fun.", "zh": "玩得开心。" }
+      ]
+    },
+    {
+      "speaker": "B",
+      "en": "Catch you later.",
+      "zh": "晚点聊。",
+      "keyExpressions": [
+        { "en": "Catch you later.", "zh": "晚点聊。" }
+      ]
+    }
+  ],
+  "tipsZh": [
+    "What are you up to? 是口语中非常常用的问候，相当于“你在忙什么呢？”",
+    "So far so good. 表示“到目前为止一切都好”，适合回答近况。",
+    "Can you repeat that? 没听清对方的话时，可以礼貌地请对方重复。",
+    "Right away. 表示“马上、立刻”，回应别人的请求时很干脆。",
+    "Catch you later. 是“晚点聊、回头见”的意思，适合朋友间道别。"
+  ]
+}
   ]
 }
 
