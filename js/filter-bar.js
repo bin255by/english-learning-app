@@ -27,17 +27,23 @@
  *      - 主题单词页是 Tab 式（data-mode="single"），max-height 始终生效
  *      - 内容确实超出时才在底部显示一条渐隐提示（::after + linear-gradient）
  *
- *   4) 多选筛选 + 重置（需求 7 / 9）
+ *   4) 多选筛选 +「全选 / 清空勾选」（需求 7 / 第 5 轮拆分为两个独立按钮）
  *      - multi 模式：默认全部勾选，点击即切换，未勾选的分类内容隐藏
  *      - single 模式（主题单词页）：保持原有 Tab 式，点谁只显示谁
- *      - showReset 页面额外提供「清空勾选」按钮，点击恢复"全选"默认状态
+ *      - showReset 页面右上角依次是 [全选][清空勾选][▸/▾] 三个按钮（同行垂直居中）：
+ *        · 「全选」(主色实心)：所有一级、二级全部勾上并立即重绘内容区；已全选时置灰
+ *        · 「清空勾选」(主色描边)：所有一级、二级全部取消并立即重绘；已全空时置灰
+ *      - 一个分类都没勾时，筛选条内显示 .filterbar__empty 空状态引导文案
+ *      - 展开/收起、手风琴切换只改显隐不改勾选，因此不影响两个按钮的置灰状态
  *
  * 对外 API：
  *   const bar = createFilterBar({ items, mode, onChange, ... });
  *   bar.element            // 可直接 append 的 <div>
  *   bar.getSelected()      // Set<string>，被勾选的 key 集合
  *   bar.isSelected(key)
- *   bar.reset()            // 等价于「清空勾选」：全部恢复勾选
+ *   bar.selectAll()        // 全选（等价于点「全选」按钮）
+ *   bar.clearAll()         // 清空勾选（等价于点「清空勾选」按钮）
+ *   bar.reset()            // 兼容旧名：语义不变（全部恢复勾选），等价于 selectAll()
  *   bar.setCollapsed(bool) // 需求 6 的展开/收起
  *   bar.syncActive(id)     // single 模式下同步高亮（切分类后调用）
  *
@@ -49,8 +55,10 @@
 
 /** 默认计数单位文案 */
 const DEFAULT_COUNT_SUFFIX = ' 个';
-/** 「清空勾选」按钮文案（需求 9：两种方案里选"已全选时置灰"，见 renderSelection 注释） */
-const RESET_LABEL = '清空勾选';
+/** 「全选」按钮文案（第 5 轮：拆分为「全选」+「清空勾选」两个独立工具按钮） */
+const SELECT_ALL_LABEL = '全选';
+/** 「清空勾选」按钮文案 */
+const CLEAR_LABEL = '清空勾选';
 
 let uid = 0;
 
@@ -61,13 +69,14 @@ let uid = 0;
  *                 subs?:Array<{id:string, label:string, count?:number, countText?:string}>}>,
  *   ariaLabel?: string,
  *   mode?: 'multi'|'single',        // 默认 multi（分类筛选切换）
- *   showReset?: boolean,            // 是否显示「清空勾选」（需求 9）
+ *   showReset?: boolean,            // 是否显示「全选」+「清空勾选」两个工具按钮（第 5 轮）
  *   defaultCollapsed?: boolean,     // 默认【展开】；传 true 则默认收起一行（主题单词页）
  *   activeId?: string,              // single 模式初始选中项
  *   onChange?: (payload: {selected: Set<string>, reason: string, id: string}) => void
  * }} options
  * @returns {{element: HTMLElement, getSelected: Function, isSelected: Function,
- *            reset: Function, setCollapsed: Function, syncActive: Function}}
+ *            selectAll: Function, clearAll: Function, reset: Function,
+ *            setCollapsed: Function, syncActive: Function}}
  */
 export function createFilterBar(options = {}) {
   const items = Array.isArray(options.items) ? options.items : [];
@@ -186,15 +195,27 @@ export function createFilterBar(options = {}) {
     groupNodes.set(item.id, { group, chip, caret, subsBox, subChips });
   });
 
-  /* ---- 右侧工具区：「清空勾选」+ 展开/收起小三角（需求 9 + 需求 6） ---- */
+  /* ---- 右侧工具区：「全选」+「清空勾选」+ 展开/收起小三角（第 5 轮拆分） ----
+     三个按钮排在同一行（.filterbar__tools 为 flex + align-items:center 垂直居中）：
+       [全选]（主色实心，视觉权重高） [清空勾选]（主色描边，权重低） [▸/▾]（保持原样） */
   const tools = el('div', 'filterbar__tools');
 
-  let resetBtn = null;
+  let selectAllBtn = null;
+  let clearBtn = null;
   if (showReset) {
-    resetBtn = el('button', 'filterbar__reset');
-    resetBtn.type = 'button';
-    resetBtn.append(el('span', '', RESET_LABEL));
-    tools.append(resetBtn);
+    // 「全选」：主色填充（实心按钮）
+    selectAllBtn = el('button', 'filterbar__tool filterbar__tool--primary');
+    selectAllBtn.type = 'button';
+    selectAllBtn.append(el('span', '', SELECT_ALL_LABEL));
+    selectAllBtn.setAttribute('aria-label', '全选所有分类');
+
+    // 「清空勾选」：主色描边（幽灵按钮，视觉权重低）
+    clearBtn = el('button', 'filterbar__tool filterbar__tool--ghost');
+    clearBtn.type = 'button';
+    clearBtn.append(el('span', '', CLEAR_LABEL));
+    clearBtn.setAttribute('aria-label', '清空所有分类的勾选');
+
+    tools.append(selectAllBtn, clearBtn);
   }
 
   const toggleBtn = el('button', 'filterbar__toggle');
@@ -205,6 +226,22 @@ export function createFilterBar(options = {}) {
 
   row.append(scrollViewport, tools);
   root.append(row);
+
+  /* 第 5 轮：空状态引导 —— 一个分类都没勾（点「清空勾选」）时显示在筛选条内。
+     仅 showReset 页面创建；文案居中 18px、--text-2，"[全选]" 做主色强调。
+     纯普通流内元素，不遮挡返回顶部按钮和底部 Tab 栏。 */
+  const emptyBox = showReset ? el('div', 'filterbar__empty') : null;
+  if (emptyBox) {
+    emptyBox.hidden = true;
+    emptyBox.setAttribute('role', 'status');
+    emptyBox.append(el('p', 'filterbar__empty-line', '还没有选择任何分类'));
+    const hintLine = el('p', 'filterbar__empty-line');
+    hintLine.append('点击上方 ');
+    hintLine.append(el('span', 'filterbar__empty-hl', '[全选]'));
+    hintLine.append(' 查看全部内容');
+    emptyBox.append(hintLine);
+    root.append(emptyBox);
+  }
 
   /* ---------------------------- 状态渲染 ---------------------------- */
   // 第 3 轮起默认【展开】（多行平铺显示所有分类标签）；
@@ -235,14 +272,52 @@ export function createFilterBar(options = {}) {
       }
     });
 
-    // 「清空勾选」按钮：已全选（或本来就全空）时置灰不可点。
-    // 方案选择：置灰而非隐藏 —— 位置不会跳动，用户也更容易发现这个按钮的存在。
-    if (resetBtn) {
-      const all = allKeys();
-      const allOn = all.length > 0 && all.every((key) => selected.has(key));
-      const noneOn = all.every((key) => !selected.has(key));
-      resetBtn.disabled = allOn || noneOn;
-    }
+    // 第 5 轮：勾选状态变化后统一同步两个工具按钮的置灰 + 空状态显隐。
+    // 展开/收起（renderCollapsed）与手风琴（renderSubs）不经过这里 → 不影响置灰。
+    syncToolButtons();
+  }
+
+  /* ---------------- 第 5 轮：全选 / 清空勾选 两个独立工具按钮 ---------------- */
+
+  /** 所有一级 + 二级是否【已全部勾选】（只看可勾选 key，一级由二级推导） */
+  function isAllSelected() {
+    const all = allKeys();
+    return all.length > 0 && all.every((key) => selected.has(key));
+  }
+
+  /** 所有一级 + 二级是否【全部未勾选】 */
+  function isNoneSelected() {
+    const all = allKeys();
+    return all.length > 0 && all.every((key) => !selected.has(key));
+  }
+
+  /** 「全选」：所有一级、二级全部勾上 → 立即重新渲染内容区 */
+  function selectAll() {
+    selected = new Set(allKeys());
+    renderSelection();
+    onChange({ selected: new Set(selected), reason: 'select-all', id: '' });
+  }
+
+  /** 「清空勾选」：所有一级、二级全部取消 → 内容区进入空状态 */
+  function clearAll() {
+    selected = new Set();
+    renderSelection();
+    onChange({ selected: new Set(selected), reason: 'clear-all', id: '' });
+  }
+
+  /**
+   * 同步两个工具按钮的 disabled + 空状态显隐（只在勾选状态变化后被调用）：
+   *   「全选」    —— 已全部勾选时置灰
+   *   「清空勾选」—— 已全部未勾选时置灰
+   *   部分勾选   —— 两个都保持可点
+   * single 模式（主题单词页）没有工具按钮，直接跳过。
+   */
+  function syncToolButtons() {
+    if (!selectAllBtn || !clearBtn) return;
+    const noneOn = isNoneSelected();
+    selectAllBtn.disabled = isAllSelected();
+    clearBtn.disabled = noneOn;
+    if (emptyBox) emptyBox.hidden = !noneOn;
   }
 
   function renderCollapsed() {
@@ -352,20 +427,15 @@ export function createFilterBar(options = {}) {
     onChange({ selected: new Set(selected), reason: 'toggle', id });
   });
 
-  // 工具区：清空勾选 / 展开收起
+  // 工具区：全选 / 清空勾选 / 展开收起
+  // （disabled 按钮原生不会派发 click，置灰时无需再判断）
   tools.addEventListener('click', (event) => {
     const btn = event.target.closest('button');
     if (!btn) return;
-    if (resetBtn && btn === resetBtn) { reset(); return; }
+    if (btn === selectAllBtn) { selectAll(); return; }
+    if (btn === clearBtn) { clearAll(); return; }
     if (btn === toggleBtn) { setCollapsed(!collapsed); }
   });
-
-  /** 「清空勾选」：把所有一级、二级项恢复为勾选（即默认全显示） */
-  function reset() {
-    selected = new Set(allKeys());
-    renderSelection();
-    onChange({ selected: new Set(selected), reason: 'reset', id: '' });
-  }
 
   /** 需求 6：展开 / 收起 */
   function setCollapsed(value) {
@@ -391,7 +461,9 @@ export function createFilterBar(options = {}) {
     element: root,
     getSelected: () => new Set(selected),
     isSelected: (id) => (subOwner.has(id) ? selected.has(id) : isItemSelected(id)),
-    reset,
+    selectAll,
+    clearAll,
+    reset: selectAll,          // 兼容旧名：语义不变（全部恢复勾选）
     setCollapsed,
     syncActive
   };

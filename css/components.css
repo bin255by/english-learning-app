@@ -617,14 +617,50 @@
 }
 .filterbar__sub.is-on .filterbar__sub-tick { opacity: 1; color: var(--brand-ink); }
 
-/* 右侧工具区：「清空勾选」+ 展开/收起小三角（需求 9 + 需求 6） */
+/* 右侧工具区：「全选」+「清空勾选」+ 展开/收起小三角（第 5 轮拆分为两个工具按钮） */
 .filterbar__tools {
   flex: 0 0 auto;
   display: flex;
-  align-items: center;
+  align-items: center;                   /* 三个按钮同行垂直居中 */
   gap: 6px;
 }
 
+/* ---- 第 5 轮：[全选] 实心 + [清空勾选] 描边 两个独立工具按钮 ---- */
+.filterbar__tool {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--tap);                /* 触控区域 ≥44px 高 */
+  min-width: var(--tap);                 /* 触控区域 ≥44px 宽 */
+  padding: 0 10px;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  transition: background .18s ease, border-color .18s ease, transform .15s ease, opacity .18s ease;
+}
+/* 「全选」：主色填充（实心按钮），视觉权重高 */
+.filterbar__tool--primary {
+  color: #fff;
+  background: var(--brand-ink);
+  border: 1px solid var(--brand-ink);
+}
+.filterbar__tool--primary:active { transform: scale(.96); background: var(--brand-dark); border-color: var(--brand-dark); }
+/* 「清空勾选」：主色描边（幽灵按钮），视觉权重低 */
+.filterbar__tool--ghost {
+  color: var(--brand-dark);
+  background: transparent;
+  border: 1px solid var(--brand);
+}
+.filterbar__tool--ghost:active { transform: scale(.96); background: var(--brand-soft); }
+/* 置灰：只在"目标状态已达成"时出现（全选→已全选；清空→已全空） */
+.filterbar__tool:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ---- 旧「清空勾选」按钮样式（第 5 轮起 DOM 已不再使用，保留 CSS 以防外部引用） ---- */
 .filterbar__reset {
   display: inline-flex;
   align-items: center;
@@ -656,6 +692,24 @@
 }
 .filterbar__toggle:active { transform: scale(.94); background: #D7F0EC; }
 .filterbar__toggle-icon { font-size: 15px; line-height: 1; font-weight: 700; }
+
+/* 第 5 轮：空状态引导 —— 一个分类都没勾（点「清空勾选」）时显示。
+   普通流内元素（不遮挡返回顶部按钮和底部 Tab 栏）；文案居中 18px、--text-2；
+   "[全选]" 做轻微主色强调。仅创建于 showReset 页面（词根词缀/场景对话/常用网站）。 */
+.filterbar__empty {
+  padding: 24px 12px;
+  min-height: 96px;                      /* 触控友好的舒展留白 */
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--text-2);
+  background: var(--bg);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-sm);
+}
+.filterbar__empty-line { margin: 0; }
+.filterbar__empty-line + .filterbar__empty-line { margin-top: 4px; }
+.filterbar__empty-hl { color: var(--brand-dark); font-weight: 600; }
 
 /* ==========================================================================
    返回顶部悬浮按钮（需求 1）

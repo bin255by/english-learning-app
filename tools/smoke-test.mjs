@@ -63,7 +63,7 @@ for (const route of ROUTES) {
   await send('Page.navigate', { url: `${BASE}#/${route}` });
   await sleep(2200);
 
-  results.push({ route, errors: [...consoleErrors], probe: await evalJs(`(() => {
+  const probe = await evalJs(`(() => {
     const q = (s) => document.querySelector(s);
     const qa = (s) => Array.from(document.querySelectorAll(s));
     const bar = q('.filterbar');
@@ -94,7 +94,14 @@ for (const route of ROUTES) {
       // 其他保持不变
       chips: qa('.filterbar__chip').length, caret: qa('.filterbar__caret').length,
       subs: qa('.filterbar__sub').length,
-      reset: !!q('.filterbar__reset'), toggle: !!q('.filterbar__toggle'),
+      // 第 5 轮：[全选][清空勾选][▸/▾] 三按钮；旧 .filterbar__reset 应已不存在
+      resetGone: !q('.filterbar__reset'),
+      tools: ['.filterbar__tool--primary', '.filterbar__tool--ghost', '.filterbar__toggle'].map((s) => {
+        const b = q(s); if (!b) return null;
+        const r = b.getBoundingClientRect();
+        return Math.round(r.width) + 'x' + Math.round(r.height);
+      }),
+      toggle: !!q('.filterbar__toggle'),
       rateButtons: qa('.rate__btn').map(b => b.dataset.rateStep),
       rateValue: q('#rateValue')?.textContent,
       speakbarH: q('.speakbar') ? Math.round(q('.speakbar').getBoundingClientRect().height) : 0,
@@ -106,7 +113,36 @@ for (const route of ROUTES) {
       tabbar: !!q('#tabbar'), speakable: qa('.speakable').length,
       overflowX: document.documentElement.scrollWidth - document.documentElement.clientWidth
     };
-  })()`) });
+  })()`);
+  // 第 5 轮：每页实测「全选态 → 点清空 → 空态 → 点全选 → 全选态」+ 置灰时机 + 空态文案
+  //（home 无筛选条、vocabulary 无工具按钮 → 自动 skip）
+  const toolCycle = await evalJs(`(async () => {
+    const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+    const q = (s) => document.querySelector(s);
+    const p = q('.filterbar__tool--primary'), g = q('.filterbar__tool--ghost');
+    if (!p || !g) return { skip: true, hasBar: !!q('.filterbar') };
+    const st = () => {
+      const e = q('.filterbar__empty');
+      return {
+        visible: document.querySelectorAll('.dialogue-scene:not([hidden]), .roots-category:not([hidden]), .website-category:not([hidden])').length,
+        selectAllDisabled: p.disabled,
+        clearDisabled: g.disabled,
+        emptyShown: e ? !e.hidden : null,
+        emptyText: e && !e.hidden ? e.innerText : null,
+        emptyStyle: e && !e.hidden ? (() => { const s = getComputedStyle(e); return { fontSize: s.fontSize, color: s.color, textAlign: s.textAlign }; })() : null
+      };
+    };
+    const out = { s1_allSelected: st() };
+    if (g.disabled) return { ...out, error: 'initial: clear button should be enabled' };
+    g.click(); await sleep(400);
+    out.s2_afterClear = st();
+    if (p.disabled) out.error = 'after clear: select-all should be enabled';
+    p.click(); await sleep(400);
+    out.s3_afterSelectAll = st();
+    if (g.disabled) out.error = 'after select-all: clear should be enabled';
+    return out;
+  })()`);
+  results.push({ route, errors: [...consoleErrors], probe, toolCycle });
 }
 console.log(JSON.stringify({ results }, null, 1));
 
@@ -163,6 +199,8 @@ for (const r of ['roots', 'dialogues', 'websites', 'vocabulary']) {
     const list = q('.filterbar__list');
     const bar = q('.filterbar');
     const out = {};
+    const tp = q('.filterbar__tool--primary'), tg = q('.filterbar__tool--ghost');
+    out.toolsBefore = [tp ? tp.disabled : null, tg ? tg.disabled : null];     // 第 5 轮：展开/收起不改变置灰
     out.defaultCollapsed = bar.classList.contains('is-collapsed');
     out.defaultH = Math.round(list.getBoundingClientRect().height);
     out.defaultIcon = q('.filterbar__toggle-icon').textContent;
@@ -174,6 +212,8 @@ for (const r of ['roots', 'dialogues', 'websites', 'vocabulary']) {
     out.backToExpanded = !bar.classList.contains('is-collapsed');
     out.allChipsInView = Array.from(document.querySelectorAll('.filterbar__chip'))
       .filter(c => { const b = c.getBoundingClientRect(); return b.top >= -1 && b.left >= -1; }).length;
+    out.toolsAfter = [tp ? tp.disabled : null, tg ? tg.disabled : null];
+    out.toolsUnchanged = JSON.stringify(out.toolsBefore) === JSON.stringify(out.toolsAfter);
     return out;
   })()`);
 }
@@ -197,9 +237,15 @@ console.log('CARET0 ' + JSON.stringify(caretTest0));
 const caretTest = await evalJs(`(async () => {
   const sleep = (ms) => new Promise(r => setTimeout(r, ms));
   const q = (s) => document.querySelector(s);
+  const qa = (s) => Array.from(document.querySelectorAll(s));
   const out = {};
   const c = q('.filterbar__caret'), i = q('.filterbar__caret-icon');
   const code = () => i.textContent.codePointAt(0).toString(16);
+  // 第 5 轮：先取消一个勾 → 部分状态，验证手风琴展开/收起不改变置灰与勾选
+  q('.filterbar__chip').click(); await sleep(300);
+  out.toolsPartialBefore = [q('.filterbar__tool--primary').disabled, q('.filterbar__tool--ghost').disabled];
+  out.chipOnBefore = q('.filterbar__chip').classList.contains('is-on');
+  out.subsOnBefore = qa('.filterbar__sub').map((s) => s.classList.contains('is-on'));
   out.iconClosed = code();
   c.click(); await sleep(300);
   out.subsAfterFirstClick = !q('.filterbar__subs').hidden;
@@ -211,24 +257,40 @@ const caretTest = await evalJs(`(async () => {
   out.iconClosedAgain = code();
   const s2 = getComputedStyle(q('.filterbar__sub'));
   out.subStyleUnchanged = { minH: s2.minHeight, border: s2.borderTopWidth, radius: s2.borderTopLeftRadius, pad: s2.paddingLeft };
+  // 第 5 轮：手风琴切换后 —— 置灰状态与勾选状态都必须保持不变
+  out.toolsAfterAccordion = [q('.filterbar__tool--primary').disabled, q('.filterbar__tool--ghost').disabled];
+  out.chipOnAfter = q('.filterbar__chip').classList.contains('is-on');
+  out.subsOnAfter = qa('.filterbar__sub').map((s) => s.classList.contains('is-on'));
+  out.toolsUnchanged = JSON.stringify(out.toolsPartialBefore) === JSON.stringify(out.toolsAfterAccordion);
+  out.selectionUnchanged = out.chipOnBefore === out.chipOnAfter &&
+    JSON.stringify(out.subsOnBefore) === JSON.stringify(out.subsOnAfter);
   return out;
 })()`);
 console.log('CARET ' + JSON.stringify(caretTest));
 
-// ---- 回归：筛选/重置/卡片池/语速/返回顶部 ----
+// ---- 回归：筛选 / 全选 / 清空勾选 / 卡片池 / 语速 / 返回顶部 ----
 await send('Page.navigate', { url: `${BASE}#/dialogues` });
 await sleep(2200);
 const regress = await evalJs(`(async () => {
   const sleep = (ms) => new Promise(r => setTimeout(r, ms));
   const q = (s) => document.querySelector(s);
   const qa = (s) => Array.from(document.querySelectorAll(s));
+  const p = q('.filterbar__tool--primary'), g = q('.filterbar__tool--ghost');
   const out = {};
   out.allScenes = qa('.dialogue-scene:not([hidden])').length;
-  qa('.filterbar__chip')[0].click(); await sleep(300);
+  out.initial = { selectAllDisabled: p.disabled, clearDisabled: g.disabled };   // 全选态：全选置灰、清空可点
+  qa('.filterbar__chip')[0].click(); await sleep(300);                          // → 部分勾选
   out.afterUncheck1 = qa('.dialogue-scene:not([hidden])').length;
-  q('.filterbar__reset').click(); await sleep(300);
-  out.afterReset = qa('.dialogue-scene:not([hidden])').length;
-  out.resetDisabledWhenAll = q('.filterbar__reset').disabled;
+  out.partial = { selectAllDisabled: p.disabled, clearDisabled: g.disabled };   // 部分勾选：两个都亮
+  g.click(); await sleep(300);                                                  // → 清空勾选
+  out.afterClear = qa('.dialogue-scene:not([hidden])').length;
+  out.cleared = { selectAllDisabled: p.disabled, clearDisabled: g.disabled };   // 空态：清空置灰、全选可点
+  out.emptyShown = !q('.filterbar__empty').hidden;
+  out.emptyText = q('.filterbar__empty').innerText;
+  p.click(); await sleep(300);                                                  // → 全选恢复
+  out.afterSelectAll = qa('.dialogue-scene:not([hidden])').length;
+  out.restored = { selectAllDisabled: p.disabled, clearDisabled: g.disabled };
+  out.emptyHiddenAgain = q('.filterbar__empty').hidden;
   return out;
 })()`);
 const misc = await evalJs(`(async () => {

@@ -468,7 +468,7 @@ async function renderRootsView(tab) {
     return section;
   }
 
-  /* 顶部分类筛选条：需求 5（一级 + 二级多选）/ 6（展开收起）/ 7（筛选切换）/ 9（清空勾选） */
+  /* 顶部分类筛选条：需求 5（一级 + 二级多选）/ 6（展开收起）/ 7（筛选切换）/ 全选 + 清空勾选 */
   const filterBar = createRootsFilterBar(categories, section);
   section.append(filterBar.element);
   categories.forEach((cat) => section.append(buildCategorySection(cat)));
@@ -665,10 +665,9 @@ async function renderDialoguesView(tab) {
   wrap.append(buildDialoguesToolbar(scenes, wrap));
   scenes.forEach((scene, index) => wrap.append(buildScene(scene, index + 1)));
 
-  // 一个场景都没勾时给一句提示，避免出现纯空白页（配合 applyDialoguesFilter）
-  wrap.append(el('div', 'dialogues-filter-empty muted',
-    '所有场景都被取消了勾选，点右上角「清空勾选」即可恢复全部内容。'));
-  wrap.lastChild.hidden = true;
+  /* 第 5 轮：一个场景都没勾时的空状态引导已统一收进 filter-bar 组件
+     （.filterbar__empty，点「清空勾选」后自动显示，点「全选」自动隐藏），
+     原页面级 .dialogues-filter-empty 提示不再创建，避免两条提示同时出现。 */
 
   /* 中文显隐 + 播放状态联动 */
   applyZhVisibility(wrap, loadHideZhPref());
@@ -692,7 +691,7 @@ async function renderDialoguesView(tab) {
   return wrap;
 }
 
-/** 工具条：中文开关 + 分类筛选条（需求 6 展开收起 / 7 筛选切换 / 9 清空勾选） */
+/** 工具条：中文开关 + 分类筛选条（需求 6 展开收起 / 7 筛选切换 / 全选 + 清空勾选） */
 function buildDialoguesToolbar(scenes, root) {
   const bar = el('div', 'dialogues-toolbar');
 
@@ -736,7 +735,7 @@ function buildDialoguesToolbar(scenes, root) {
 
 /**
  * 应用场景对话页的勾选筛选（并集语义，理由同 applyRootsFilter 的注释）：
- * 未勾选的场景整块隐藏；一个都没勾时给出提示而不是空白页。
+ * 未勾选的场景整块隐藏；一个都没勾时由 filter-bar 组件显示空状态引导。
  */
 function applyDialoguesFilter(root) {
   if (!root) return;
@@ -744,15 +743,9 @@ function applyDialoguesFilter(root) {
   if (!bar) return;
   const selected = bar.getSelected();
 
-  let visible = 0;
   root.querySelectorAll('.dialogue-scene').forEach((scene) => {
-    const on = selected.has(scene.dataset.id);
-    scene.hidden = !on;
-    if (on) visible += 1;
+    scene.hidden = !selected.has(scene.dataset.id);
   });
-
-  const tip = root.querySelector('.dialogues-filter-empty');
-  if (tip) tip.hidden = visible > 0;
 }
 
 /** 应用“是否显示中文”：隐藏的是英文的中文翻译，文化小贴士（无英文对照）保留 */
@@ -912,7 +905,8 @@ async function renderVocabularyView(tab, targetId) {
   }
 
   /* 需求 6：顶部标签区默认收起一行可滑动；点 ▸ 展开为多行
-     需求 7：主题单词保留原有 Tab 式逻辑（点谁只显示谁），所以 mode='single'、不显示「清空勾选」 */
+     需求 7：主题单词保留原有 Tab 式逻辑（点谁只显示谁），所以 mode='single'、
+     第 5 轮的「全选 / 清空勾选」工具按钮同样不显示（showReset: false） */
   const strip = createFilterBar({
     items: categories.map((cat) => ({
       id: cat.id,
@@ -1149,10 +1143,8 @@ async function renderWebsitesView(tab) {
   wrap.append(filterBar.element);
   categories.forEach((cat) => wrap.append(buildWebsiteCategory(cat)));
 
-  // 所有分类都被取消勾选时的提示（配合 applyWebsitesFilter）
-  wrap.append(el('div', 'websites-filter-empty muted',
-    '所有分类都被取消了勾选，点右上角「清空勾选」即可恢复全部内容。'));
-  wrap.lastChild.hidden = true;
+  /* 第 5 轮：空状态引导已统一收进 filter-bar 组件（.filterbar__empty），
+     原页面级 .websites-filter-empty 提示不再创建，避免两条提示同时出现。 */
 
   bindFilterApply(filterBar, wrap);
   return wrap;
@@ -1160,7 +1152,7 @@ async function renderWebsitesView(tab) {
 
 /**
  * 应用常用网站页的勾选筛选（并集语义，理由同 applyRootsFilter 的注释）：
- * 未勾选的分类整块隐藏；一个都没勾时显示提示而不是空白页。
+ * 未勾选的分类整块隐藏；一个都没勾时由 filter-bar 组件显示空状态引导。
  */
 function applyWebsitesFilter(root) {
   if (!root) return;
@@ -1168,15 +1160,9 @@ function applyWebsitesFilter(root) {
   if (!bar) return;
   const selected = bar.getSelected();
 
-  let visible = 0;
   root.querySelectorAll('.website-category').forEach((catNode) => {
-    const on = selected.has(catNode.dataset.id);
-    catNode.hidden = !on;
-    if (on) visible += 1;
+    catNode.hidden = !selected.has(catNode.dataset.id);
   });
-
-  const tip = root.querySelector('.websites-filter-empty');
-  if (tip) tip.hidden = visible > 0;
 }
 
 /** 一个分类区块：标题 + 计数 + 网站卡片列表 */
