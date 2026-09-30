@@ -557,6 +557,224 @@
     "Right away. 表示“马上、立刻”，回应别人的请求时很干脆。",
     "Catch you later. 是“晚点聊、回头见”的意思，适合朋友间道别。"
   ]
+},
+{
+  "id": "starbucks-latte-order-with-greeting",
+  "titleEn": "Ordering a Latte at Starbucks (with Greeting)",
+  "titleZh": "星巴克点拿铁（含进店问候）",
+  "descZh": "进店寒暄、点拿铁、付款、取餐的简单日常对话。",
+  "lines": [
+    {
+      "speaker": "B",
+      "en": "Hi, welcome to Starbucks. How are you today?",
+      "zh": "你好，欢迎光临星巴克。你今天好吗？",
+      "keyExpressions": [
+        { "en": "Welcome to Starbucks.", "zh": "欢迎光临星巴克。" },
+        { "en": "How are you today?", "zh": "你今天好吗？" }
+      ]
+    },
+    {
+      "speaker": "A",
+      "en": "I'm good, thanks. How are you?",
+      "zh": "我很好，谢谢。你好吗？",
+      "keyExpressions": [
+        { "en": "I'm good, thanks. How are you?", "zh": "我很好，谢谢。你好吗？" }
+      ]
+    },
+    {
+      "speaker": "B",
+      "en": "I'm great, thanks. What can I get for you?",
+      "zh": "我很好，谢谢。请问您要喝什么？",
+      "keyExpressions": [
+        { "en": "What can I get for you?", "zh": "请问您要喝什么？" }
+      ]
+    },
+    {
+      "speaker": "A",
+      "en": "Can I get a latte, please?",
+      "zh": "我要一杯拿铁，谢谢。",
+      "keyExpressions": [
+        { "en": "Can I get a latte?", "zh": "我要一杯拿铁。" }
+      ]
+    },
+    {
+      "speaker": "B",
+      "en": "Sure. Hot or iced?",
+      "zh": "好的。热的还是冰的？",
+      "keyExpressions": [
+        { "en": "Hot or iced?", "zh": "热的还是冰的？" }
+      ]
+    },
+    {
+      "speaker": "A",
+      "en": "Hot, please.",
+      "zh": "热的，谢谢。",
+      "keyExpressions": []
+    },
+    {
+      "speaker": "B",
+      "en": "What size?",
+      "zh": "要什么杯型？",
+      "keyExpressions": [
+        { "en": "What size?", "zh": "要什么杯型？" },
+        { "en": "Tall / Grande / Venti", "zh": "中杯 / 大杯 / 超大杯" }
+      ]
+    },
+    {
+      "speaker": "A",
+      "en": "Grande, please.",
+      "zh": "大杯，谢谢。",
+      "keyExpressions": []
+    },
+    {
+      "speaker": "B",
+      "en": "What kind of milk?",
+      "zh": "要什么奶？",
+      "keyExpressions": [
+        { "en": "What kind of milk?", "zh": "要什么奶？" },
+        { "en": "Oat milk", "zh": "燕麦奶" }
+      ]
+    },
+    {
+      "speaker": "A",
+      "en": "Oat milk, please.",
+      "zh": "燕麦奶，谢谢。",
+      "keyExpressions": []
+    },
+    {
+      "speaker": "B",
+      "en": "Any sugar or syrup?",
+      "zh": "要糖或糖浆吗？",
+      "keyExpressions": [
+        { "en": "Any sugar or syrup?", "zh": "要糖或糖浆吗？" },
+        { "en": "One pump of vanilla", "zh": "一泵香草糖浆" }
+      ]
+    },
+    {
+      "speaker": "A",
+      "en": "One pump of vanilla, please.",
+      "zh": "一泵香草糖浆，谢谢。",
+      "keyExpressions": []
+    },
+    {
+      "speaker": "B",
+      "en": "Do you want an extra shot?",
+      "zh": "要加一份浓缩咖啡吗？",
+      "keyExpressions": [
+        { "en": "Do you want an extra shot?", "zh": "要加一份浓缩咖啡吗？" }
+      ]
+    },
+    {
+      "speaker": "A",
+      "en": "No, thanks.",
+      "zh": "不用，谢谢。",
+      "keyExpressions": []
+    },
+    {
+      "speaker": "B",
+      "en": "For here or to go?",
+      "zh": "堂食还是外带？",
+      "keyExpressions": [
+        { "en": "For here or to go?", "zh": "堂食还是外带？" },
+        { "en": "To go", "zh": "外带" }
+      ]
+    },
+    {
+      "speaker": "A",
+      "en": "To go, please.",
+      "zh": "外带，谢谢。",
+      "keyExpressions": []
+    },
+    {
+      "speaker": "B",
+      "en": "Can I have your name?",
+      "zh": "请问你叫什么名字？",
+      "keyExpressions": [
+        { "en": "Can I have your name?", "zh": "请问你叫什么名字？" }
+      ]
+    },
+    {
+      "speaker": "A",
+      "en": "It's Li.",
+      "zh": "我叫 Li。",
+      "keyExpressions": []
+    },
+    {
+      "speaker": "B",
+      "en": "Your total is five forty-five. Cash or card?",
+      "zh": "一共 5.45 美元。现金还是刷卡？",
+      "keyExpressions": [
+        { "en": "Cash or card?", "zh": "现金还是刷卡？" }
+      ]
+    },
+    {
+      "speaker": "A",
+      "en": "Card, please.",
+      "zh": "刷卡，谢谢。",
+      "keyExpressions": []
+    },
+    {
+      "speaker": "B",
+      "en": "Okay. Tap or insert your card.",
+      "zh": "好的。拍卡或插卡。",
+      "keyExpressions": []
+    },
+    {
+      "speaker": "A",
+      "en": "Done.",
+      "zh": "好了。",
+      "keyExpressions": []
+    },
+    {
+      "speaker": "B",
+      "en": "Do you want a receipt?",
+      "zh": "要收据吗？",
+      "keyExpressions": [
+        { "en": "Do you want a receipt?", "zh": "要收据吗？" }
+      ]
+    },
+    {
+      "speaker": "A",
+      "en": "No, thanks.",
+      "zh": "不用，谢谢。",
+      "keyExpressions": []
+    },
+    {
+      "speaker": "B",
+      "en": "Okay. We'll call your name.",
+      "zh": "好的。我们会叫你的名字。",
+      "keyExpressions": [
+        { "en": "We'll call your name.", "zh": "我们会叫你的名字。" }
+      ]
+    },
+    {
+      "speaker": "A",
+      "en": "Thank you.",
+      "zh": "谢谢。",
+      "keyExpressions": []
+    },
+    {
+      "speaker": "B",
+      "en": "You're welcome. Have a nice day!",
+      "zh": "不客气。祝你今天愉快！",
+      "keyExpressions": []
+    },
+    {
+      "speaker": "A",
+      "en": "Thanks, you too.",
+      "zh": "谢谢，你也是。",
+      "keyExpressions": []
+    }
+  ],
+  "tipsZh": [
+    "进店后店员通常会先寒暄：How are you today? 回答 I'm good, thanks. How are you? 就可以。",
+    "点单常用 Can I get ...?，比 I want ... 更礼貌自然。",
+    "星巴克杯型：Tall 中杯，Grande 大杯，Venti 超大杯。",
+    "奶可选：whole milk 全脂奶，skim milk 脱脂奶，oat milk 燕麦奶，almond milk 杏仁奶，soy milk 豆奶。",
+    "糖浆用 pump 表示“泵”，例如 one pump of vanilla 一泵香草糖浆。",
+    "For here or to go? 是“堂食还是外带？”，Cash or card? 是“现金还是刷卡？”",
+    "We'll call your name. 是“我们会叫你的名字”，做好后会叫名字取餐。"
+  ]
 }
   ]
 }
