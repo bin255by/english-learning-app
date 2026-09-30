@@ -1,0 +1,1508 @@
+{
+  "scenes": [
+    {
+      "id": "christmas-tree-farm-west",
+      "titleEn": "At a Christmas Tree Farm",
+      "titleZh": "在圣诞树农场",
+      "descZh": "冬天到农场挑树、借锯子、把树绑到车顶。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "How much are the trees?",
+          "zh": "这些树多少钱？",
+          "keyExpressions": [
+            { "en": "How much are the trees?", "zh": "树多少钱？" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Forty dollars, any size.",
+          "zh": "四十美元，不分大小。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "Do you have a saw we can borrow?",
+          "zh": "有锯子可以借吗？",
+          "keyExpressions": [
+            { "en": "saw", "zh": "锯子" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, the saws are by the barn.",
+          "zh": "有，锯子在谷仓旁边。",
+          "keyExpressions": [
+            { "en": "barn", "zh": "谷仓" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "Which tree looks good to you?",
+          "zh": "你觉得哪棵树好？",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "B",
+          "en": "The tall one in the corner.",
+          "zh": "角落里那棵高的。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "Great. Let's cut it down.",
+          "zh": "好。我们把它锯下来。",
+          "keyExpressions": [
+            { "en": "cut it down", "zh": "把它锯下来" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "I'll help you tie it to the car.",
+          "zh": "我帮你把树绑到车上。",
+          "keyExpressions": [
+            { "en": "tie it to the car", "zh": "把它绑到车上" }
+          ]
+        }
+      ],
+      "tipsZh": [
+        "农场圣诞树按棵卖，可以自己挑、自己锯。",
+        "锯子 saw 一般现场能借，绳子最好自己带。",
+        "树买回家要立在装水的底座里，每天加水。"
+      ]
+    },
+    {
+      "id": "phone-store-sim-west",
+      "titleEn": "Buying a SIM Card",
+      "titleZh": "买电话卡",
+      "descZh": "在手机店买预付费卡：问流量、能不能保留原号码。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "I need a SIM card for my phone.",
+          "zh": "我需要一张手机卡。",
+          "keyExpressions": [
+            { "en": "SIM card", "zh": "手机卡" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Do you want prepaid or monthly?",
+          "zh": "你要预付费还是按月付费？",
+          "keyExpressions": [
+            { "en": "prepaid", "zh": "预付费" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "Prepaid, please. How much data?",
+          "zh": "预付费。有多少流量？",
+          "keyExpressions": [
+            { "en": "data", "zh": "流量" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Thirty dollars for ten gigabytes.",
+          "zh": "三十美元 10 GB。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "Can I keep my old number?",
+          "zh": "可以保留我原来的号码吗？",
+          "keyExpressions": [
+            { "en": "keep my old number", "zh": "保留原来的号码" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, we can move it over.",
+          "zh": "可以，我们帮你转过来。",
+          "keyExpressions": [
+            { "en": "move it over", "zh": "把号码转过来" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "Great. Let's do that.",
+          "zh": "好，就这么办。",
+          "keyExpressions": []
+        }
+      ],
+      "tipsZh": [
+        "美国常见预付费卡 prepaid，按月套餐叫 monthly plan。",
+        "流量说 data，单位是 gigabytes（GB）。",
+        "换运营商通常能把旧号码转过来：keep my old number。"
+      ]
+    },
+    {
+      "id": "board-game-night-west",
+      "titleEn": "Board Game Night",
+      "titleZh": "桌游夜",
+      "descZh": "朋友家玩桌游：问规则、人数和轮次。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "Are we playing a board game tonight?",
+          "zh": "今晚我们玩桌游吗？",
+          "keyExpressions": [
+            { "en": "board game", "zh": "桌游" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Yes. Do you know how to play this one?",
+          "zh": "玩。你会玩这个吗？",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "No, can you show me the rules?",
+          "zh": "不会，你能给我讲讲规则吗？",
+          "keyExpressions": [
+            { "en": "rules", "zh": "规则" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Sure. It takes about ten minutes.",
+          "zh": "没问题。大约十分钟就讲完。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "How many people can play?",
+          "zh": "几个人能玩？",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "B",
+          "en": "Up to six. We have five now.",
+          "zh": "最多六个人。我们现在五个。",
+          "keyExpressions": [
+            { "en": "up to six", "zh": "最多六个人" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "Perfect. Let's start.",
+          "zh": "正好。开始吧。",
+          "keyExpressions": []
+        }
+      ],
+      "tipsZh": [
+        "Board game 是桌游，rules 是规则；骰子叫 dice。",
+        "轮到你说 It's your turn.，赢了一局说 win a round。",
+        "桌游夜常配零食和汽水，带一点去很受欢迎。"
+      ]
+    },
+    {
+      "id": "borrow-tools-west",
+      "titleEn": "Borrowing Tools",
+      "titleZh": "向邻居借工具",
+      "descZh": "向邻居借梯子换灯泡，说好什么时候还。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "Hi, can I borrow a ladder?",
+          "zh": "你好，可以借一下梯子吗？",
+          "keyExpressions": [
+            { "en": "borrow", "zh": "借（入）" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Sure. What do you need it for?",
+          "zh": "可以。你借来做什么？",
+          "keyExpressions": [
+            { "en": "What do you need it for?", "zh": "你借来做什么？" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "I need to change a light bulb.",
+          "zh": "我要换个灯泡。",
+          "keyExpressions": [
+            { "en": "light bulb", "zh": "灯泡" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Okay, it's in the garage.",
+          "zh": "好，在车库里。",
+          "keyExpressions": [
+            { "en": "garage", "zh": "车库" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "I'll bring it back tonight.",
+          "zh": "我今晚就还回来。",
+          "keyExpressions": [
+            { "en": "bring it back", "zh": "还回来" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "No rush. Take your time.",
+          "zh": "不着急，慢慢来。",
+          "keyExpressions": [
+            { "en": "No rush.", "zh": "不着急。" }
+          ]
+        }
+      ],
+      "tipsZh": [
+        "借进来用 borrow，还回去用 return 或 bring it back。",
+        "车库 garage 里通常放着梯子、工具和割草机。",
+        "No rush 是“不着急”，邻居之间很常用。"
+      ]
+    },
+    {
+      "id": "stargazing-west",
+      "titleEn": "Going Stargazing",
+      "titleZh": "去看星空",
+      "descZh": "在远离城市灯光的地方看星星：几点去、带什么。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "Is this a good place for stargazing?",
+          "zh": "这里适合看星星吗？",
+          "keyExpressions": [
+            { "en": "stargazing", "zh": "观星" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, there are no city lights here.",
+          "zh": "适合，这里没有城市灯光。",
+          "keyExpressions": [
+            { "en": "city lights", "zh": "城市灯光" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "When is the best time?",
+          "zh": "什么时候最好？",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "B",
+          "en": "After ten, when the moon is down.",
+          "zh": "十点以后，月亮落下去的时候。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "Should I bring a flashlight?",
+          "zh": "要带手电筒吗？",
+          "keyExpressions": [
+            { "en": "flashlight", "zh": "手电筒" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, but use the red light mode.",
+          "zh": "要，但用红光模式。",
+          "keyExpressions": [
+            { "en": "red light mode", "zh": "红光模式" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "Good idea. Thanks for the tip.",
+          "zh": "好主意，谢谢提醒。",
+          "keyExpressions": []
+        }
+      ],
+      "tipsZh": [
+        "看星星要远离城市灯光 city lights，越黑越好。",
+        "手电筒开红光模式，眼睛适应得快，看星更清楚。",
+        "月亮落下后（moon is down）星光最亮，带件外套。"
+      ]
+    },
+    {
+      "id": "state-park-pass-west",
+      "titleEn": "Buying a Park Pass",
+      "titleZh": "买州立公园年票",
+      "descZh": "在州立公园问年票价格、能不能通用多个公园。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "Do you sell annual passes?",
+          "zh": "你们卖年票吗？",
+          "keyExpressions": [
+            { "en": "annual pass", "zh": "年票" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, it's eighty dollars for a year.",
+          "zh": "卖，一年八十美元。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "Does it work in other parks?",
+          "zh": "在别的公园也能用吗？",
+          "keyExpressions": [
+            { "en": "work in other parks", "zh": "在别的公园也能用" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, in all state parks.",
+          "zh": "可以，所有州立公园都行。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "That's a good deal.",
+          "zh": "那挺划算的。",
+          "keyExpressions": [
+            { "en": "a good deal", "zh": "很划算" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, two visits pay it back.",
+          "zh": "是啊，来两次就回本了。",
+          "keyExpressions": []
+        }
+      ],
+      "tipsZh": [
+        "Annual pass 是年票，一年内不限次数进州立公园。",
+        "单次入园费常按车收，叫 day-use fee。",
+        "常来玩买年票更划算：two visits pay it back。"
+      ]
+    },
+    {
+      "id": "rv-park-west",
+      "titleEn": "At an RV Park",
+      "titleZh": "房车营地登记",
+      "descZh": "房车营地登记：问有没有位子、能不能接水接电。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "Do you have a spot for tonight?",
+          "zh": "今晚还有位子吗？",
+          "keyExpressions": [
+            { "en": "spot", "zh": "位子" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, we have one with power.",
+          "zh": "有，还有一个能接电的。",
+          "keyExpressions": [
+            { "en": "power hookup", "zh": "电源接口" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "Does it have water too?",
+          "zh": "也能接水吗？",
+          "keyExpressions": [
+            { "en": "water hookup", "zh": "接水口" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, water and power both.",
+          "zh": "可以，水和电都有。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "How much for one night?",
+          "zh": "住一晚多少钱？",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "B",
+          "en": "Forty-five dollars for full hookups.",
+          "zh": "全套接口四十五美元。",
+          "keyExpressions": [
+            { "en": "full hookups", "zh": "全套接口（水/电/下水）" }
+          ]
+        }
+      ],
+      "tipsZh": [
+        "RV park 是房车营地，full hookup 指水、电、下水都能接。",
+        "一晚按位置 site 收费，通常含淋浴和洗衣房。",
+        "旺季位子紧张，最好提前打电话订。"
+      ]
+    },
+    {
+      "id": "send-letter-west",
+      "titleEn": "Sending a Letter",
+      "titleZh": "在邮局寄信",
+      "descZh": "寄一封平信回国：问邮资、贴邮票的位置。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "I want to send a letter to China.",
+          "zh": "我想寄一封信到中国。",
+          "keyExpressions": [
+            { "en": "send a letter", "zh": "寄信" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Regular mail or express?",
+          "zh": "平信还是快递？",
+          "keyExpressions": [
+            { "en": "regular mail / express", "zh": "平信 / 快递" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "Regular mail is fine.",
+          "zh": "平信就行。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "B",
+          "en": "Okay. That's two dollars.",
+          "zh": "好的。两美元。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "Where do I put the stamp?",
+          "zh": "邮票贴在哪里？",
+          "keyExpressions": [
+            { "en": "stamp", "zh": "邮票" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "In the top right corner.",
+          "zh": "贴在右上角。",
+          "keyExpressions": [
+            { "en": "top right corner", "zh": "右上角" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "Thank you. All set.",
+          "zh": "谢谢，都好了。",
+          "keyExpressions": []
+        }
+      ],
+      "tipsZh": [
+        "寄信说 send a letter，平信 regular mail、快递 express。",
+        "邮票 stamp 贴在信封右上角，写完地址就能投邮筒。",
+        "邮筒是蓝色的，路边和邮局门口都有。"
+      ]
+    },
+    {
+      "id": "community-pool-west",
+      "titleEn": "At the Community Pool",
+      "titleZh": "社区游泳池",
+      "descZh": "到社区泳池问通行证、浅水区和下水的规矩。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "Do I need a pass to swim here?",
+          "zh": "在这里游泳要通行证吗？",
+          "keyExpressions": [
+            { "en": "pass", "zh": "通行证" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, it's five dollars for adults.",
+          "zh": "要，大人五美元。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "Is there a shallow area?",
+          "zh": "有浅水区吗？",
+          "keyExpressions": [
+            { "en": "shallow area", "zh": "浅水区" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, on the left side.",
+          "zh": "有，在左边。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "Do I need a swimming cap?",
+          "zh": "需要戴泳帽吗？",
+          "keyExpressions": [
+            { "en": "swimming cap", "zh": "泳帽" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "No, but you need a shower first.",
+          "zh": "不用，但要先冲个淋浴。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "Okay. Thanks.",
+          "zh": "好的，谢谢。",
+          "keyExpressions": []
+        }
+      ],
+      "tipsZh": [
+        "社区泳池要买 pass（通行证），大人小孩价格不同。",
+        "下水前先淋浴是常见规矩，浅水区 shallow area 适合新手。",
+        "泳道叫 lane，问一句 Which lane is open? 就能找到位置。"
+      ]
+    },
+    {
+      "id": "parking-meter-west",
+      "titleEn": "Using a Parking Meter",
+      "titleZh": "路边停车缴费",
+      "descZh": "在路边用停车缴费机：怎么付、能停多久、什么时候免费。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "How does this parking meter work?",
+          "zh": "这个停车缴费机怎么用？",
+          "keyExpressions": [
+            { "en": "parking meter", "zh": "停车缴费机" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Put in coins or use a card.",
+          "zh": "投币或者刷卡。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "How long can I park?",
+          "zh": "我可以停多久？",
+          "keyExpressions": [
+            { "en": "How long can I park?", "zh": "我可以停多久？" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Two hours at most.",
+          "zh": "最多两小时。",
+          "keyExpressions": [
+            { "en": "at most", "zh": "最多" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "Is it free on Sunday?",
+          "zh": "周日免费吗？",
+          "keyExpressions": [
+            { "en": "Is it free on Sunday?", "zh": "周日免费吗？" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, and after six every day.",
+          "zh": "免费，而且每天六点以后也免费。",
+          "keyExpressions": []
+        }
+      ],
+      "tipsZh": [
+        "路边停车用 parking meter，可以投币或刷卡。",
+        "超时会吃罚单 ticket，金额不小，记得看时间。",
+        "很多城市晚上六点后和周日免费，牌子上会写。"
+      ]
+    },
+    {
+      "id": "tire-shop-west",
+      "titleEn": "At the Tire Shop",
+      "titleZh": "补轮胎",
+      "descZh": "轮胎漏气到修车行：说哪条轮、问补胎要多久多少钱。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "My tire is losing air.",
+          "zh": "我的轮胎漏气。",
+          "keyExpressions": [
+            { "en": "tire", "zh": "轮胎" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Let's take a look. Which one?",
+          "zh": "我们看看。哪一条？",
+          "keyExpressions": [
+            { "en": "Let's take a look.", "zh": "我们看一下。" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "The back right one.",
+          "zh": "右后轮。",
+          "keyExpressions": [
+            { "en": "back right one", "zh": "右后轮" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "There is a nail in it.",
+          "zh": "里面扎了个钉子。",
+          "keyExpressions": [
+            { "en": "nail", "zh": "钉子" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "Can you fix it today?",
+          "zh": "今天能修好吗？",
+          "keyExpressions": [
+            { "en": "fix it", "zh": "把它修好" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, about twenty minutes.",
+          "zh": "可以，大约二十分钟。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "Great. How much?",
+          "zh": "好。多少钱？",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "B",
+          "en": "Twenty-five dollars for a patch.",
+          "zh": "补胎二十五美元。",
+          "keyExpressions": [
+            { "en": "patch", "zh": "补胎" }
+          ]
+        }
+      ],
+      "tipsZh": [
+        "轮胎 tire，漏气说 losing air；钉子 nail 是最常见原因。",
+        "补胎叫 patch，比换新胎便宜很多。",
+        "轮胎位置说 front / back + left / right，比如右后轮。"
+      ]
+    },
+    {
+      "id": "vet-appointment-west",
+      "titleEn": "At the Vet",
+      "titleZh": "给宠物预约体检",
+      "descZh": "给狗预约体检：问时间、要带什么资料。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "I'd like to make an appointment for my dog.",
+          "zh": "我想给我的狗预约一下。",
+          "keyExpressions": [
+            { "en": "make an appointment", "zh": "预约" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Sure. What's the problem?",
+          "zh": "好的。是什么情况？",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "He just needs a checkup.",
+          "zh": "他只是需要做个体检。",
+          "keyExpressions": [
+            { "en": "checkup", "zh": "体检" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "How about tomorrow at ten?",
+          "zh": "明天十点可以吗？",
+          "keyExpressions": [
+            { "en": "How about ...?", "zh": "……怎么样？" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "That works. Do I bring his papers?",
+          "zh": "可以。需要带他的资料吗？",
+          "keyExpressions": [
+            { "en": "papers", "zh": "资料、证件" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, and his vaccine record.",
+          "zh": "要，还有疫苗记录。",
+          "keyExpressions": [
+            { "en": "vaccine record", "zh": "疫苗记录" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "Okay. See you tomorrow.",
+          "zh": "好的，明天见。",
+          "keyExpressions": []
+        }
+      ],
+      "tipsZh": [
+        "宠物医院叫 vet（veterinarian），预约说 make an appointment。",
+        "常规体检 checkup 一年一次，带上疫苗记录 vaccine record。",
+        "预约时间常用 How about ...? 来提，比如 How about tomorrow at ten?"
+      ]
+    },
+    {
+      "id": "library-printing-west",
+      "titleEn": "Printing at the Library",
+      "titleZh": "在图书馆打印",
+      "descZh": "在图书馆打印文件：按页收费、在前台付款。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "Can I print here?",
+          "zh": "这里可以打印吗？",
+          "keyExpressions": [
+            { "en": "print", "zh": "打印" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, the printer is near the study room.",
+          "zh": "可以，打印机在自习室旁边。",
+          "keyExpressions": [
+            { "en": "printer", "zh": "打印机" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "How much per page?",
+          "zh": "每页多少钱？",
+          "keyExpressions": [
+            { "en": "per page", "zh": "每页" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Ten cents a page.",
+          "zh": "每页十美分。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "How do I pay?",
+          "zh": "怎么付钱？",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "B",
+          "en": "At the front desk, with your card.",
+          "zh": "在前台，用你的卡付。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "Got it. Thank you.",
+          "zh": "明白了，谢谢。",
+          "keyExpressions": [
+            { "en": "Got it.", "zh": "明白了。" }
+          ]
+        }
+      ],
+      "tipsZh": [
+        "图书馆打印常按页收费（per page），先在前台付费。",
+        "复印是 copy，扫描是 scan，很多图书馆都能自助用。",
+        "打印机卡纸问工作人员：It's out of paper."
+      ]
+    },
+    {
+      "id": "used-bookstore-west",
+      "titleEn": "At a Used Bookstore",
+      "titleZh": "逛二手书店",
+      "descZh": "在二手书店找入门读物、问价格和收书规则。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "Do you have books for beginners?",
+          "zh": "有适合初学者的书吗？",
+          "keyExpressions": [
+            { "en": "books for beginners", "zh": "初学者读物" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, on that wall by the window.",
+          "zh": "有，靠窗那面墙。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "How much are they?",
+          "zh": "这些书多少钱？",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "B",
+          "en": "Two dollars each, or five for three.",
+          "zh": "两美元一本，三本五美元。",
+          "keyExpressions": [
+            { "en": "two dollars each", "zh": "每本两美元" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "Do you buy books too?",
+          "zh": "你们也收书吗？",
+          "keyExpressions": [
+            { "en": "Do you buy books too?", "zh": "你们也收书吗？" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Sometimes. Bring them in and we'll look.",
+          "zh": "有时收。带来我们看看。",
+          "keyExpressions": []
+        }
+      ],
+      "tipsZh": [
+        "二手书店 used bookstore 常 2 美元一本，多买更便宜。",
+        "也回收旧书，价格看品相和畅销度。",
+        "儿童书 kids' books 和入门读物最便宜，适合练阅读。"
+      ]
+    },
+    {
+      "id": "garden-center-west",
+      "titleEn": "At the Garden Center",
+      "titleZh": "在园艺店",
+      "descZh": "买草籽、花盆和土：说院子大小、找货架。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "I need some grass seed.",
+          "zh": "我需要一些草籽。",
+          "keyExpressions": [
+            { "en": "grass seed", "zh": "草籽" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "How big is your yard?",
+          "zh": "你的院子多大？",
+          "keyExpressions": [
+            { "en": "yard", "zh": "院子" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "It's very small.",
+          "zh": "很小。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "B",
+          "en": "Then this small bag is enough.",
+          "zh": "那这一小袋就够。",
+          "keyExpressions": [
+            { "en": "enough", "zh": "足够" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "Do you have flower pots?",
+          "zh": "你们有花盆吗？",
+          "keyExpressions": [
+            { "en": "flower pots", "zh": "花盆" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, aisle two, next to the soil.",
+          "zh": "有，2 号通道，土旁边。",
+          "keyExpressions": [
+            { "en": "soil", "zh": "土、营养土" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "Perfect. Thanks a lot.",
+          "zh": "太好了，多谢。",
+          "keyExpressions": []
+        }
+      ],
+      "tipsZh": [
+        "园艺店叫 garden center 或 nursery，草籽 grass seed、土 soil、花盆 flower pots。",
+        "小院子用一小袋种子就够，买多了浪费。",
+        "春播前店员会问院子多大、日照够不够。"
+      ]
+    },
+    {
+      "id": "camping-packing-west",
+      "titleEn": "Packing for Camping",
+      "titleZh": "露营打包清单",
+      "descZh": "出发露营前清点装备：帐篷、睡袋、保温箱、驱蚊喷雾。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "What should we bring camping?",
+          "zh": "去露营要带什么？",
+          "keyExpressions": [
+            { "en": "go camping", "zh": "去露营" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "A tent, sleeping bags, and water.",
+          "zh": "帐篷、睡袋和水。",
+          "keyExpressions": [
+            { "en": "tent / sleeping bag", "zh": "帐篷 / 睡袋" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "Do we need a cooler?",
+          "zh": "需要带保温箱吗？",
+          "keyExpressions": [
+            { "en": "cooler", "zh": "保温箱" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, for food and drinks.",
+          "zh": "要，装食物和饮料。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "What about bug spray?",
+          "zh": "驱蚊喷雾呢？",
+          "keyExpressions": [
+            { "en": "bug spray", "zh": "驱蚊喷雾" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Definitely. The mosquitoes are bad.",
+          "zh": "一定要带。蚊子很多。",
+          "keyExpressions": [
+            { "en": "mosquitoes", "zh": "蚊子" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "Okay, I'll make a list.",
+          "zh": "好，我列个清单。",
+          "keyExpressions": []
+        }
+      ],
+      "tipsZh": [
+        "露营必备：tent 帐篷、sleeping bag 睡袋、cooler 保温箱。",
+        "山里蚊子多，bug spray 驱蚊喷雾一定带。",
+        "出发前查一下营地有没有禁火令 fire ban。"
+      ]
+    },
+    {
+      "id": "airport-pickup-west",
+      "titleEn": "Picking Someone Up at the Airport",
+      "titleZh": "去机场接人",
+      "descZh": "开车去机场接人：约好等的位置、行李多就进停车场。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "Where should I wait for you?",
+          "zh": "我在哪里等你？",
+          "keyExpressions": [
+            { "en": "Where should I wait for you?", "zh": "我在哪里等你？" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Wait at the curb near door four.",
+          "zh": "在 4 号门旁边的路边等。",
+          "keyExpressions": [
+            { "en": "curb", "zh": "路边" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "Okay. Do you have bags?",
+          "zh": "好。你有行李吗？",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, two big ones.",
+          "zh": "有，两个大的。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "Then I'll park and come in.",
+          "zh": "那我停车进去找你。",
+          "keyExpressions": [
+            { "en": "park and come in", "zh": "停车进去" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Good idea. I'll be out soon.",
+          "zh": "好主意。我很快出来。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "Just text me when you see me.",
+          "zh": "看到我就给我发消息。",
+          "keyExpressions": [
+            { "en": "text me", "zh": "给我发短信" }
+          ]
+        }
+      ],
+      "tipsZh": [
+        "机场接人常约在路边 curb，看门口 door 编号。",
+        "美国机场路边不能长时间停，等久了会被催走。",
+        "行李多建议进停车场 short-term parking 再进去接。"
+      ]
+    },
+    {
+      "id": "birthday-party-west",
+      "titleZh": "参加生日派对",
+      "titleEn": "At a Birthday Party",
+      "descZh": "到朋友家参加生日派对：放礼物、问脱鞋、说祝福。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "Is this the birthday party for Mia?",
+          "zh": "这是 Mia 的生日派对吗？",
+          "keyExpressions": [
+            { "en": "birthday party", "zh": "生日派对" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Yes! Come in. Put the gift on the table.",
+          "zh": "是啊！进来吧，礼物放桌上。",
+          "keyExpressions": [
+            { "en": "gift", "zh": "礼物" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "Should I take off my shoes?",
+          "zh": "要脱鞋吗？",
+          "keyExpressions": [
+            { "en": "take off my shoes", "zh": "脱鞋" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "No, you're fine.",
+          "zh": "不用，没关系。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "Where can I put my drink?",
+          "zh": "我的饮料放哪儿？",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "B",
+          "en": "On the kitchen counter.",
+          "zh": "放厨房台面上。",
+          "keyExpressions": [
+            { "en": "counter", "zh": "台面" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "Great. Happy birthday to Mia!",
+          "zh": "好。祝 Mia 生日快乐！",
+          "keyExpressions": [
+            { "en": "Happy birthday!", "zh": "生日快乐！" }
+          ]
+        }
+      ],
+      "tipsZh": [
+        "生日派对带礼物 gift，进门常放在礼物桌上。",
+        "不确定要不要脱鞋就问 Should I take off my shoes?",
+        "Happy birthday! 是最常用的祝福，说的时候笑一笑就好。"
+      ]
+    },
+    {
+      "id": "back-to-school-west",
+      "titleEn": "Getting Ready for School",
+      "titleZh": "开学准备",
+      "descZh": "开学前照着清单买文具：笔记本、铅笔、书包。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "Do you have the school supply list?",
+          "zh": "你有开学文具清单吗？",
+          "keyExpressions": [
+            { "en": "school supply list", "zh": "文具清单" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, it's on the fridge.",
+          "zh": "有，贴在冰箱上。",
+          "keyExpressions": [
+            { "en": "on the fridge", "zh": "在冰箱上（贴着）" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "We need notebooks and pencils.",
+          "zh": "我们需要笔记本和铅笔。",
+          "keyExpressions": [
+            { "en": "notebooks / pencils", "zh": "笔记本 / 铅笔" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "And a new backpack, too.",
+          "zh": "还要一个新书包。",
+          "keyExpressions": [
+            { "en": "backpack", "zh": "书包" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "Let's go to the store after lunch.",
+          "zh": "午饭后我们去店里吧。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "B",
+          "en": "Good. The sales are on this week.",
+          "zh": "好。这周正好在打折。",
+          "keyExpressions": [
+            { "en": "sales", "zh": "打折促销" }
+          ]
+        }
+      ],
+      "tipsZh": [
+        "开学前学校会发 school supply list（文具清单），照着买就行。",
+        "八九月是文具打折季，sales 期间买最划算。",
+        "backpack 书包、notebook 笔记本、glue stick 胶棒是最常见的。"
+      ]
+    },
+    {
+      "id": "hardware-store-west",
+      "titleEn": "At the Hardware Store",
+      "titleZh": "逛五金店",
+      "descZh": "在五金店买灯泡、螺丝和胶带，问货架位置。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "Where can I find light bulbs?",
+          "zh": "灯泡在哪里？",
+          "keyExpressions": [
+            { "en": "light bulbs", "zh": "灯泡" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Aisle six, on the right.",
+          "zh": "6 号通道，右手边。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "Do you have screws this size?",
+          "zh": "有这种尺寸的螺丝吗？",
+          "keyExpressions": [
+            { "en": "screws", "zh": "螺丝" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, they're sold by the box.",
+          "zh": "有，按盒卖。",
+          "keyExpressions": [
+            { "en": "sold by the box", "zh": "按盒卖" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "I'll take one box, please.",
+          "zh": "我要一盒。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "B",
+          "en": "Anything else? We have tape too.",
+          "zh": "还要别的吗？我们也有胶带。",
+          "keyExpressions": [
+            { "en": "tape", "zh": "胶带" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "No, that's all. Thanks.",
+          "zh": "不用了，就这些，谢谢。",
+          "keyExpressions": []
+        }
+      ],
+      "tipsZh": [
+        "五金店叫 hardware store，灯泡、螺丝、胶带都能买到。",
+        "小零件常按盒卖 sold by the box，挑尺寸看包装。",
+        "找不到就问店员 Where can I find ...? 他们会带你过去。"
+      ]
+    },
+    {
+      "id": "recycling-center-west",
+      "titleEn": "At the Recycling Center",
+      "titleZh": "去回收站换钱",
+      "descZh": "把易拉罐和瓶子拿去回收站，问按磅计价、要不要分类。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "Can I bring cans here?",
+          "zh": "易拉罐可以拿到这里吗？",
+          "keyExpressions": [
+            { "en": "cans", "zh": "易拉罐" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, we pay by the pound.",
+          "zh": "可以，我们按磅付钱。",
+          "keyExpressions": [
+            { "en": "pay by the pound", "zh": "按磅付钱" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "How much per pound?",
+          "zh": "每磅多少钱？",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "B",
+          "en": "About a dollar for cans.",
+          "zh": "易拉罐大约一美元。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "Do I need to sort them?",
+          "zh": "需要分类吗？",
+          "keyExpressions": [
+            { "en": "sort", "zh": "分类" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, cans and bottles go in separate bags.",
+          "zh": "要，易拉罐和瓶子分开装。",
+          "keyExpressions": [
+            { "en": "separate bags", "zh": "分开装袋" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "Okay, I'll sort them at home.",
+          "zh": "好，我在家分好。",
+          "keyExpressions": []
+        }
+      ],
+      "tipsZh": [
+        "加州等州买饮料时已含押金（CRV），空罐可以拿去换钱。",
+        "回收按磅 pay by the pound 计价，易拉罐和瓶子分开装。",
+        "塑料瓶、玻璃瓶也能回收，但价格比易拉罐低。"
+      ]
+    },
+    {
+      "id": "laundry-dry-clean-west",
+      "titleEn": "At the Dry Cleaner",
+      "titleZh": "在干洗店取衣",
+      "descZh": "到干洗店取西装：报名字、问价格、刷卡付款。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "I'm here to pick up my suit.",
+          "zh": "我来取我的西装。",
+          "keyExpressions": [
+            { "en": "pick up", "zh": "取（衣）" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "What name is it under?",
+          "zh": "登记在谁的名字下？",
+          "keyExpressions": [
+            { "en": "What name is it under?", "zh": "登记在谁的名下？" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "It's under Li.",
+          "zh": "登记在 Li 名下。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "B",
+          "en": "Here it is. That's fifteen dollars.",
+          "zh": "在这里。一共十五美元。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "Can I pay by card?",
+          "zh": "可以刷卡吗？",
+          "keyExpressions": [
+            { "en": "pay by card", "zh": "刷卡付款" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, of course.",
+          "zh": "当然可以。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "A",
+          "en": "Thanks. Have a good day.",
+          "zh": "谢谢，祝你今天愉快。",
+          "keyExpressions": []
+        }
+      ],
+      "tipsZh": [
+        "干洗店叫 dry cleaner，取衣说 pick up my suit。",
+        "取衣常按名字找，报名字就行：It's under Li.",
+        "西装、大衣这类才需要干洗，普通衣服不用。"
+      ]
+    },
+    {
+      "id": "community-garden-west",
+      "titleEn": "At the Community Garden",
+      "titleZh": "社区菜园",
+      "descZh": "在社区菜园租一小块地，问价格和能种什么。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "Is this the community garden?",
+          "zh": "这里是社区菜园吗？",
+          "keyExpressions": [
+            { "en": "community garden", "zh": "社区菜园" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Yes. Do you want a small plot?",
+          "zh": "是。你要租一小块地吗？",
+          "keyExpressions": [
+            { "en": "plot", "zh": "小块地" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "How much for one year?",
+          "zh": "一年多少钱？",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "B",
+          "en": "Twenty dollars, and you bring your own tools.",
+          "zh": "二十美元，工具自带。",
+          "keyExpressions": [
+            { "en": "bring your own tools", "zh": "自带工具" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "What can I grow here?",
+          "zh": "这里能种什么？",
+          "keyExpressions": [
+            { "en": "grow", "zh": "种、种植" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Tomatoes and peppers do well.",
+          "zh": "番茄和辣椒长得不错。",
+          "keyExpressions": [
+            { "en": "tomatoes / peppers", "zh": "番茄 / 辣椒" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "Sounds great. I'll take one.",
+          "zh": "听起来很好，我租一块。",
+          "keyExpressions": []
+        }
+      ],
+      "tipsZh": [
+        "社区菜园 community garden 按小块地 plot 出租，一年很便宜。",
+        "要自己带工具和水，收成归自己。",
+        "番茄 tomatoes、辣椒 peppers、生菜 lettuce 最好种。"
+      ]
+    },
+    {
+      "id": "desert-heat-driving-west",
+      "titleEn": "Driving in the Desert Heat",
+      "titleZh": "沙漠高温开车",
+      "descZh": "夏天开车穿越沙漠：带足水、提前加满油、告诉家人行程。",
+      "lines": [
+        {
+          "speaker": "A",
+          "en": "It's very hot today. Is the road safe?",
+          "zh": "今天很热。这条路安全吗？",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, but bring lots of water.",
+          "zh": "安全，但要带很多水。",
+          "keyExpressions": [
+            { "en": "bring lots of water", "zh": "带足够多的水" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "How far is the next gas station?",
+          "zh": "下一个加油站多远？",
+          "keyExpressions": [
+            { "en": "the next gas station", "zh": "下一个加油站" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "About sixty miles, so fill up now.",
+          "zh": "大约六十英里，现在先加满油。",
+          "keyExpressions": [
+            { "en": "fill up", "zh": "加满油" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "Is there phone service out there?",
+          "zh": "那边有手机信号吗？",
+          "keyExpressions": [
+            { "en": "phone service", "zh": "手机信号" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Not much. Tell someone your plan.",
+          "zh": "基本没有。把行程告诉别人。",
+          "keyExpressions": [
+            { "en": "Tell someone your plan.", "zh": "把行程告诉别人。" }
+          ]
+        },
+        {
+          "speaker": "A",
+          "en": "Good idea. Let's go early.",
+          "zh": "好主意。我们早点出发。",
+          "keyExpressions": []
+        }
+      ],
+      "tipsZh": [
+        "沙漠路段加油站间隔很远，出发前 fill up（加满油）。",
+        "带足够的水，手机经常没信号。",
+        "出发前把行程告诉家人，傍晚凉快了再赶路更安全。"
+      ]
+    }
+  ]
+}
