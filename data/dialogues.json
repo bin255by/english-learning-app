@@ -4405,6 +4405,12 @@
         },
         {
           "speaker": "B",
+          "en": "Yes. You must be her father.",
+          "zh": "是的。你一定是她的爸爸。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "B",
           "en": "Yes. You must be his mother.",
           "zh": "是的。你一定是他的妈妈。",
           "keyExpressions": []
@@ -4418,9 +4424,23 @@
           ]
         },
         {
+          "speaker": "A",
+          "en": "Right. How is she doing in class?",
+          "zh": "对。她在班上表现怎么样？",
+          "keyExpressions": [
+            { "en": "How is she doing in class?", "zh": "她在班上表现怎么样？" }
+          ]
+        },
+        {
           "speaker": "B",
           "en": "He is doing well in reading.",
           "zh": "他阅读不错。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "B",
+          "en": "She is doing well in reading.",
+          "zh": "她阅读不错。",
           "keyExpressions": []
         },
         {
@@ -4437,6 +4457,14 @@
           "zh": "请每天晚上陪他读书。",
           "keyExpressions": [
             { "en": "read with him", "zh": "陪他一起读" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Please read with her every night.",
+          "zh": "请每天晚上陪她读书。",
+          "keyExpressions": [
+            { "en": "read with her", "zh": "陪她一起读" }
           ]
         }
       ],
@@ -5233,6 +5261,14 @@
           ]
         },
         {
+          "speaker": "A",
+          "en": "She just needs a checkup.",
+          "zh": "她只是需要做个体检。",
+          "keyExpressions": [
+            { "en": "checkup", "zh": "体检" }
+          ]
+        },
+        {
           "speaker": "B",
           "en": "How about tomorrow at ten?",
           "zh": "明天十点可以吗？",
@@ -5249,8 +5285,24 @@
           ]
         },
         {
+          "speaker": "A",
+          "en": "That works. Do I bring her papers?",
+          "zh": "可以。需要带她的资料吗？",
+          "keyExpressions": [
+            { "en": "papers", "zh": "资料、证件" }
+          ]
+        },
+        {
           "speaker": "B",
           "en": "Yes, and his vaccine record.",
+          "zh": "要，还有疫苗记录。",
+          "keyExpressions": [
+            { "en": "vaccine record", "zh": "疫苗记录" }
+          ]
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, and her vaccine record.",
           "zh": "要，还有疫苗记录。",
           "keyExpressions": [
             { "en": "vaccine record", "zh": "疫苗记录" }
