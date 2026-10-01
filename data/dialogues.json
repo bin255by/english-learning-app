@@ -4388,13 +4388,13 @@
         {
           "speaker": "A",
           "en": "Are you my son's teacher?",
-          "zh": "你是我们孩子的老师吗？",
+          "zh": "你是我们儿子的老师吗？",
           "keyExpressions": []
         },
         {
           "speaker": "A",
           "en": "Are you my daughter's teacher?",
-          "zh": "你是我们孩子的老师吗？",
+          "zh": "你是我们女儿的老师吗？",
           "keyExpressions": []
         },
         {
