@@ -188,6 +188,12 @@
       "keyExpressions": []
     },
     {
+      "speaker": "B",
+      "en": "Yes, we need to pick up your brother at six.",
+      "zh": "要，我们六点要去接你弟弟。",
+      "keyExpressions": []
+    },
+    {
       "speaker": "A",
       "en": "Should we leave now?",
       "zh": "我们要现在出发吗？",
@@ -4386,9 +4392,21 @@
           "keyExpressions": []
         },
         {
+          "speaker": "A",
+          "en": "Are you my daughter's teacher?",
+          "zh": "你是我们孩子的老师吗？",
+          "keyExpressions": []
+        },
+        {
           "speaker": "B",
           "en": "Yes. You must be his father.",
           "zh": "是的。你一定是他的爸爸。",
+          "keyExpressions": []
+        },
+        {
+          "speaker": "B",
+          "en": "Yes. You must be his mother.",
+          "zh": "是的。你一定是他的妈妈。",
           "keyExpressions": []
         },
         {
