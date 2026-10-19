@@ -15,8 +15,8 @@
           "nameEn": "Homedepot",
           "nameZh": "家得宝",
           "url": "https://careers.homedepot.com/",
-          "descEn": "The home improvement retailer offering tools, building materials, and home.",
-          "descZh": "提供工具、建筑材料及家居用品的家居装修零售商。"
+          "descEn": "The official careers site of The Home Depot, offering job opportunities in retail, supply chain, and corporate roles",
+          "descZh": "家得宝官方招聘网站，提供零售、供应链及企业职能等领域的工作机会。"
         },
         {
           "nameEn": "CalCareers",
@@ -24,6 +24,55 @@
           "url": "https://calcareers.ca.gov/",
           "descEn": "California's official job portal for state government career opportunities.",
           "descZh": "加利福尼亚州政府官方招聘平台，提供州政府各类职位信息。"
+        },
+        {
+          "nameEn": "USAJOBS",
+          "nameZh": "美国联邦政府招聘网",
+          "url": "https://www.usajobs.gov/",
+          "descEn": "Official job site of the U.S. federal government.",
+          "descZh": "美国联邦政府官方招聘网站，可搜索和申请联邦职位。"
+        },
+        {
+          "nameEn": "ZipRecruiter",
+          "nameZh": "ZipRecruiter招聘网",
+          "url": "https://www.ziprecruiter.com",
+          "descEn": "Job search site that matches candidates with employers.",
+          "descZh": "求职搜索平台，帮求职者匹配招聘方。"
+        },
+        {
+          "nameEn": "LinkedIn",
+          "nameZh": "领英",
+          "url": "https://www.linkedin.com",
+          "descEn": "Professional network for job search, recruiting, and career networking.",
+          "descZh": "职业社交平台，用于找工作、招聘和职场人脉。"
+        },
+        {
+          "nameEn": "Dice",
+          "nameZh": "Dice科技招聘",
+          "url": "https://www.dice.com",
+          "descEn": "Job board focused on technology and engineering careers.",
+          "descZh": "专注科技与工程类职位的招聘网站。"
+        },
+        {
+          "nameEn": "CareerOneStop",
+          "nameZh": "美国一站式职业网",
+          "url": "https://www.careeronestop.org",
+          "descEn": "Site from the U.S. Department of Labor with career, training, and job search tools.",
+          "descZh": "美国劳工部职业网站，提供职业探索、培训和求职工具。"
+        },
+        {
+          "nameEn": "Indeed",
+          "nameZh": "Indeed求职网",
+          "url": "https://www.indeed.com",
+          "descEn": "Job search site listing openings from many employers.",
+          "descZh": "聚合大量雇主职位的求职搜索网站。"
+        },
+        {
+          "nameEn": "Glassdoor",
+          "nameZh": "Glassdoor职场点评",
+          "url": "https://www.glassdoor.com",
+          "descEn": "Job listings with company reviews, salaries, and interview reports.",
+          "descZh": "提供职位搜索、公司评价、薪资和面试经验分享。"
         }
       ]
     },
@@ -93,6 +142,41 @@
           "url": "https://www.visitsacramento.com/",
           "descEn": "Official tourism site for Sacramento, highlighting local events, attractions, and things to do.",
           "descZh": "萨克拉门托官方旅游网站，介绍本地活动、景点和游玩推荐。"
+        },
+        {
+          "nameEn": "City of Sacramento",
+          "nameZh": "萨克拉门托市政府",
+          "url": "https://www.cityofsacramento.org/",
+          "descEn": "Official website of the City of Sacramento with city departments, services, and news.",
+          "descZh": "萨克拉门托市政府官网，提供市政部门、服务和新闻信息。"
+        },
+        {
+          "nameEn": "SMUD",
+          "nameZh": "萨克拉门托市政电力公司",
+          "url": "https://www.smud.org",
+          "descEn": "Community-owned utility providing electricity to the Sacramento area.",
+          "descZh": "为萨克拉门托地区供电的社区公用事业公司。"
+        },
+        {
+          "nameEn": "Sacramento Public Library",
+          "nameZh": "萨克拉门托公共图书馆",
+          "url": "https://www.saclibrary.org",
+          "descEn": "Public library system for Sacramento County with books, events, and digital resources.",
+          "descZh": "萨克拉门托县公共图书馆，提供图书、活动和数字资源。"
+        },
+        {
+          "nameEn": "Sacramento County",
+          "nameZh": "萨克拉门托县政府",
+          "url": "https://www.saccounty.gov",
+          "descEn": "Official site of Sacramento County with departments, services, and public information.",
+          "descZh": "萨克拉门托县政府官网，提供部门信息、公共服务和公告。"
+        },
+        {
+          "nameEn": "KCRA News",
+          "nameZh": "KCRA本地新闻",
+          "url": "https://www.kcra.com",
+          "descEn": "Sacramento local television news station.",
+          "descZh": "萨克拉门托本地电视新闻台。"
         }
       ]
     },
@@ -113,6 +197,13 @@
           "url": "https://www.bing.com",
           "descEn": "Microsoft's search engine.",
           "descZh": "微软出品的搜索引擎。"
+        },
+        {
+          "nameEn": "DuckDuckGo",
+          "nameZh": "DuckDuckGo搜索",
+          "url": "https://duckduckgo.com",
+          "descEn": "A search engine that does not track your search history.",
+          "descZh": "不追踪搜索记录的搜索引擎。"
         }
       ]
     },
@@ -133,6 +224,62 @@
           "url": "https://www.ebay.com",
           "descEn": "Buy and sell new and used goods.",
           "descZh": "买卖新品和二手物品的平台。"
+        },
+        {
+          "nameEn": "Walmart",
+          "nameZh": "沃尔玛",
+          "url": "https://www.walmart.com",
+          "descEn": "Buy groceries, clothing, electronics, and more online.",
+          "descZh": "在线购买食品、服装、电子产品等商品。"
+        },
+        {
+          "nameEn": "Costco",
+          "nameZh": "好市多",
+          "url": "https://www.costco.com",
+          "descEn": "Membership warehouse club for groceries, electronics, and household goods.",
+          "descZh": "会员制仓储超市，售卖食品、电子产品和家居用品。"
+        },
+        {
+          "nameEn": "Target",
+          "nameZh": "塔吉特",
+          "url": "https://www.target.com",
+          "descEn": "Retail chain selling clothing, home goods, groceries, and more.",
+          "descZh": "连锁零售商，售卖服装、家居用品、食品等商品。"
+        },
+        {
+          "nameEn": "Home Depot",
+          "nameZh": "家得宝",
+          "url": "https://www.homedepot.com",
+          "descEn": "Home improvement retailer for tools, building materials, and decor.",
+          "descZh": "家居建材零售商，售卖工具、建材和家居装饰。"
+        },
+        {
+          "nameEn": "Best Buy",
+          "nameZh": "百思买",
+          "url": "https://www.bestbuy.com",
+          "descEn": "Electronics retailer for computers, TVs, appliances, and more.",
+          "descZh": "电子产品零售商，售卖电脑、电视、家电等。"
+        },
+        {
+          "nameEn": "Etsy",
+          "nameZh": "Etsy创意市集",
+          "url": "https://www.etsy.com",
+          "descEn": "Marketplace for handmade, vintage, and creative goods.",
+          "descZh": "手工、复古和创意商品的交易市场。"
+        },
+        {
+          "nameEn": "Sam's Club",
+          "nameZh": "山姆会员店",
+          "url": "https://www.samsclub.com",
+          "descEn": "Membership warehouse club for bulk groceries and household goods.",
+          "descZh": "会员制仓储超市，批量购买食品和家居用品。"
+        },
+        {
+          "nameEn": "Wayfair",
+          "nameZh": "Wayfair家居",
+          "url": "https://www.wayfair.com",
+          "descEn": "Online store for furniture, decor, and home goods.",
+          "descZh": "售卖家具、装饰和家居用品的网购平台。"
         }
       ]
     },
@@ -153,6 +300,62 @@
           "url": "https://www.uber.com",
           "descEn": "Call a car with your phone.",
           "descZh": "用手机叫车。"
+        },
+        {
+          "nameEn": "Lyft",
+          "nameZh": "来福车",
+          "url": "https://www.lyft.com",
+          "descEn": "Ride-hailing app for calling a car with your phone.",
+          "descZh": "用手机叫车的出行应用。"
+        },
+        {
+          "nameEn": "Amtrak",
+          "nameZh": "美国国铁",
+          "url": "https://www.amtrak.com",
+          "descEn": "U.S. national passenger rail service for intercity train travel.",
+          "descZh": "美国全国客运铁路，提供城际火车出行。"
+        },
+        {
+          "nameEn": "Delta",
+          "nameZh": "达美航空",
+          "url": "https://www.delta.com",
+          "descEn": "Major U.S. airline for booking flights and managing trips.",
+          "descZh": "美国主要航空公司，可预订机票和管理行程。"
+        },
+        {
+          "nameEn": "TripAdvisor",
+          "nameZh": "猫途鹰",
+          "url": "https://www.tripadvisor.com",
+          "descEn": "Travel site with reviews of hotels, restaurants, and attractions.",
+          "descZh": "酒店、餐厅和景点的旅行点评网站。"
+        },
+        {
+          "nameEn": "Airbnb",
+          "nameZh": "爱彼迎",
+          "url": "https://www.airbnb.com",
+          "descEn": "Book homes, apartments, and rooms from local hosts.",
+          "descZh": "向本地房东预订民宿、公寓和房间。"
+        },
+        {
+          "nameEn": "Southwest",
+          "nameZh": "美国西南航空",
+          "url": "https://www.southwest.com",
+          "descEn": "Major U.S. airline for booking flights across the country.",
+          "descZh": "美国主要航空公司，提供全美航班预订。"
+        },
+        {
+          "nameEn": "Waze",
+          "nameZh": "位智导航",
+          "url": "https://www.waze.com",
+          "descEn": "Navigation app with community-based traffic and road alerts.",
+          "descZh": "带实时路况提醒的导航应用。"
+        },
+        {
+          "nameEn": "Hertz",
+          "nameZh": "赫兹租车",
+          "url": "https://www.hertz.com",
+          "descEn": "Car rental company for renting vehicles in the U.S. and worldwide.",
+          "descZh": "租车公司，可在全美及全球租赁汽车。"
         }
       ]
     },
@@ -180,6 +383,48 @@
           "url": "https://www.bbc.com",
           "descEn": "British news and stories.",
           "descZh": "英国的新闻与报道。"
+        },
+        {
+          "nameEn": "Netflix",
+          "nameZh": "网飞",
+          "url": "https://www.netflix.com",
+          "descEn": "Stream movies and TV shows online.",
+          "descZh": "在线看电影和电视剧的流媒体平台。"
+        },
+        {
+          "nameEn": "NPR",
+          "nameZh": "美国全国公共广播电台",
+          "url": "https://www.npr.org",
+          "descEn": "American public radio network offering news and podcasts.",
+          "descZh": "美国公共广播电台，提供新闻和播客节目。"
+        },
+        {
+          "nameEn": "The New York Times",
+          "nameZh": "纽约时报",
+          "url": "https://www.nytimes.com",
+          "descEn": "Major American newspaper covering news, politics, culture, and more.",
+          "descZh": "美国主流报纸，报道新闻、政治、文化等。"
+        },
+        {
+          "nameEn": "Hulu",
+          "nameZh": "Hulu流媒体",
+          "url": "https://www.hulu.com",
+          "descEn": "Streaming service for TV shows, movies, and original series.",
+          "descZh": "观看电视剧、电影和自制剧的流媒体平台。"
+        },
+        {
+          "nameEn": "AP News",
+          "nameZh": "美联社新闻",
+          "url": "https://apnews.com",
+          "descEn": "News from the Associated Press wire service.",
+          "descZh": "美联社发布的新闻报道。"
+        },
+        {
+          "nameEn": "Los Angeles Times",
+          "nameZh": "洛杉矶时报",
+          "url": "https://www.latimes.com",
+          "descEn": "Major daily newspaper covering California and U.S. news.",
+          "descZh": "美国主流日报，重点报道加州和全美新闻。"
         }
       ]
     },
@@ -200,6 +445,48 @@
           "url": "https://www.instagram.com",
           "descEn": "Share photos with your friends.",
           "descZh": "和朋友分享照片。"
+        },
+        {
+          "nameEn": "Pinterest",
+          "nameZh": "拼趣",
+          "url": "https://www.pinterest.com",
+          "descEn": "Save and discover image ideas on boards.",
+          "descZh": "用图片板收藏和发现灵感的社交平台。"
+        },
+        {
+          "nameEn": "WhatsApp",
+          "nameZh": "WhatsApp即时通讯",
+          "url": "https://www.whatsapp.com",
+          "descEn": "Send messages and make calls over the internet.",
+          "descZh": "用网络发消息、打电话的通讯应用。"
+        },
+        {
+          "nameEn": "Snapchat",
+          "nameZh": "快拍",
+          "url": "https://www.snapchat.com",
+          "descEn": "Messaging app for photos, videos, and disappearing stories.",
+          "descZh": "发送照片、视频和阅后即焚快照的通讯应用。"
+        },
+        {
+          "nameEn": "X",
+          "nameZh": "X社交平台",
+          "url": "https://x.com",
+          "descEn": "Social network for short posts, news, and real-time discussion.",
+          "descZh": "发布短内容、看新闻和实时讨论的社交平台。"
+        },
+        {
+          "nameEn": "Discord",
+          "nameZh": "Discord群聊",
+          "url": "https://discord.com",
+          "descEn": "Voice and text chat app for communities and friend groups.",
+          "descZh": "面向社群和好友的语音与文字聊天应用。"
+        },
+        {
+          "nameEn": "Telegram",
+          "nameZh": "电报",
+          "url": "https://telegram.org",
+          "descEn": "Messaging app with channels, groups, and cloud sync.",
+          "descZh": "支持频道、群组和云端同步的通讯应用。"
         }
       ]
     },
@@ -220,6 +507,62 @@
           "url": "https://translate.google.com",
           "descEn": "Translate words and sentences.",
           "descZh": "翻译单词和句子。"
+        },
+        {
+          "nameEn": "DeepL",
+          "nameZh": "DeepL翻译",
+          "url": "https://www.deepl.com",
+          "descEn": "Translate texts and documents between languages.",
+          "descZh": "翻译文字和文档的在线工具。"
+        },
+        {
+          "nameEn": "Grammarly",
+          "nameZh": "Grammarly写作助手",
+          "url": "https://www.grammarly.com",
+          "descEn": "Writing assistant that checks grammar, spelling, and tone.",
+          "descZh": "检查语法、拼写和语气的写作助手。"
+        },
+        {
+          "nameEn": "ChatGPT",
+          "nameZh": "ChatGPT",
+          "url": "https://chatgpt.com",
+          "descEn": "AI chatbot that answers questions and helps with writing.",
+          "descZh": "人工智能聊天机器人，可答疑和辅助写作。"
+        },
+        {
+          "nameEn": "Merriam-Webster",
+          "nameZh": "韦氏词典",
+          "url": "https://www.merriam-webster.com",
+          "descEn": "English dictionary with definitions, synonyms, and examples.",
+          "descZh": "英语词典，提供释义、同义词和例句。"
+        },
+        {
+          "nameEn": "Outlook",
+          "nameZh": "Outlook邮箱",
+          "url": "https://outlook.live.com/mail/",
+          "descEn": "Microsoft's web email service for sending and reading messages.",
+          "descZh": "微软网页邮箱，用于收发邮件。"
+        },
+        {
+          "nameEn": "Cambridge Dictionary",
+          "nameZh": "剑桥词典",
+          "url": "https://dictionary.cambridge.org",
+          "descEn": "English dictionary with translations, definitions, and pronunciation.",
+          "descZh": "英语词典，提供翻译、释义和发音。"
+        },
+        {
+          "nameEn": "Google Drive",
+          "nameZh": "谷歌云端硬盘",
+          "url": "https://drive.google.com",
+          "descEn": "Store, edit, and share files online with your Google account.",
+          "descZh": "用谷歌账号在线存储、编辑和分享文件。"
+        },
+        {
+          "nameEn": "Canva",
+          "nameZh": "Canva设计",
+          "url": "https://www.canva.com",
+          "descEn": "Online design tool for posters, slides, and social graphics.",
+          "descZh": "在线设计工具，可制作海报、演示文稿和社交图片。"
         }
       ]
     },
@@ -240,6 +583,55 @@
           "url": "https://www.yelp.com",
           "descEn": "Find restaurants and read reviews.",
           "descZh": "找餐厅、看评价。"
+        },
+        {
+          "nameEn": "Grubhub",
+          "nameZh": "Grubhub外卖",
+          "url": "https://www.grubhub.com",
+          "descEn": "Order food from local restaurants for delivery or pickup.",
+          "descZh": "从本地餐厅点外卖或到店自取。"
+        },
+        {
+          "nameEn": "Starbucks",
+          "nameZh": "星巴克",
+          "url": "https://www.starbucks.com",
+          "descEn": "Coffee chain for drinks, food, and mobile ordering.",
+          "descZh": "连锁咖啡店，提供咖啡、轻食和手机点单。"
+        },
+        {
+          "nameEn": "McDonald's",
+          "nameZh": "麦当劳",
+          "url": "https://www.mcdonalds.com",
+          "descEn": "Global fast-food chain known for burgers and fries.",
+          "descZh": "全球连锁快餐店，以汉堡和薯条闻名。"
+        },
+        {
+          "nameEn": "Chick-fil-A",
+          "nameZh": "福来鸡",
+          "url": "https://www.chick-fil-a.com",
+          "descEn": "U.S. fast-food chain known for chicken sandwiches.",
+          "descZh": "美国快餐连锁店，以鸡肉三明治闻名。"
+        },
+        {
+          "nameEn": "Domino's",
+          "nameZh": "达美乐披萨",
+          "url": "https://www.dominos.com",
+          "descEn": "Pizza chain for delivery and pickup orders.",
+          "descZh": "披萨连锁店，支持外送和自取。"
+        },
+        {
+          "nameEn": "Taco Bell",
+          "nameZh": "塔可钟",
+          "url": "https://www.tacobell.com",
+          "descEn": "Fast-food chain for tacos, burritos, and Mexican-style meals.",
+          "descZh": "主打卷饼、塔可等墨西哥风味的快餐连锁。"
+        },
+        {
+          "nameEn": "Chipotle",
+          "nameZh": "奇波雷墨西哥烤肉",
+          "url": "https://www.chipotle.com",
+          "descEn": "Fast-casual chain for burritos, bowls, and tacos.",
+          "descZh": "主打墨西哥卷饼和碗饭的休闲快餐连锁。"
         }
       ]
     },
@@ -295,6 +687,213 @@
           "url": "https://www.reddit.com",
           "descEn": "Online forums where people discuss almost any topic.",
           "descZh": "在线论坛，几乎什么话题都有人讨论。"
+        },
+        {
+          "nameEn": "IRS",
+          "nameZh": "美国国税局",
+          "url": "https://www.irs.gov",
+          "descEn": "Official website of the U.S. Internal Revenue Service for federal tax information.",
+          "descZh": "美国国税局官方网站，提供联邦税务信息和报税服务。"
+        },
+        {
+          "nameEn": "Medicare",
+          "nameZh": "美国联邦医疗保险",
+          "url": "https://www.medicare.gov",
+          "descEn": "Official site of the U.S. federal health insurance program for people 65 and older.",
+          "descZh": "美国联邦医疗保险官网，为65岁及以上人群提供医保信息。"
+        },
+        {
+          "nameEn": "Zillow",
+          "nameZh": "Zillow房产网",
+          "url": "https://www.zillow.com",
+          "descEn": "Real estate site for home listings, rentals, and price estimates.",
+          "descZh": "房产网站，提供买卖租房房源和房价估算。"
+        },
+        {
+          "nameEn": "California DMV",
+          "nameZh": "加州车管所",
+          "url": "https://www.dmv.ca.gov",
+          "descEn": "California DMV site for licenses, vehicle registration, and driving tests.",
+          "descZh": "加州车管所官网，办理驾照、车辆注册和驾驶考试。"
+        },
+        {
+          "nameEn": "WebMD",
+          "nameZh": "WebMD健康网",
+          "url": "https://www.webmd.com",
+          "descEn": "Health site with symptom checker, conditions, and medical news.",
+          "descZh": "健康资讯网站，提供症状查询、疾病知识和医疗新闻。"
+        },
+        {
+          "nameEn": "SSA",
+          "nameZh": "美国社会安全局",
+          "url": "https://www.ssa.gov",
+          "descEn": "Official site of the U.S. Social Security Administration for benefits and cards.",
+          "descZh": "美国社会安全局官网，办理社会保障相关和福利事务。"
+        },
+        {
+          "nameEn": "Bank of America",
+          "nameZh": "美国银行",
+          "url": "https://www.bankofamerica.com",
+          "descEn": "One of the largest U.S. banks for accounts, cards, and loans.",
+          "descZh": "美国大型银行，提供账户、信用卡和贷款服务。"
+        }
+      ]
+    },
+    {
+      "id": "learning",
+      "nameZh": "学习与教育",
+      "items": [
+        {
+          "nameEn": "Duolingo",
+          "nameZh": "多邻国",
+          "url": "https://www.duolingo.com",
+          "descEn": "Learn languages with short daily lessons.",
+          "descZh": "用每日短课程学习多种语言。"
+        },
+        {
+          "nameEn": "Khan Academy",
+          "nameZh": "可汗学院",
+          "url": "https://www.khanacademy.org",
+          "descEn": "Free lessons and practice exercises in many subjects.",
+          "descZh": "提供多学科的免费课程和练习。"
+        },
+        {
+          "nameEn": "BBC Learning English",
+          "nameZh": "BBC英语学习",
+          "url": "https://www.bbc.co.uk/learningenglish",
+          "descEn": "Free English courses, videos, and exercises from the BBC.",
+          "descZh": "BBC提供的免费英语课程、视频和练习。"
+        },
+        {
+          "nameEn": "RateMyProfessors",
+          "nameZh": "教授点评网",
+          "url": "https://www.ratemyprofessors.com",
+          "descEn": "Site where students rate professors and read class reviews.",
+          "descZh": "学生点评教授、查看课程评价的网站。"
+        },
+        {
+          "nameEn": "Coursera",
+          "nameZh": "Coursera在线课程",
+          "url": "https://www.coursera.org",
+          "descEn": "Online courses and certificates from universities and companies.",
+          "descZh": "大学和企业提供的在线课程与证书平台。"
+        },
+        {
+          "nameEn": "Quizlet",
+          "nameZh": "Quizlet记忆卡",
+          "url": "https://quizlet.com",
+          "descEn": "Study sets, flashcards, and quizzes for review.",
+          "descZh": "用学习集、记忆卡和测验进行复习。"
+        },
+        {
+          "nameEn": "TED",
+          "nameZh": "TED演讲",
+          "url": "https://www.ted.com",
+          "descEn": "Short talks on technology, science, culture, and ideas.",
+          "descZh": "科技、科学、文化等主题的短篇演讲。"
+        },
+        {
+          "nameEn": "LearnEnglish (British Council)",
+          "nameZh": "英国文化协会英语学习",
+          "url": "https://learnenglish.britishcouncil.org",
+          "descEn": "Free English courses and exercises from the British Council.",
+          "descZh": "英国文化协会提供的免费英语课程和练习。"
+        },
+        {
+          "nameEn": "edX",
+          "nameZh": "edX在线课程",
+          "url": "https://www.edx.org",
+          "descEn": "Online courses and programs from universities around the world.",
+          "descZh": "汇集全球高校的在线课程与项目平台。"
+        },
+        {
+          "nameEn": "MIT OpenCourseWare",
+          "nameZh": "MIT开放课件",
+          "url": "https://ocw.mit.edu",
+          "descEn": "Free lecture notes, videos, and course materials from MIT.",
+          "descZh": "麻省理工公开的免费课程讲义、视频和资料。"
+        }
+      ]
+    },
+    {
+      "id": "music",
+      "nameZh": "音乐",
+      "items": [
+        {
+          "nameEn": "Spotify",
+          "nameZh": "Spotify音乐",
+          "url": "https://www.spotify.com",
+          "descEn": "Stream music and podcasts on demand.",
+          "descZh": "在线收听音乐和播客的流媒体平台。"
+        },
+        {
+          "nameEn": "Apple Music",
+          "nameZh": "苹果音乐",
+          "url": "https://music.apple.com",
+          "descEn": "Apple's official music streaming service.",
+          "descZh": "苹果官方的音乐流媒体服务。"
+        },
+        {
+          "nameEn": "YouTube Music",
+          "nameZh": "油管音乐",
+          "url": "https://music.youtube.com",
+          "descEn": "Music streaming with songs, albums, and music videos.",
+          "descZh": "提供歌曲、专辑和音乐视频的流媒体服务。"
+        },
+        {
+          "nameEn": "SoundCloud",
+          "nameZh": "SoundCloud音乐",
+          "url": "https://soundcloud.com",
+          "descEn": "Platform for discovering and sharing new music and podcasts.",
+          "descZh": "发现和分享新音乐与播客的平台。"
+        },
+        {
+          "nameEn": "Pandora",
+          "nameZh": "潘多拉网络电台",
+          "url": "https://www.pandora.com",
+          "descEn": "Internet radio that builds personalized stations from your taste.",
+          "descZh": "按个人喜好生成个性化电台的网络音乐服务。"
+        },
+        {
+          "nameEn": "iHeartRadio",
+          "nameZh": "iHeart网络电台",
+          "url": "https://www.iheart.com",
+          "descEn": "Live radio stations, podcasts, and personalized playlists.",
+          "descZh": "提供电台直播、播客和个性化歌单。"
+        },
+        {
+          "nameEn": "TIDAL",
+          "nameZh": "TIDAL高音质音乐",
+          "url": "https://tidal.com",
+          "descEn": "Music streaming service known for high-fidelity audio.",
+          "descZh": "以高音质著称的音乐流媒体服务。"
+        }
+      ]
+    },
+    {
+      "id": "auto",
+      "nameZh": "汽车",
+      "items": [
+        {
+          "nameEn": "Cars.com",
+          "nameZh": "Cars.com购车",
+          "url": "https://www.cars.com",
+          "descEn": "Search new and used cars, read reviews, and compare prices.",
+          "descZh": "搜索新车和二手车、看评测、比价格。"
+        },
+        {
+          "nameEn": "Carvana",
+          "nameZh": "Carvana线上购车",
+          "url": "https://www.carvana.com",
+          "descEn": "Online used car shopping with home delivery.",
+          "descZh": "线上购买二手车并配送到家的平台。"
+        },
+        {
+          "nameEn": "Kelley Blue Book",
+          "nameZh": "凯利蓝皮书",
+          "url": "https://www.kbb.com",
+          "descEn": "Car value estimates and pricing guides for buyers and sellers.",
+          "descZh": "提供汽车估值和买卖价格参考。"
         }
       ]
     }
