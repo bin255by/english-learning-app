@@ -1,7 +1,7 @@
 {
   "categories": [
     {
-       "id": "careers",
+      "id": "careers",
       "nameZh": "求职",
       "items": [
         {
@@ -28,74 +28,74 @@
       ]
     },
     {
-  "id": "local-life",
-  "nameZh": "本地生活",
-  "items": [
-    {
-      "nameEn": "Golden 1 Center",
-      "nameZh": "金州第一中心",
-      "url": "https://www.golden1center.com/",
-      "descEn": "Downtown Sacramento's premier arena for Sacramento Kings games, concerts, and live entertainment.",
-      "descZh": "萨克拉门托市中心顶级场馆，承办国王队比赛、演唱会及各类现场娱乐活动。"
+      "id": "local-life",
+      "nameZh": "本地生活",
+      "items": [
+        {
+          "nameEn": "Golden 1 Center",
+          "nameZh": "金州第一中心",
+          "url": "https://www.golden1center.com/",
+          "descEn": "Downtown Sacramento's premier arena for Sacramento Kings games, concerts, and live entertainment.",
+          "descZh": "萨克拉门托市中心顶级场馆，承办国王队比赛、演唱会及各类现场娱乐活动。"
+        },
+        {
+          "nameEn": "SacRT",
+          "nameZh": "萨克拉门托区域交通",
+          "url": "https://www.sacrt.com/",
+          "descEn": "The largest public transit provider in the Sacramento region, operating buses and light rail.",
+          "descZh": "萨克拉门托地区最大的公共交通运营商，提供公交车和轻轨服务。"
+        },
+        {
+          "nameEn": "City of West Sacramento",
+          "nameZh": "西萨克拉门托市政府",
+          "url": "https://www.cityofwestsacramento.org/",
+          "descEn": "Official website for the City of West Sacramento, offering city services, news, and resources.",
+          "descZh": "西萨克拉门托市政府官方网站，提供市政服务、新闻和资源信息。"
+        },
+        {
+          "nameEn": "The Sacramento Bee",
+          "nameZh": "萨克拉门托蜜蜂报",
+          "url": "https://www.sacbee.com/",
+          "descEn": "Sacramento's major daily newspaper, covering local news, sports, weather, and community stories.",
+          "descZh": "萨克拉门托主要日报，报道本地新闻、体育、天气和社区故事。"
+        },
+        {
+          "nameEn": "Spectrum News Sacramento",
+          "nameZh": "Spectrum新闻萨克拉门托",
+          "url": "https://spectrumlocalnews.com/ca/sacramento",
+          "descEn": "24/7 local news network covering Sacramento and surrounding communities.",
+          "descZh": "7×24小时本地新闻频道，报道萨克拉门托及周边社区动态。"
+        },
+        {
+          "nameEn": "Crest Theatre",
+          "nameZh": "克雷斯特剧院",
+          "url": "https://www.crestsacramento.com/",
+          "descEn": "Historic theater in downtown Sacramento hosting films, concerts, comedy, and live events.",
+          "descZh": "萨克拉门托市中心历史悠久的剧院，放映电影并举办音乐会、喜剧和现场活动。"
+        },
+        {
+          "nameEn": "Ace of Spades",
+          "nameZh": "黑桃A俱乐部",
+          "url": "https://www.aceofspadessac.com/",
+          "descEn": "Popular live music venue in Sacramento featuring concerts and club events.",
+          "descZh": "萨克拉门托热门现场音乐场馆，举办演唱会和俱乐部活动。"
+        },
+        {
+          "nameEn": "Downtown Grid",
+          "nameZh": "市中心网格",
+          "url": "https://sacramento.downtowngrid.com/",
+          "descEn": "Comprehensive directory of downtown Sacramento businesses, dining, shopping, and local deals.",
+          "descZh": "萨克拉门托市中心商业、餐饮、购物及本地优惠的综合指南。"
+        },
+        {
+          "nameEn": "Visit Sacramento",
+          "nameZh": "访问萨克拉门托",
+          "url": "https://www.visitsacramento.com/",
+          "descEn": "Official tourism site for Sacramento, highlighting local events, attractions, and things to do.",
+          "descZh": "萨克拉门托官方旅游网站，介绍本地活动、景点和游玩推荐。"
+        }
+      ]
     },
-    {
-      "nameEn": "SacRT",
-      "nameZh": "萨克拉门托区域交通",
-      "url": "https://www.sacrt.com/",
-      "descEn": "The largest public transit provider in the Sacramento region, operating buses and light rail.",
-      "descZh": "萨克拉门托地区最大的公共交通运营商，提供公交车和轻轨服务。"
-    },
-    {
-      "nameEn": "City of West Sacramento",
-      "nameZh": "西萨克拉门托市政府",
-      "url": "https://www.cityofwestsacramento.org/",
-      "descEn": "Official website for the City of West Sacramento, offering city services, news, and resources.",
-      "descZh": "西萨克拉门托市政府官方网站，提供市政服务、新闻和资源信息。"
-    },
-    {
-      "nameEn": "The Sacramento Bee",
-      "nameZh": "萨克拉门托蜜蜂报",
-      "url": "https://www.sacbee.com/",
-      "descEn": "Sacramento's major daily newspaper, covering local news, sports, weather, and community stories.",
-      "descZh": "萨克拉门托主要日报，报道本地新闻、体育、天气和社区故事。"
-    },
-    {
-      "nameEn": "Spectrum News Sacramento",
-      "nameZh": "Spectrum新闻萨克拉门托",
-      "url": "https://spectrumlocalnews.com/ca/sacramento",
-      "descEn": "24/7 local news network covering Sacramento and surrounding communities.",
-      "descZh": "7×24小时本地新闻频道，报道萨克拉门托及周边社区动态。"
-    },
-    {
-      "nameEn": "Crest Theatre",
-      "nameZh": "克雷斯特剧院",
-      "url": "https://www.crestsacramento.com/",
-      "descEn": "Historic theater in downtown Sacramento hosting films, concerts, comedy, and live events.",
-      "descZh": "萨克拉门托市中心历史悠久的剧院，放映电影并举办音乐会、喜剧和现场活动。"
-    },
-    {
-      "nameEn": "Ace of Spades",
-      "nameZh": "黑桃A俱乐部",
-      "url": "https://www.aceofspadessac.com/",
-      "descEn": "Popular live music venue in Sacramento featuring concerts and club events.",
-      "descZh": "萨克拉门托热门现场音乐场馆，举办演唱会和俱乐部活动。"
-    },
-    {
-      "nameEn": "Downtown Grid",
-      "nameZh": "市中心网格",
-      "url": "https://sacramento.downtowngrid.com/",
-      "descEn": "Comprehensive directory of downtown Sacramento businesses, dining, shopping, and local deals.",
-      "descZh": "萨克拉门托市中心商业、餐饮、购物及本地优惠的综合指南。"
-    },
-    {
-      "nameEn": "Visit Sacramento",
-      "nameZh": "访问萨克拉门托",
-      "url": "https://www.visitsacramento.com/",
-      "descEn": "Official tourism site for Sacramento, highlighting local events, attractions, and things to do.",
-      "descZh": "萨克拉门托官方旅游网站，介绍本地活动、景点和游玩推荐。"
-    }
-  ]
-},
     {
       "id": "search",
       "nameZh": "搜索引擎",
@@ -300,4 +300,3 @@
     }
   ]
 }
-
