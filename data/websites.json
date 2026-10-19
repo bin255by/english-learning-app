@@ -1,6 +1,33 @@
 {
   "categories": [
     {
+       "id": "careers",
+      "nameZh": "求职",
+      "items": [
+        {
+          "nameEn": "RedHawk",
+          "nameZh": "红鹰",
+          "url": "https://www.redhawkcasino.com/about-us/careers/",
+          "descEn": "Red Hawk Casino's official careers page for job opportunities in gaming, hospitality, and entertainment.",
+          "descZh": "红鹰赌场官方招聘页面，提供博彩、酒店服务及娱乐等领域的工作机会。"
+        },
+        {
+          "nameEn": "Homedepot",
+          "nameZh": "家得宝",
+          "url": "https://careers.homedepot.com/",
+          "descEn": "The home improvement retailer offering tools, building materials, and home.",
+          "descZh": "提供工具、建筑材料及家居用品的家居装修零售商。"
+        },
+        {
+          "nameEn": "CalCareers",
+          "nameZh": "加州政府招聘网",
+          "url": "https://calcareers.ca.gov/",
+          "descEn": "California's official job portal for state government career opportunities.",
+          "descZh": "加利福尼亚州政府官方招聘平台，提供州政府各类职位信息。"
+        }
+      ]
+    },
+    {
       "id": "search",
       "nameZh": "搜索引擎",
       "items": [
